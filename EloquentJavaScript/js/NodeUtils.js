@@ -49,3 +49,11 @@ function setNodeAttribute(node, attribute, value) {
 	else
 		node.setAttribute(attribute, value);
 }
+
+function removeElement(node){
+	if (node.parentNode){
+		node.parentNode.removeChild(node);
+	}
+	
+	
+}

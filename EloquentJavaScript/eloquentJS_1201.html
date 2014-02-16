@@ -11,6 +11,10 @@
 	<button id="but01">insertBefore Function</button>
 	<p>Click to see the replaceChild Function in action
 	<button id="but02">replaceChild Function</button>
+	<p>Click to see the removeChild Function in action
+	<button id="but03">removeChild Function</button>
+	<p>Click to see the removeElement Utility in action
+	<button id="but04">removeElement Utility</button>
 	<script type="text/javascript">
 		var newParagraph = dom("P", null, "A paragraph with a ", dom("A", {
 			href : "http://en.wikipedia.org/wiki/Alchemy"
@@ -25,6 +29,12 @@
 		document.getElementById("but02").onclick = function() {
 			newParagraph.replaceChild(document.createTextNode("lousy "),
 					newParagraph.childNodes[1]);
+		}
+		document.getElementById("but03").onclick=function (){
+			newParagraph.removeChild(newParagraph.childNodes[1]);
+		}
+		document.getElementById("but04").onclick=function (){
+			removeElement(newParagraph);
 		}
 	</script>
 </body>
