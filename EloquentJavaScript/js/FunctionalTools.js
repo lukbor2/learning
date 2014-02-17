@@ -28,7 +28,7 @@ function forEach(array, action) {
 function forEachIn(object, action) {
 	try {
 		for (var property in object) {
-			if (Object.prototype.hasOwnProperty.call(object, property))
+			if (Object.prototype.hasOwnProperty.call(object, property)) // This is basically checking if the object does have the property
 				action(property, object[property]);
 		}
 	} catch (e) {

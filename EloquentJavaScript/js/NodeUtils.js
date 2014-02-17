@@ -19,7 +19,9 @@ function dom(name, attributes) {
  * the forEachIn function uses attributes as object and calls the action
  * using object and object[property], so object[property] is where the value of the
  * attribute to set comes from.
- */
+ * Furthermore the forEachIn function is able to use the second argument of the dom function an 
+ * object containing the attributes of the node.
+ * */
 			
 		});
 	}
