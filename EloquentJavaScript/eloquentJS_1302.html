@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="js/FunctionalTools.js"></script>
+<script type="text/javascript" src="js/NodeUtils.js"></script>
+<script type="text/javascript" src="js/EventUtils.js"></script>
+
+<title>Eloquent JS 13_02</title>
+</head>
+<body>
+	<p>
+		Just a test of the Square object. The strange thing is the method <em>construct</em>
+		seems to be automatically called
+	</p>
+	<p>when the Object.create is called. This is something I did not
+		expect and I do not understand why it happens</p>
+<!-- Actually this code does not work. There is something wrong with the way Object.create is used -->
+
+
+	<script type="text/javascript">
+		var Square = {
+			construct : function(character, tableCell) {
+				this.background = "empty";
+				if (character == "#")
+					this.background = "wall";
+				else if (character == "*")
+					this.background = "exit";
+
+				this.tableCell = tableCell;
+				this.tableCell.className = this.background;
+
+				this.content = null;
+				if (character == "0")
+					this.content = "boulder";
+				else if (character == "@")
+					this.content = "player";
+
+				if (this.content != null) {
+					var image = dom("IMG", {
+						src : "img/sokoban/" + this.content + ".gif"
+					});
+					this.tableCell.appendChild(image);
+				}
+			},
+
+			hasPlayer : function() {
+				return this.content == "player";
+			},
+			hasBoulder : function() {
+				return this.content == "boulder";
+			},
+			isEmpty : function() {
+				return this.content == null && this.background == "empty";
+			},
+			isExit : function() {
+				return this.background == "exit";
+			}
+		};
+
+		var testSquare = Object.create(Square.prototype, "@", dom("TD"));
+		//show(testSquare.hasPlayer());
+	</script>
+
+
+</body>
+</html>

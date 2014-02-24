@@ -15,14 +15,14 @@ function dom(name, attributes) {
 	if (attributes) {
 		forEachIn(attributes, function(name, value) {
 			setNodeAttribute(node, name, value);
-/**
- * the forEachIn function uses attributes as object and calls the action
- * using object and object[property], so object[property] is where the value of the
- * attribute to set comes from.
- * Furthermore the forEachIn function is able to use the second argument of the dom function an 
- * object containing the attributes of the node.
- * */
-			
+			/**
+			 * the forEachIn function uses attributes as object and calls the action
+			 * using object and object[property], so object[property] is where the value of the
+			 * attribute to set comes from.
+			 * Furthermore the forEachIn function is able to use the second argument of the dom function an 
+			 * object containing the attributes of the node.
+			 * */
+
 		});
 	}
 	for (var i = 2; i < arguments.length; i++) {
@@ -56,6 +56,8 @@ function removeElement(node){
 	if (node.parentNode){
 		node.parentNode.removeChild(node);
 	}
-	
-	
+}
+
+function $(id) {
+	return document.getElementById(id);
 }
