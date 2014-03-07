@@ -46,19 +46,33 @@ function printKeyCode(event) {
 }
 
 function normaliseEvent(event) {
+
+/**
+ * IE versions older than 9 do not support stopPropagation. Therefore the code below
+ * takes care of this exception by setting cancelBubble and returnValue which are used by IE
+ */
+	
 	if (!event.stopPropagation) {
 		event.stopPropagation = function() {this.cancelBubble = true;};
 		event.preventDefault = function() {this.returnValue = false;};
 	}
+
+
 	if (!event.stop) {
 		event.stop = function() {
 			this.stopPropagation();
 			this.preventDefault();
 		};
 	}
-
+/**
+ * event.target is the original element the event happened to. 
+ * However, Internet Explorer calls it event.srcElement. On the other hand Chrome and Safari started setting both.
+ * So with the code below we solve this difference between the browsers.
+ **/
 	if (event.srcElement && !event.target)
 		event.target = event.srcElement;
+	
+	
 	if ((event.toElement || event.fromElement) && !event.relatedTarget)
 		event.relatedTarget = event.toElement || event.fromElement;
 	if (event.clientX != undefined && event.pageX == undefined) {

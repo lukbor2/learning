@@ -39,5 +39,57 @@ var Square = {
 		},
 		isExit: function() {
 			return this.background == "exit";
+		},
+		moveContent: function(destSquare){
+			destSquare.content = this.content;
+			this.content = null;
+			if (destSquare.content != null) {
+				var image = dom("IMG", {src: "img/sokoban/" +
+					destSquare.content + ".gif"});
+				destSquare.tableCell.appendChild(image);
+			}
+		},
+		clearContent:  function() {
+			this.content = null;
+			removeElement(this.tableCell.lastChild);
+		}
+};
+
+var SokobanField = {
+		construct: function(level) {
+			var tbody = dom("TBODY");
+			this.squares = [];
+			this.bouldersToGo = level.boulders;
+
+			for (var y = 0; y < level.field.length; y++) {
+				var line = level.field[y];
+				var tableRow = dom("TR");
+				var squareRow = [];
+				for (var x = 0; x < line.length; x++) {
+					var tableCell = dom("TD");
+					tableRow.appendChild(tableCell);
+					var square = Square.create(line.charAt(x), tableCell);
+					squareRow.push(square);
+					if (square.hasPlayer())
+						this.playerPos = new Point(x, y);
+				}
+				tbody.appendChild(tableRow);
+				this.squares.push(squareRow);
+			}
+
+			this.table = dom("TABLE", {"class": "sokoban"}, tbody);
+			this.score = dom("DIV", null, "...");
+			this.updateScore();
+		},
+
+		getSquare: function(position) {
+			return this.squares[position.y][position.x];
+		},
+		updateScore: function() {
+			this.score.firstChild.nodeValue = this.bouldersToGo + 
+			" boulders to go.";
+		},
+		won: function() {
+			return this.bouldersToGo <= 0;
 		}
 };

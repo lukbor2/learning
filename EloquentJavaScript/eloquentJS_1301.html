@@ -15,7 +15,9 @@
 	<p>
 		<input id="textfield" type="text" style="font-size: 150%;">
 	</p>
-	<p> When you enter the letter q nothing happens</p>
+	<p>When you enter the letter q nothing happens</p>
+	<p>When you focus on the text field the background turns yellow</p>
+	<p>When you change the content of the text field the content is written to the console</p>
 	<script type="text/javascript">
 		registerEventHandler($("button"), "click", function() {
 			console.log("Button Clicked!!!");
@@ -28,6 +30,17 @@
 			if (event.character.toLowerCase() == "q")
 				event.stop();
 		});
+		
+		addHandler($("textfield"), "focus", function(event){
+			event.target.style.backgroundColor = "yellow";
+			console.log("focus event fired");		
+		})
+		addHandler($("textfield"), "blur", function(event){
+			event.target.style.backgroundColor = "";		
+		})
+		addHandler($("textfield"), "change", function(event){
+			console.log("Content of the text field changed to: " + event.target.value);		
+		})
 		
 		
 	</script>
