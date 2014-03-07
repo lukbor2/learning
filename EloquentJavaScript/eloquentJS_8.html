@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Eloquent Javascript Chapter 8</title>
+</head>
+<body>
+	<p id="outputHere"></p>
+	<p id="outputHere2"></p>
+	<p id="outputHere3"></p>
+	<p id="outputHere4"></p>
+	<p id="outputHere5"></p>
+
+	<script type="text/javascript">
+		var rabbit = {};
+		rabbit.speak = function(line) {
+			return "The rabbit says '" + line + "'";
+		}
+		document.getElementById("outputHere").innerHTML = rabbit
+				.speak("This is Luca's rabbit");
+
+		function speak(line) {
+			return "The " + this.adjective + " rabbit says '" + line + "'";
+		}
+		var whiteRabbit = {
+			adjective : "white",
+			speak : speak
+		};
+		var fatRabbit = {
+			adjective : "fat",
+			speak : speak
+		};
+
+		document.getElementById("outputHere2").innerHTML = whiteRabbit.speak("Oh my ears and whiskers, how late it's getting!");
+		document.getElementById("outputHere3").innerHTML = fatRabbit.speak("I could sure use a carrot right now.");
+		
+		<!-- Another way of calling the functions -->
+			
+		document.getElementById("outputHere4").innerHTML = speak.apply(fatRabbit, ["Yum!"]);
+		document.getElementById("outputHere5").innerHTML = speak.call(fatRabbit, "Burp!");
+	</script>
+
+</body>
+</html>
