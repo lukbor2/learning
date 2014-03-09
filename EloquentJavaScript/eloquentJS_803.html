@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="js/FunctionalTools.js" type="text/javascript"></script>
+<title>Eloquent Javascript Chaper 8</title>
+</head>
+<body>
+	<p id="outputHere">Look at the console!</p>
+
+<!-- In this example an object is just a list of properties (a Dictionary)-->
+
+	<script type="text/javascript">
+		function Dictionary(startValues) {
+			this.values = startValues || {};
+		}
+
+		Dictionary.prototype.store = function(name, value) {
+			this.values[name] = value;
+		}
+
+		Dictionary.prototype.lookup = function(name) {
+			return this.values[name];
+		}
+
+		Dictionary.prototype.contains = function(name) {
+			return Object.prototype.hasOwnProperty.call(this.values, name)
+					&& Object.prototype.propertyIsEnumerable.call(this.values,
+							name);
+		}
+
+		Dictionary.prototype.each = function(action) {
+			forEachIn(this.values, action);
+		}
+		
+		var colors = new Dictionary({Grover: "blue", Elmo: "orange", Bert: "yellow"});
+		console.log("First check: is Grover a property? " + colors.contains("Grover"));
+		console.log("Second check: is constructor a property? " + colors.contains("constructor"));
+		colors.each(function(name, color){console.log(name + "is " + color); })
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Eloquent JavaScript Chapter 8</title>
+</head>
+<body>
+	<p id="outputHere"></p>
+	<p id="outputHere2"></p>
+	<p id="outputHere3"></p>
+	<script type="text/javascript">
+	<!-- New version of the Constructor for Rabbit Objects and using prototype-->
+		function Rabbit(adj) {
+			this.adjective = adj;
+		}
+		Rabbit.prototype.speak = function(line) {
+			return "The Rabbit " + this.adjective + "says: " + line;
+		}
+		var hazelRabbit = new Rabbit("hazel");
+		document.getElementById("outputHere").innerHTML = "Example 1: <p>" + hazelRabbit.speak("Good Frith!") + "</p>";
+		
+	<!-- Looping through the properties of an object-->
+	<!-- In this way it does not really work because we don't get just the real properties of the object-->
+	Object.prototype.properties = function(){
+		var result = [];
+		for (var property in this){
+			result.push(property);
+		}
+		return result;
+	}
+	var test = {x: 10, y: 3};
+	var res = test.properties();
+	var out = "";
+	for (var i=0; i<res.length; i++)
+		out = out + "<p>" + res[i] + "</p>"
+	document.getElementById("outputHere2").innerHTML = "Example 2: "+ out;
+	
+	<!-- Looping through the properties of an object using HasOwnProperties solves the problem-->
+	
+	Object.prototype.properties2 = function(){
+	var result = [];
+	for (var property in this){
+		if (this.hasOwnProperty(property))
+		result.push(property);
+		}
+	return result;
+	}
+	var test = {"Fat Igor": true, "Fireball": true};
+	var res = test.properties2();
+	var out = "";
+	for (var i=0; i<res.length; i++)
+		out = out + "<p>" + res[i] + "</p>"
+	document.getElementById("outputHere3").innerHTML = "Example 3: "+ out;
+	
+	</script>
+
+</body>
+</html>
