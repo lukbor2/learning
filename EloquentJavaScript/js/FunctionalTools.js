@@ -1,13 +1,13 @@
 var Break = {
-	name: "Break"
+		name: "Break"
 };
 
 function escapeHTML(text) {
 	var replacements = {
-		"<": "&lt;",
-		">": "&gt;",
-		"&": "&amp;",
-		"\"": "&quot;"
+			"<": "&lt;",
+			">": "&gt;",
+			"&": "&amp;",
+			"\"": "&quot;"
 	};
 	return text.replace(/[<>&\"]/g, function(character) {
 		return replacements[character];
@@ -54,7 +54,7 @@ function reduce(func, start, array) {
 
 function filter(test, array) {
 	var result = [],
-		len = array.length;
+	len = array.length;
 	for (var i = 0; i < len; i++) {
 		var current = array[i];
 		if (test(current))
@@ -75,7 +75,7 @@ function any(test, array) {
 function partial(func) {
 	function asArray(quasiArray, start) {
 		var result = [],
-			len = quasiArray.length;
+		len = quasiArray.length;
 		for (var i = (start || 0); i < len; i++)
 			result.push(quasiArray[i]);
 		return result;
@@ -105,25 +105,25 @@ function compose(func1, func2) {
 }
 var op = function() {
 	var result = {
-		"-": function(a, b) {
-			if (arguments.length < 2)
-				return -a;
-			else
-				return a - b;
-		},
-		"!": function(a) {
-			return !a;
-		},
-		"typeof": function(a) {
-			return typeof a;
-		},
-		"?": function(a, b, c) {
-			return a ? b : c;
-		}
+			"-": function(a, b) {
+				if (arguments.length < 2)
+					return -a;
+				else
+					return a - b;
+			},
+			"!": function(a) {
+				return !a;
+			},
+			"typeof": function(a) {
+				return typeof a;
+			},
+			"?": function(a, b, c) {
+				return a ? b : c;
+			}
 	};
 	var ops = ["+", "*", "/", "%", "&&", "||", "==", "!=", "===",
-		"!==", "<", ">", ">=", "<=", "in", "instanceof"
-	];
+	           "!==", "<", ">", ">=", "<=", "in", "instanceof"
+	           ];
 	forEach(ops, function(op) {
 		result[op] = eval("[function(a, b){return a " + op + " b;}][0]");
 	});

@@ -1,5 +1,6 @@
 /**
- * 
+ * I did not completely finish the terrarium example because i don't have the function like inPlacePrinter()
+ * and because it becomes overly complicated.
  */
 function Dictionary(startValues) {
 	this.values = startValues || {};
@@ -21,6 +22,12 @@ Dictionary.prototype.contains = function(name) {
 
 Dictionary.prototype.each = function(action) {
 	forEachIn(this.values, action);
+};
+
+Dictionary.prototype.names = function() {
+	var names = [];
+	this.each(function(name, value) {names.push(name);});
+	return names;
 };
 
 
@@ -155,6 +162,11 @@ Terrarium.prototype.listActingCreatures = function() {
 	return found;
 };
 
+
+/**
+ * This is my version of listSurroundings. It seems to work, but check the one in the book too.
+ */
+
 Terrarium.prototype.listSurroundings = function(center){
 	var g = this.grid;
 	var result ={};
@@ -170,9 +182,105 @@ Terrarium.prototype.listSurroundings = function(center){
 };
 
 
+/**
+ * Check this function - processCreature - I don't understand how it works.
+ * creature.point, creature.object --> listActingCreatures returns an array of objects, each object has two properties: object and point
+ * 
+ * The function processCreature is called on the array returned by listActingCreatures
+ */
+
+Terrarium.prototype.processCreature = function(creature) {
+	var surroundings = this.listSurroundings(creature.point);
+	var action = creature.object.act(surroundings);
+	if (action.type == "move" && directions.contains(action.direction)) {
+		var to = creature.point.add(directions.lookup(action.direction));
+		if (this.grid.isInside(to) && this.grid.valueAt(to) == undefined)
+			this.grid.moveValue(creature.point, to);
+	}
+	else {
+		throw new Error("Unsupported action: " + action.type);
+	}
+};
+
+function bind(func, object) {
+	return function(){
+		return func.apply(object, arguments);
+	};
+}
+
+Terrarium.prototype.step = function() {
+	forEach(this.listActingCreatures(),
+			bind(this.processCreature, this));
+};
+
+Terrarium.prototype.start = function() {
+	if (!this.running)
+		this.running = setInterval(bind(this.step, this), 500);
+};
+
+Terrarium.prototype.stop = function() {
+	if (this.running) {
+		clearInterval(this.running);
+		this.running = null;
+	}
+};
 
 
+var creatureTypes = new Dictionary();
+creatureTypes.register = function(constructor) {
+	this.store(constructor.prototype.character, constructor);
+};
+
+function elementFromCharacter(character) {
+	if (character == " ")
+		return undefined;
+	else if (character == "#")
+		return wall;
+	else if (creatureTypes.contains(character))
+		return new (creatureTypes.lookup(character))();
+	else
+		throw new Error("Unknown character: " + character);
+};
+
+function BouncingBug() {
+	this.direction = "ne";
+}
+BouncingBug.prototype.act = function(surroundings) {
+	if (surroundings[this.direction] != " ")
+		this.direction = (this.direction == "ne" ? "sw" : "ne");
+	return {type: "move", direction: this.direction};
+};
+BouncingBug.prototype.character = "%";
+
+creatureTypes.register(BouncingBug);
 
 
+function randomElement(array) {
+	if (array.length == 0)
+		throw new Error("The array is empty.");
+	return array[Math.floor(Math.random() * array.length)];
+}
 
+function DrunkBug() {};
+DrunkBug.prototype.act = function(surroundings) {
+	return {type: "move",
+		direction: randomElement(directions.names())};
+};
+DrunkBug.prototype.character = "~";
+
+/**
+ * Using the clone function to simulate inheritance
+ */
+
+function clone(object) {
+	function OneShotConstructor(){}
+	OneShotConstructor.prototype = object;
+	return new OneShotConstructor();
+};
+
+function LifeLikeTerrarium(plan) {
+	Terrarium.call(this, plan);
+}
+LifeLikeTerrarium.prototype = clone(Terrarium.prototype);
+LifeLikeTerrarium.prototype.constructor = LifeLikeTerrarium;
 
