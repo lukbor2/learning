@@ -7,24 +7,19 @@
 <script type="text/javascript" src="js/EventUtils.js"></script>
 <script type="text/javascript" src="js/Sokoban.js"></script>
 <script type="text/javascript" src="js/terrarium.js"></script>
+<link href="sokoban.css" type="text/css" rel="stylesheet">
 
-<title>Eloquent JS 13_02</title>
+<title>Eloquent JS 13_03</title>
 </head>
 <body>
-	<p>Just a test of the Square object.Look at the console</p>
 
 	<script type="text/javascript">
-
-<!-- The code in the book to test the Square object does not work. So I changed it using the Object.create -->
-
-		var testSquare = Object.create(Square);
-		testSquare.construct("@", dom("TD"));
-		console.log("Calling testSquare.hasPlayer: " + testSquare.hasPlayer());
-		
-		var testField =Object.create(SokobanField); 
+	var testField =Object.create(SokobanField); 
 		testField.construct(sokobanLevels[0]);
-		console.log("Calling testFied.getSquare: " + testField.getSquare(new Point(2, 2)).content);
-		
+		testField.place(document.body);
+		testField.move(new Point(-1, 0));
+		testField.move(new Point(-1, 0));
+		testField.move(new Point(-1, 0));
 	</script>
 
 
