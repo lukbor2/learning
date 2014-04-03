@@ -16,6 +16,10 @@ From Cloud9
 	git add folder/filename
 	git commit -a -m "A message here"
 	git push
+	
+	NOTE: for a reason I don't know, when my workspace was re-activated, the project from GitHub was not working properly anymore.
+	I could see the main folder (learning) but nothing below it. So I deleted the workspace and cloned it again. After taking these
+	steps it worked again.
 
 From Eclipse
 ============
