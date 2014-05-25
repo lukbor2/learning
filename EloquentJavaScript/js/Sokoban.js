@@ -157,12 +157,15 @@ SokobanField.move = function(direction){
 				this.field = null;
 
 				var newGame = dom("BUTTON", null, "New game");
-				addHandler(newGame, "click", method(this, "newGame"));
-				var reset = dom("BUTTON", null, "Reset level");
-				addHandler(reset, "click", method(this, "reset"));
-				this.container = dom("DIV", null,
-						dom("H1", null, "Sokoban"),
-						dom("DIV", null, newGame, " ", reset));
+				// Considering how the tag BUTTON works, adding New Game as a text node (which is what the dom function does)
+				// is what we need to show New Game as the label of the button
+				addHandler(newGame, "click", method(this, "newGame")); // I don't understand this syntax with method. I understand it calls newGame, but I never saw this syntax
+				var reset = dom("BUTTON", null, "Reset level"); // same as the newGame button
+				addHandler(reset, "click", method(this, "reset")); // I don't understand what method is
+				
+				this.container = dom("DIV", null, dom("H1", null, "Sokoban"), dom("DIV", null, newGame, " ", reset)); // The nodes newGame, reset and
+				// HI are added to the DIV node created here. Thenk with the code below the DIV node is appended to place. 
+				
 				place.appendChild(this.container);
 
 				addHandler(document, "keydown", method(this, "keyDown"));
@@ -176,13 +179,41 @@ SokobanField.move = function(direction){
 			reset: function() {
 				if (this.field)
 					this.field.remove();
-				var sokobanField = Object.create(SokobanField);
-				sokobanField.construct(sokobanLevels[this.level]);
-				sokobanField.place(this.container);
+				// var sokobanField = Object.create(SokobanField);
+				this.field = Object.create(SokobanField);
+				this.field.construct(sokobanLevels[this.level]);
+				this.field.place(this.container);
 			},
 
 			keyDown: function(event) {
 				// To be filled in
+				
+				var arrowKeyCodes = new Dictionary({
+					  37: new Point(-1, 0), // left
+					  38: new Point(0, -1), // up
+					  39: new Point(1, 0),  // right
+					  40: new Point(0, 1)   // down
+					});
+				event = event || window.event;
+				norm_event = normaliseEvent(event);
+				
+				var charCode = norm_event.keyCode;
+				if (arrowKeyCodes.contains(charCode)){
+					this.field.move(arrowKeyCodes.lookup(charCode));
+					norm_event.stop;
+				}
+				
+				
+				if(this.field.won() && this.level == sokobanLevels.length-1){
+					alert("You won the game!! Now starting a new game....");
+					this.newGame();
+				}
+				else if(this.field.won() && this.level < sokobanLevels.length-1){
+					alert("You won the level!! Going to next level....");
+					this.level++;
+					this.reset();
+				}
+				
 			}
 	};
 	
