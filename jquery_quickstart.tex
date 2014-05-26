@@ -1,0 +1,174 @@
+\documentclass[10pt,letterpaper]{book}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{listings}
+\begin{document}
+\title{jquery Quickstart}
+\tableofcontents
+\chapter{Using jquery Core}
+\section{\textdollar \,  vs \textdollar() }
+Most jQuery methods are called on jQuery objects; for example
+\begin{lstlisting}
+$( "h1" ).remove();
+\end{lstlisting}
+
+these methods are said to be part of the \textdollar .fn namespace, or the "jQuery prototype" and are best thought of as \textbf{jQuery object methods}.\\
+
+However, there are several methods that do not act on a selection; these methods are said to be part of the jQuery namespace, and are best thought of as \textbf{core jQuery methods}.\\
+
+This distinction can be incredibly confusing to new jQuery users. Here's what you need to remember:
+
+\begin{itemize}
+\item Methods called on jQuery selections are in the \textit{\textdollar.fn} namespace, and automatically receive and return the selection as \textit{this}.
+\item Methods in the \textdollar \, namespace are generally utility-type methods, and do not work with selections; they are not automatically passed any arguments, and their return value will vary.
+\end{itemize}
+\section{\textdollar(document).ready()}
+A page can't be manipulated safely until the document is "ready."jQuery detects this state of readiness for you.\\
+Code included inside \textit{\textdollar( document ).ready()} will only run \textbf{once the page Document Object Model (DOM) is ready for JavaScript code to execute}.\\
+Code included inside \textit{\textdollar( window ).load(function() { ... })} will run \textbf{once the entire page (images or iframes), not just the DOM, is ready}.\\
+There is a shorthand for \textit{\textdollar( document ).ready()}\\
+\begin{lstlisting}
+$(function() {
+console.log( "ready!" );
+});
+\end{lstlisting}
+You can also \textbf{pass a named function} to \textit{\textdollar( document ).ready()} instead of passing an anonymous function.
+\begin{lstlisting}
+function readyFn( jQuery ) {
+// Code to run when the document is ready.
+}
+$( document ).ready( readyFn );
+// or:
+$( window ).load( readyFn );
+\end{lstlisting}
+\section{Avoiding Conflicts with Other Libraries}
+By default, jQuery uses \textdollar \, as a shortcut for jQuery. Thus, if you are using another JavaScript library that uses the \textdollar \, variable, you can run into conflicts with jQuery.\\
+\subsection{Putting jQuery Into No-Conflict Mode}
+In order to avoid these conflicts, you need to \textbf{put jQuery in no-conflict mode} immediately after it is loaded onto the page and before you attempt to use jQuery in your page.
+
+\begin{lstlisting}
+<!-- Putting jQuery into no-conflict mode. -->
+<script src="prototype.js"></script>
+<script src="jquery.js"></script>
+<script>
+var $j = jQuery.noConflict();
+// $j is now an alias to the jQuery function; creating the new alias
+// is optional.
+$j(document).ready(function() {
+$j( "div" ).hide();
+});
+// The $ variable now has the prototype meaning, which is a shortcut for
+// document.getElementById(). mainDiv below is a DOM element, not a jQuery
+//object.
+window.onload = function() {
+var mainDiv = $( "main" );
+}
+</script>
+\end{lstlisting}
+In the code above, the \textdollar \, will revert back to its meaning in original library. You'll still be able to use the full function name \textit{jQuery} as well as the new alias \textit{\textdollar j} in the rest of your application. The new alias can be named anything you'd like: jq, awesomeQuery, etc.\\
+Finally, \textbf{if you don't want to define another alternative} to the full jQuery function name (you really like to use \textdollar \, and don't care about using the other library's \textdollar \, method), then there's still \textbf{another approach you might try}: simply \textbf{add the \textdollar \, as an argument passed to your jQuery( document ).ready() function}.\\
+This is most frequently used in the case where you still want the benefits of really concise jQuery code, but don't want to cause conflicts with other libraries.
+
+\begin{lstlisting}
+!-- Another way to put jQuery into no-conflict mode. -->
+<script src="prototype.js"></script>
+<script src="jquery.js"></script>
+<script>
+jQuery.noConflict();
+jQuery( document ).ready(function( $ ) {
+// You can use the locally-scoped $ in here as an alias to jQuery.
+$( "div" ).hide();
+});
+// The $ variable in the global scope has the prototype.js meaning.
+window.onload = function(){
+var mainDiv = $( "main" );
+}
+</script>
+\end{lstlisting}
+
+\subsection{Including jQuery Before Other Libraries}
+The code snippets above rely on jQuery being loaded after \textit{prototype.js} is loaded. If you include jQuery \textbf{before} other libraries, you may use jQuery when you do some work with jQuery, but the \textdollar \, will have the meaning defined in the other library. There is no need to relinquish the \textdollar \, alias by calling \textit{jQuery.noConflict()}.
+\begin{lstlisting}
+<!-- Loading jQuery before other libraries. -->
+<script src="jquery.js"></script>
+<script src="prototype.js"></script>
+<script>
+// Use full jQuery function name to reference jQuery.
+jQuery( document ).ready(function() {
+jQuery( "div" ).hide();
+});
+// Use the $ variable as defined in prototype.js
+window.onload = function() {
+var mainDiv = $( "main" );
+};
+</script>
+\end{lstlisting}
+\section{Attributes}
+The \textit{.attr()} method acts \textbf{as both a getter and a setter}. As a setter, \textit{.attr()} can accept either a key and a value, or an object containing one or more key/value pairs.
+
+\textit{.attr()} as a setter:
+\begin{lstlisting}
+$( "a" ).attr( "href", "allMyHrefsAreTheSameNow.html" );
+$( "a" ).attr({
+title: "all titles are the same too!",
+href: "somethingNew.html"
+}); \\In this case I've used an object
+\end{lstlisting}
+\textit{.attr()} as a getter:
+\begin{lstlisting}
+$( "a" ).attr( "href" );// Returns the href for the first a element
+\\in the document
+\end{lstlisting}
+\section{Selecting Elements}
+\subsection{Selecting Elements by ID}
+\begin{lstlisting}
+$( "#myId" ); // Note IDs must be unique per page.
+\end{lstlisting}
+\subsection{Selecting Elements by Class Name}
+\begin{lstlisting}
+$( ".myClass" );
+\end{lstlisting}
+\subsection{Selecting Elements by Attribute}
+\begin{lstlisting}
+$( "input[name='first_name']" );
+// Beware, this can be very slow in older browsers
+\end{lstlisting}
+\subsection{Selecting Elements by Compound CSS Selector}
+\begin{lstlisting}
+$( "#contents ul.people li" );
+\end{lstlisting}
+\subsection{Does My Selection Contain Any Elements?}
+Once you've made a selection, you'll often want to know whether you have anything to work with.
+The best way to determine \textbf{if there are any elements is to test the selection's \textit{.length} property}, which tells you how many elements were selected. If the answer is 0, the \textit{.length} property will evaluate to false when used as a boolean value:
+\begin{lstlisting}
+// Testing whether a selection contains elements.
+if ( $( "div.foo" ).length ) {
+...
+}
+\end{lstlisting}
+\subsection{Saving Selections}
+\textbf{jQuery doesn't cache elements for you}. If you've made a selection that you might need to make again, you should \textbf{save the selection in a variable} rather than making the selection repeatedly.
+\begin{lstlisting}
+var divs = $( "div" );
+\end{lstlisting}
+Once the selection is stored in a variable, you can \textbf{call jQuery methods on the variable} just like you would have called them on the original selection.
+
+A selection \textbf{only fetches the elements that are on the page at the time the selection is made}. If elements are added to the page later, you'll have to repeat the selection or otherwise add them to the selection stored in the variable. Stored selections don't magically update when the DOM changes.
+
+\subsection{Refining and Filtering Selections}
+Sometimes the selection contains more than what you're after. jQuery offers \textbf{several methods for refining and filtering selections}.
+\begin{lstlisting}
+// Refining selections.
+$( "div.foo" ).has( "p" ); // div.foo elements that contain <p> tags
+$( "h1" ).not( ".bar" ); // h1 elements that don't have a class of bar
+$( "ul li" ).filter( ".current" ); // unordered list items with class of current
+$( "ul li" ).first(); // just the first unordered list item
+$( "ul li" ).eq( 5 ); // the sixth
+\end{lstlisting}
+\subsection{Selecting Form Elements}
+
+\end{document}
