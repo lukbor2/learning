@@ -31,4 +31,12 @@ $(document).ready(function() {
 	$('tr').children(':contains(Tragedy)').first().addClass('special');
 	$('tr').children(':contains(Tragedy)').first().siblings().addClass('special');
 	
+	// Chapter 2 - Ex 04: Select all of the list items (<li>s) containing a link (<a>). Add the
+	// class afterlink to the sibling list items that follow the ones selected.
+	
+	$('li').has('a').nextAll().addClass('afterlink');
+	
+	//Chapter 2 - Ex 05: Add the class tragedy to the closest ancestor <ul> of any .pdf link
+	
+	
 });
