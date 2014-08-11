@@ -27,3 +27,33 @@
 \contentsline {subsection}{\numberline {1.7.4}Removing Elements}{10}
 \contentsline {subsection}{\numberline {1.7.5}Creating New Elements}{11}
 \contentsline {subsection}{\numberline {1.7.6}Manipulating Attributes}{12}
+\contentsline {section}{\numberline {1.8}The jQuery Object}{12}
+\contentsline {subsection}{\numberline {1.8.1}DOM and DOM Elements}{13}
+\contentsline {subsection}{\numberline {1.8.2}The jQuery Object}{13}
+\contentsline {paragraph}{Compatibility}{13}
+\contentsline {paragraph}{Convenience}{13}
+\contentsline {subsubsection}{Getting Elements Into the jQuery Object}{14}
+\contentsline {subsubsection}{Not All jQuery Objects are Created}{14}
+\contentsline {subsubsection}{jQuery Objects Are Not "Live"}{15}
+\contentsline {subsubsection}{Wrapping Up}{15}
+\contentsline {section}{\numberline {1.9}Traversing}{16}
+\contentsline {subsubsection}{Parent}{16}
+\contentsline {subsection}{\numberline {1.9.1}Children}{16}
+\contentsline {subsection}{\numberline {1.9.2}Siblings}{17}
+\contentsline {section}{\numberline {1.10}CCS, Styling and Dimensions}{17}
+\contentsline {subsection}{\numberline {1.10.1}Using CSS Classes for Styling}{18}
+\contentsline {subsection}{\numberline {1.10.2}Dimensions}{18}
+\contentsline {section}{\numberline {1.11}Data Methods}{19}
+\contentsline {section}{\numberline {1.12}Utility Methods}{19}
+\contentsline {paragraph}{\textdollar .trim():}{19}
+\contentsline {paragraph}{\textdollar .each():}{19}
+\contentsline {paragraph}{\textdollar .inArray() :}{20}
+\contentsline {paragraph}{\textdollar .extend() :}{20}
+\contentsline {paragraph}{\textdollar .proxy():}{20}
+\contentsline {section}{\numberline {1.13}Iterating over jQuery and non-jQuery Objects}{21}
+\contentsline {subsection}{\numberline {1.13.1}\textdollar .each()}{21}
+\contentsline {subsection}{\numberline {1.13.2}.each()}{22}
+\contentsline {subsection}{\numberline {1.13.3}Sometimes .each() Isn't Necessary}{22}
+\contentsline {subsection}{\numberline {1.13.4}.map()}{23}
+\contentsline {subsection}{\numberline {1.13.5}\textdollar .map}{23}
+\contentsline {section}{\numberline {1.14}Using jQuery\^a\GenericError {(inputenc) }{Package inputenc Error: Keyboard character used is undefined\MessageBreak in inputencoding `latin1'}{See the inputenc package documentation for explanation.}{You need to provide a definition with \def document####1 ${}\def \reserved@b {o}\@inpenc@test \bgroup \uccode `\~\MessageBreak \uppercase {\egroup \def \nobreakspace {}}{\IeC {o}}r \@inpenc@test \bgroup \uccode `\~b\uppercase {\egroup \def \nobreakspace {}}efore using this key.}\GenericError {(inputenc) }{Package inputenc Error: Keyboard character used is undefined\MessageBreak in inputencoding `latin1'}{See the inputenc package documentation for explanation.}{You need to provide a definition with \def document####1 ${}\def \reserved@b {o}\@inpenc@test \bgroup \uccode `\~\MessageBreak \uppercase {\egroup \def \nobreakspace {}}{\IeC {o}}r \@inpenc@test \bgroup \uccode `\~b\uppercase {\egroup \def \nobreakspace {}}efore using this key.}s .index() Function}{24}

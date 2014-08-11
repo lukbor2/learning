@@ -1,0 +1,19 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+		var myItems = [];
+		var myList = $("#myList");
+		for(var i=0; i < 10; i++){
+			myItems.push("<li>Item " + i + "</li>");
+		}
+		myList.append(myItems.join(""));
+		console.log("No Message");
+	});
+</script>
+</head>
+<body>
+	<ul id="myList"></ul>
+</body>
+</html>

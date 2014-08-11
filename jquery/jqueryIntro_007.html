@@ -1,0 +1,26 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+		// Make the first list item the last list item:
+		var li = $("#myList li:first").appendTo("#myList");
+		
+		// Another option using .append
+		// $( "#myList" ).append( $( "#myList li:first" ) );
+		
+		// Copy the first list item to the end of the list:
+		$( "#myList li:first" ).clone().appendTo( "#myList" );
+		
+		console.log(li);
+	});
+</script>
+</head>
+<body>
+	<ul id="myList">
+		<li>First Element</li>
+		<li>Second Element</li>
+		<li>Third Element</li>
+	</ul>
+</body>
+</html>
