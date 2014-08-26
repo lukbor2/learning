@@ -1,0 +1,26 @@
+After generating the app, before moving forward
+I had to do some additional stpes not listed in the tutorial.
+
+grunt serve did not work so from the directory where the project is
+I did:
+
+sudo npm cache clean
+sudo npm install grunt --save-dev
+
+Then I had to fix bower. Still staying in the directory where the project
+is I did:
+
+sudo npm install
+sudo npm install -g bower
+bower install
+
+
+Then I had to fix karma. Still staying in the directory where the project is
+I did:
+
+sudo npm install grunt-karma --save-dev
+sudo npm install karma-phantomjs-launcher --save-dev
+npm install karma-jasmine --save-dev
+
+Basically it seems grunt, bower and karma need to be installed in the directory
+where the project is
