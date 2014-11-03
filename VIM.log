@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.4)  8 SEP 2014 23:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.5.4)  11 OCT 2014 16:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Unix.tex
-(./Unix.tex
+**VIM.tex
+(./VIM.tex
 LaTeX2e <2011/06/27>
 Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
@@ -166,8 +166,8 @@ File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
 Package: listings 2013/08/26 1.5b (Carsten Heinz)
- (./Unix.aux)
-\openout1 = `Unix.aux'.
+ (./VIM.aux)
+\openout1 = `VIM.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
@@ -245,7 +245,7 @@ e
 ))
 \c@lstlisting=\count115
 
-(./Unix.toc
+(./VIM.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 2.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -256,7 +256,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write3
-\openout3 = `Unix.toc'.
+\openout3 = `VIM.toc'.
 
  [1
 
@@ -265,158 +265,36 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 Chapter 1.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 24.
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 24.
-
-Overfull \hbox (32.9106pt too wide) in paragraph at lines 26--27
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (20.91344pt too wide) in paragraph at lines 32--33
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (128.8879pt too wide) in paragraph at lines 33--34
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (260.85667pt too wide) in paragraph at lines 35--36
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (32.9106pt too wide) in paragraph at lines 36--37
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (50.90634pt too wide) in paragraph at lines 39--40
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
 [3]
-Overfull \hbox (14.91486pt too wide) in paragraph at lines 44--45
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (14.91486pt too wide) in paragraph at lines 45--46
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
+Underfull \hbox (badness 10000) in paragraph at lines 43--46
 
  []
 
-
-Overfull \hbox (104.89357pt too wide) in paragraph at lines 56--57
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
 
  []
 
-[4] [5]
-Overfull \hbox (134.88647pt too wide) in paragraph at lines 124--125
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--133
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--133
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 136--157
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 136--157
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 193--205
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--205
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 212--215
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 221--251
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 221--251
-
- []
-
-
-Underfull \vbox (badness 5008) has occurred while \output is active []
-
- [8]
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 277--296
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 307--310
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 311--330
-
- []
-
-[10] [11] (./Unix.aux) ) 
+[5] [6] [7] (./VIM.aux) ) 
 Here is how much of TeX's memory you used:
- 4268 strings out of 493304
- 54979 string characters out of 6139872
- 130924 words of memory out of 5000000
- 7669 multiletter control sequences out of 15000+600000
- 14562 words of font info for 34 fonts, out of 8000000 for 9000
+ 3990 strings out of 493304
+ 52704 string characters out of 6139872
+ 112924 words of memory out of 5000000
+ 7396 multiletter control sequences out of 15000+600000
+ 13022 words of font info for 32 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,7n,32p,398b,1553s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.
-enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/sha
-re/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1
-/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfb
-x1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/shar
-e/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/
-public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsl
-1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on Unix.pdf (11 pages, 182928 bytes).
+ 38i,4n,32p,236b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1
+.enc}</usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/tex
+mf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/publi
+c/cm-super/sfbx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.
+pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texm
+f/fonts/type1/public/cm-super/sfsl1000.pfb></usr/share/texmf/fonts/type1/public
+/cm-super/sfti1000.pfb>
+Output written on VIM.pdf (7 pages, 119946 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
