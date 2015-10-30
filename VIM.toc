@@ -71,3 +71,11 @@
 \contentsline {paragraph}{:tabn}{7}
 \contentsline {paragraph}{:tabp}{7}
 \contentsline {paragraph}{:tabmove N}{7}
+\contentsline {section}{\numberline {1.8}Files}{7}
+\contentsline {paragraph}{:edit or :e}{7}
+\contentsline {paragraph}{:find}{7}
+\contentsline {paragraph}{Explore File System}{7}
+\contentsline {paragraph}{:Explore or :E}{7}
+\contentsline {paragraph}{:edit \{path\}}{7}
+\contentsline {paragraph}{:Vexplore}{7}
+\contentsline {paragraph}{\textit {buffer number}:bdelete or :bd}{7}
