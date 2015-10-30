@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <script type="text/javascript" src="js/http.js"></script>
+        <title>Eloquent JS 14</title>
+    </head>
+    
+    <body>
+        Content of the file retrieved: 
+        <em><p id="output1"></p></em>
+        Status Code:
+        <em><p id="output2"></p></em>
+        Status Description:
+        <em><p id="output3"></p></em>
+        Length of the xml file:
+        <em><p id="output4"></p></em>
+        
+        <script type="text/javascript">
+            var request = makeHttpObject();
+            request.open("GET", "files/fruit.txt", false);
+            request.send(null);
+            console.log(request.responseText);
+            document.getElementById("output1").innerHTML = request.responseText;
+            document.getElementById("output2").innerHTML = request.status;
+            document.getElementById("output3").innerHTML = request.statusText;
+            
+            request.open("GET", "files/fruit.xml", true);
+            request.send(null);
+            request.onreadystatechange = function() {
+                if (request.readyState == 4)  document.getElementById("output4").innerHTML = request.responseText.length;
+            };
+            
+        </script>
+        
+        
+    </body>
+
+</html>
