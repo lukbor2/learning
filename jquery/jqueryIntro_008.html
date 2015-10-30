@@ -1,0 +1,25 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+		// Creating new elements from an HTML string.
+		var myNewElement = $("<p>This is a new paragraph</p>");
+		//myNewElement.appendTo("#myDiv");
+		myNewElement.insertAfter("ul:last");
+		$( "ul" ).last().after( myNewElement.clone() );
+		console.log("No Message");
+	});
+</script>
+</head>
+<body>
+	<div id="myDiv">
+		<p>Initial paragraph</p>
+		<ul>
+			<li>First Element</li>
+			<li>Second Element</li>
+			<li>Third Element</li>
+		</ul>
+	</div>
+</body>
+</html>

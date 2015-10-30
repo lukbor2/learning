@@ -1,0 +1,32 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+		
+
+		var foo = $("#foo1");
+		console.log("Index: " + foo.index()); // 1
+		var listItem = $("li");
+		// This implicitly calls .first()
+		console.log("Index: " + listItem.index()); // 1
+		console.log("Index: " + listItem.first().index()); // 1
+		var div = $("div");
+		// This implicitly calls .first()
+		console.log("Index: " + div.index()); // 0
+		console.log("Index: " + div.first().index()); // 0
+
+	});
+</script>
+</head>
+<body>
+	<p>Look at the console. Testing .index</p>
+	<ul>
+		<div></div>
+		<li id="foo1">foo</li>
+		<li id="bar1">bar</li>
+		<li id="baz1">baz</li>
+		<div></div>
+	</ul>
+</body>
+</html>
