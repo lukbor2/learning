@@ -1,3 +1,8 @@
+"""
+another one
+
+"""
+
 import time
 def timer(func, *args):
     start = time.clock()
