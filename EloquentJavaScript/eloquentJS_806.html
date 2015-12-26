@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="js/terrarium.js"></script>
+<script type="text/javascript" src="js/FunctionalTools.js"></script>
+<title>Test Terrarium 2</title>
+</head>
+<body>
+
+	<p id="outputHere">Look at the console</p>
+
+	<script type="text/javascript">
+var thePlan =
+	["############################",
+	 "#      #    #      o      ##",
+	 "#                          #",
+	 "#          #####           #",
+	 "##         #   #    ##     #",
+	 "###           ##     #     #",
+	 "#           ###      #     #",
+	 "#   ####                   #",
+	 "#   ##       o             #",
+	 "# o  #         o       ### #",
+	 "#    #                     #",
+	 "############################"];
+
+		var testTerr = new Terrarium(thePlan);
+		console.log(testTerr.toString());
+		testTerr.step();
+		console.log(testTerr.toString());
+		testTerr.step();
+		console.log(testTerr.toString());
+	</script>
+</body>
+</html>

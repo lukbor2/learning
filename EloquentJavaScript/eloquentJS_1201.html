@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="js/NodeUtils.js"></script>
+<script type="text/javascript" src="js/FunctionalTools.js"></script>
+<title>Eloquent JS 12_01</title>
+</head>
+<body>
+	<p>
+		Click to see the insertBefore Function in action
+		<button id="but01">insertBefore Function</button>
+	<p>
+		Click to see the replaceChild Function in action
+		<button id="but02">replaceChild Function</button>
+	<p>
+		Click to see the removeChild Function in action
+		<button id="but03">removeChild Function</button>
+	<p>
+		Click to see the removeElement Utility in action
+		<button id="but04">removeElement Utility</button>
+		<script type="text/javascript">
+		var newParagraph = dom("P", null, "A paragraph with a ", dom("A", {
+			href : "http://en.wikipedia.org/wiki/Alchemy"
+		}, "link"), " inside of it.");
+		document.body.appendChild(newParagraph);
+
+		document.getElementById("but01").onclick = function() {
+			var link = newParagraph.childNodes[1];
+			newParagraph.insertBefore(dom("STRONG", null, "great "), link);
+		}
+
+		document.getElementById("but02").onclick = function() {
+			newParagraph.replaceChild(document.createTextNode("lousy "),
+					newParagraph.childNodes[1]);
+		}
+		document.getElementById("but03").onclick=function (){
+			newParagraph.removeChild(newParagraph.childNodes[1]);
+		}
+		document.getElementById("but04").onclick=function (){
+			removeElement(newParagraph);
+		}
+	</script>
+</body>
+</html>

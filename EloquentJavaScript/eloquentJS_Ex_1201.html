@@ -1,0 +1,57 @@
+<html>
+<!-- TO MAKE THE RECURSION WORKING, IT IS KEY TO DECLARE THE i variable in the for loop
+as a local variable; therefore use var i = 0, not just i = 0
+-->
+
+<head>
+<title>Eloquent JavaScript Exercise 12.01</title>
+<script src="js/FunctionalTools.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<p>This is a Paragraph</p>
+	<p id="result_here"></p>
+
+	<script type="text/javascript">
+		var myResult;
+
+
+		myResult = asHTML(document.body);
+		// document.getElementById("result_here").innerHTML = myResult; --> this does not work. I do not know why
+		// document.write(myResult);  --> this does not work. I do not know why
+		alert(myResult); //This does work !!
+
+		function asHTML(node) {
+			if (isTextNode(node))
+				return escapeHTML(node.nodeValue);
+			else if (node.childNodes.length == 0)
+				return "</" + node.nodeName + ">";
+			else
+				return "<" + node.nodeName + ">" + processNodes(asHTML, node.childNodes).join("") + "</" + node.nodeName + ">";
+		}
+
+		function processNodes(action, nodes) {
+			var len = nodes.length;
+			var result = new Array(len);
+			for (var i = 0; i < len; i++) {
+				result[i] = action(nodes[i]);
+			}
+			return result;
+		}
+
+
+		function isTextNode(node) {
+			return node.nodeType == 3;
+			//if 3 it means it is a text node
+		}
+
+		function showNode(node) {
+			if (isTextNode(node))
+				return node.nodeValue;
+			else
+				return node.nodeName;
+		}
+	</script>
+</body>
+
+</html>

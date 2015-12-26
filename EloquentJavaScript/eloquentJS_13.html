@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="js/FunctionalTools.js"></script>
+<script type="text/javascript" src="js/NodeUtils.js"></script>
+<script type="text/javascript" src="js/EventUtils.js"></script>
+<title>Eloquent JS Chapter 13</title>
+</head>
+<body>
+	<p>
+		<button id="button" style="font-size: 150%;" type="button">The
+			Button</button>
+	</p>
+	<p>
+		<input id="textfield" type="text" style="font-size: 150%;">
+	</p>
+	<script type="text/javascript">
+		registerEventHandler($("button"), "click", function() {
+			console.log("Button Clicked!!!");
+		});
+
+		// note the below would NOT work. You need to use the anonymous function
+		//	registerEventHandler($("button"), "click", console.log("Button Clicked NEW!!!"));
+
+		//Two functions below just to show the event handling
+		//registerEventHandler(document, "click", reportClick);	
+		//unregisterEventHandler(document, "click", reportClick);
+
+		//Two more functions
+		// registerEventHandler($("textfield"), "keydown", printKeyCode);
+		// unregisterEventHandler($("textfield"), "keydown", printKeyCode);
+
+		// This is after a function to normalize events have been introduced and
+		// with a wrapper for adding handlers
+		var blockQ = addHandler($("textfield"), "keypress", function(event) {
+			if (event.character.toLowerCase() == "q")
+				event.stop();
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="js/NodeUtils.js"></script>
+<style type="text/css">
+h1 {
+	font-size: 22pt;
+	text-align: center;
+}
+
+p.ugly {
+	font-family: sans-serif;
+	color: purple;
+}
+</style>
+<title>Eloquent Javascript 1203</title>
+</head>
+<body>
+	<p>This is a normal paragraph</p>
+	<p class="ugly">... and this is an ugly paragraph</p>
+
+	<h1 id="header">Chapter 1: Equipment</h1>
+	<p id="par">
+		This is what and <em>alchemists bottle</em> looks like:
+	</p>
+	<img id="picture" alt="a flat bottle" src="img/florence_flask.png">
+	<br>
+	<button id="but01" type="button">Hide Picture</button>
+	<button id="but02" type="button">Show Picture</button>
+	<script type="text/javascript">
+		document.getElementById("but01").onclick = function() {
+			document.getElementById("par").innerHTML = "Hide";
+			document.getElementById("picture").style.display = "none";
+		}
+		document.getElementById("but02").onclick = function() {
+			document.getElementById("par").innerHTML = "Show";
+			document.getElementById("picture").style.display = "";
+		}
+	</script>
+</body>
+</html>

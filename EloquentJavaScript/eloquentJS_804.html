@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="js/terrarium.js"></script>
+<title>Test Terrarium</title>
+</head>
+<body>
+<p>Look at the console</p>
+	<script type="text/javascript">
+	
+		var testGrid = new Grid(3, 2);
+		testGrid.setValueAt(new Point(1, 0), "#");
+		testGrid.setValueAt(new Point(1, 1), "o");
+		testGrid.each(function(point, value) {
+			console.log(point.x, ",", point.y, ": ", value);
+		});
+	</script>
+
+</body>
+</html>

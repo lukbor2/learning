@@ -1,0 +1,42 @@
+<html>
+
+<head>
+<title>EloquentJS Ex 11.01</title>
+</head>
+
+<body>
+	<h2>Enter Some Information Below</h2>
+	<form name="userinfo" method="get" action="testpage.html">
+		<p>
+			Name: <input type="text" name="name">
+		</p>
+		<p>
+			E-mail: <input type="email" name="email">
+		</p>
+		<p>
+			Sex: <select name="sex">
+				<option>Male</option>
+				<option>Female</option>
+				<option>No Info</option>
+			</select>
+		</p>
+		<p>
+			<input name="send" type="submit" value="GO!"
+		</p>
+	</form>
+	<script type="text/javascript">
+		var userform = document.forms.userinfo;
+		userform.elements.send.onclick = function() {
+			if (validateForm(userform))
+				userform.submit;
+			else alert("Name or Email not Correct");
+
+		}
+
+		function validateForm(form) {
+			return form.elements.name.value != "" && /^.+@.+\.\w{2,3}$/.test(form.elements.email.value);
+		}
+	</script>
+</body>
+
+</html>

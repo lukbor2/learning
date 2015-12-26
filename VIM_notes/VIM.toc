@@ -1,0 +1,81 @@
+\contentsline {chapter}{\numberline {1}Commands}{3}
+\contentsline {section}{\numberline {1.1}Movements}{3}
+\contentsline {paragraph}{w}{3}
+\contentsline {paragraph}{b}{3}
+\contentsline {paragraph}{\textdollar }{3}
+\contentsline {paragraph}{0}{3}
+\contentsline {section}{\numberline {1.2}Misc}{3}
+\contentsline {paragraph}{i}{3}
+\contentsline {paragraph}{I}{3}
+\contentsline {paragraph}{<esc>}{3}
+\contentsline {paragraph}{a}{3}
+\contentsline {paragraph}{A}{3}
+\contentsline {paragraph}{R}{3}
+\contentsline {paragraph}{.}{3}
+\contentsline {paragraph}{u}{3}
+\contentsline {paragraph}{<C-a>, <C-x>}{4}
+\contentsline {paragraph}{gU}{4}
+\contentsline {paragraph}{gu}{4}
+\contentsline {section}{\numberline {1.3}Delete Stuff}{4}
+\contentsline {paragraph}{x}{4}
+\contentsline {paragraph}{s}{4}
+\contentsline {paragraph}{dw}{4}
+\contentsline {paragraph}{db}{4}
+\contentsline {paragraph}{dd}{4}
+\contentsline {paragraph}{dap}{4}
+\contentsline {paragraph}{cw}{4}
+\contentsline {paragraph}{cb}{4}
+\contentsline {paragraph}{cc}{4}
+\contentsline {paragraph}{cap}{4}
+\contentsline {paragraph}{<C-h>}{4}
+\contentsline {paragraph}{<C-w>}{4}
+\contentsline {paragraph}{<C-u>}{4}
+\contentsline {section}{\numberline {1.4}Indentation}{5}
+\contentsline {paragraph}{>G}{5}
+\contentsline {paragraph}{>>}{5}
+\contentsline {paragraph}{=}{5}
+\contentsline {section}{\numberline {1.5}Search}{5}
+\contentsline {paragraph}{f\{char\}}{5}
+\contentsline {paragraph}{F\{char\}}{5}
+\contentsline {paragraph}{t\{char\}}{5}
+\contentsline {paragraph}{T\{char\}}{5}
+\contentsline {paragraph}{;}{5}
+\contentsline {paragraph}{,}{5}
+\contentsline {paragraph}{/pattern}{5}
+\contentsline {paragraph}{?pattern}{5}
+\contentsline {paragraph}{n}{5}
+\contentsline {paragraph}{N}{5}
+\contentsline {paragraph}{*}{5}
+\contentsline {section}{\numberline {1.6}Copy and Paste}{5}
+\contentsline {paragraph}{yy}{5}
+\contentsline {paragraph}{yw}{5}
+\contentsline {paragraph}{yb}{6}
+\contentsline {paragraph}{p}{6}
+\contentsline {paragraph}{<C-r>0}{6}
+\contentsline {section}{\numberline {1.7}Multiple Files}{6}
+\contentsline {paragraph}{:ls}{6}
+\contentsline {paragraph}{<C-\^{}>}{6}
+\contentsline {paragraph}{:bN}{6}
+\contentsline {paragraph}{<C-w>}{6}
+\contentsline {paragraph}{<C-w>s}{6}
+\contentsline {paragraph}{<C-w>v}{6}
+\contentsline {paragraph}{<C-w>c}{6}
+\contentsline {paragraph}{<C-w>o}{6}
+\contentsline {paragraph}{:sp {file}}{6}
+\contentsline {paragraph}{:vsp {file}}{6}
+\contentsline {paragraph}{:tabe {filename}}{6}
+\contentsline {paragraph}{<C-w>T}{6}
+\contentsline {paragraph}{:tabc}{6}
+\contentsline {paragraph}{:tabo}{6}
+\contentsline {paragraph}{:tabn N}{6}
+\contentsline {paragraph}{:tabn}{7}
+\contentsline {paragraph}{:tabp}{7}
+\contentsline {paragraph}{:tabmove N}{7}
+\contentsline {section}{\numberline {1.8}Files}{7}
+\contentsline {paragraph}{:edit or :e}{7}
+\contentsline {paragraph}{:find}{7}
+\contentsline {paragraph}{Explore File System}{7}
+\contentsline {paragraph}{:Explore or :E}{7}
+\contentsline {paragraph}{:edit \{path\}}{7}
+\contentsline {paragraph}{:Vexplore}{7}
+\contentsline {paragraph}{\textit {buffer number}:bdelete or :bd}{7}

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="js/FunctionalTools.js"></script>
+<script type="text/javascript" src="js/NodeUtils.js"></script>
+<title>Eloquent Javascript Exercise 12_02</title>
+</head>
+<body>
+	<script type="text/javascript">
+		makeTable([ {
+			Tree : "Apple",
+			Flowers : "White"
+		}, {
+			Tree : "Coral",
+			Flowers : "Red"
+		}, {
+			Tree : "Pine",
+			Flowers : "None"
+		} ], [ "Tree", "Flowers" ]);
+
+		function makeTable(content, columns) {
+			var newtable = dom("TABLE");
+			document.body.appendChild(newtable);
+			var newtbody = dom("TBODY");
+			newtable.appendChild(newtbody);
+			makeTableHeader(newtbody, arguments[1]);
+			makeTableRows(newtbody, arguments[0]);
+
+		}
+
+		function makeTableHeader(node, headers) {
+			var newheader = dom("TR");
+			node.appendChild(newheader);
+			for (var i = 0; i < headers.length; i++) {
+				var newth = dom("TH", null, headers[i]);
+				newheader.appendChild(newth);
+			}
+		}
+
+		function makeTableRows(node, rows) {
+			for (var i = 0; i < rows.length; i++) {
+				var newrow = dom("TR", null, dom("TD", null, rows[i].Tree),
+						dom("TD", null, rows[i].Flowers));
+				node.appendChild(newrow);
+			}
+		}
+	</script>
+
+
+</body>
+</html>

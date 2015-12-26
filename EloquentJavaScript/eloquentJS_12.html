@@ -1,0 +1,54 @@
+<html>
+
+<head>
+<title>Alchemy For Beginners</title>
+<script src="js/FunctionalTools.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<h1 id="header">Chapter 1: Equipment</h1>
+	<p id="par">
+		This is what and <em>alchemists bottle</em> looks like:
+	</p>
+	<img id="picture" alt="a flat bottle" src="img/florence_flask.png">
+
+	<form name="changes">
+		<input type="button" value="Change_01" name="chg01"><br>
+		<input type="button" value="Change_02" name="chg02"><br>
+		<input type="button" value="Add Nodes" name="chg03">
+	</form>
+	<p id="par2"></p>
+
+
+	<script type="text/javascript">
+		var formChanges = document.forms.changes;
+		alert(document.body.innerHTML);
+
+		formChanges.elements.chg01.onclick = function() {
+			document.getElementById("header").firstChild.nodeValue = "Changing with nodeValue";
+		}
+
+		formChanges.elements.chg02.onclick = function() {
+			document.getElementById("header").innerHTML = "Changing with innerHTML (don't need to go to the firstChild)";
+		}
+
+		formChanges.elements.chg03.onclick = function() {
+			var secondHeader = document.createElement("H1");
+			var secondTitle = document.createTextNode("Added H1 Node - Deep Magic is Here");
+
+			secondHeader.appendChild(secondTitle);
+			document.body.appendChild(secondHeader);
+			
+			var newImg = document.createElement("IMG");
+			newImg.setAttribute("src","img/Hiva Oa.png");
+			document.body.appendChild(newImg);
+		}
+		$("par2").innerHTML = "Added via innerHTML and using the function $";
+		
+		function $ (id){
+			return document.getElementById(id);
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Eloquent Javascript Chapter 8</title>
+</head>
+<body>
+	<p id="outputHere"></p>
+
+	<script type="text/javascript">
+	<!-- Constructor for Rabbit Objects -->
+		function Rabbit(adjective) {
+			this.adjective = adjective;
+			this.speak = function(line) {
+				return "The " + " rabbit says '" + line + "'";
+			};
+		}
+	
+	var killerRabbit = new Rabbit("killer");
+	document.getElementById("outputHere").innerHTML = killerRabbit.speak("GRAAAAAAAAAH!");
+	</script>
+
+
+</body>
+</html>
