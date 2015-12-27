@@ -15,7 +15,7 @@ def runner(stmts, pythons = None, tracecmd = False):
             print('%.4f [%r]' % (best, stmt[:70]))
             
         else:
-            print('-' * 80 % ststmt)
+            print('-' * 80)
             print('[%r]' % stmt)
             for (ispy3, python) in pythons:
                 stmt1 = stmt.replace('$listif3', 'list' if ispy3 else '')
