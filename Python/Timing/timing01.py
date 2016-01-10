@@ -1,3 +1,7 @@
+"""
+timing01.py
+"""
+
 from timer0 import timer
 
 time = timer(pow, 2, 1000)
