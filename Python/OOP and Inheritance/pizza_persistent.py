@@ -1,3 +1,6 @@
+#Using pickle to save the entire pizza shop object
+#It can be retrieved later (see pizza_persisten_retrieve.py
+
 from pizzashop import PizzaShop
 import pickle
 
