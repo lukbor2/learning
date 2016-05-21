@@ -1,0 +1,18 @@
+1) Go to the folder where you want to create a repository.
+
+        git init
+
+   Repository is initialized and the hidden folder .git is created.
+
+2) Check the status
+
+        git status
+
+   It reveals whether there are non-tracked files. i.e. files which need to be added to the repository.
+
+3) Add files to the repository
+
+        git add <filename>
+        git add -A .
+
+   The last commmand adds all files and folders below the current one.
