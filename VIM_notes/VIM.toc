@@ -46,9 +46,12 @@
 \contentsline {paragraph}{n}{5}
 \contentsline {paragraph}{N}{5}
 \contentsline {paragraph}{*}{5}
-\contentsline {section}{\numberline {1.6}Copy and Paste}{5}
-\contentsline {paragraph}{yy}{5}
-\contentsline {paragraph}{yw}{5}
+\contentsline {paragraph}{:noh}{5}
+\contentsline {paragraph}{:set ignorecase}{5}
+\contentsline {paragraph}{:set smartcase}{5}
+\contentsline {section}{\numberline {1.6}Copy and Paste}{6}
+\contentsline {paragraph}{yy}{6}
+\contentsline {paragraph}{yw}{6}
 \contentsline {paragraph}{yb}{6}
 \contentsline {paragraph}{p}{6}
 \contentsline {paragraph}{<C-r>0}{6}
@@ -66,8 +69,8 @@
 \contentsline {paragraph}{:tabe {filename}}{6}
 \contentsline {paragraph}{<C-w>T}{6}
 \contentsline {paragraph}{:tabc}{6}
-\contentsline {paragraph}{:tabo}{6}
-\contentsline {paragraph}{:tabn N}{6}
+\contentsline {paragraph}{:tabo}{7}
+\contentsline {paragraph}{:tabn N}{7}
 \contentsline {paragraph}{:tabn}{7}
 \contentsline {paragraph}{:tabp}{7}
 \contentsline {paragraph}{:tabmove N}{7}
