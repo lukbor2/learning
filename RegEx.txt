@@ -1,0 +1,42 @@
+Very Short Summary About Regular Expressions (http://www.cs.cf.ac.uk/Dave/Internet/NEWS/regexp.html)
+
+Most characters match themselves. The only exceptions are called special characters:
+
+    asterisk (*),
+    plus sign (+),
+    question mark (?),
+    backslash (\),
+    period (.),
+    caret (^),
+    square brackets ([ and ]),
+    dollar sign ($),
+    ampersand (&).
+    or sign (|). 
+
+To match a special character, precede it with a backslash, like this \*. 
+
+A period (.) matches any character except a newline character. (Remember, the period alone matches one character only).
+So to match any series of zero or more characters, use ".*"
+
+You can repeat expressions with an asterisk or plus sign.
+
+- A regular expression followed by an asterisk (*) matches zero or more occurrences of the regular expression. If there is any choice, the first matching string in a line is used.
+- A regular expression followed by a plus sign (+) matches one or more occurrences of the one-character regular expression.
+  If there is any choice, the first matching string in a line is used.
+- A regular expression followed by a question mark (?) matches zero or one occurrence of the one-character regular expression. 
+
+If an expression is enclosed in parentheses (( and )), the editor treats it as one expression and applies any asterisk (*) or plus (+) to the whole expression.
+
+A string of characters enclosed in square brackets ([]) matches any one character in that string.
+If the first character in the brackets is a caret (^), it matches any character except those in the string.
+For example, [abc] matches a, b, or c, but not x, y, or z. However, [^abc] matches x, y, or z, but not a, b, or c. 
+
+A minus sign (-) within square brackets indicates a range of consecutive ASCII characters.
+For example, [0-9] is the same as [0123456789].
+The minus sign loses its special meaning if it's the first (after an initial ^, if any) or last character in the string.
+If a right square bracket is immediately after a left square bracket, it does not terminate the string but is considered to be one of the characters to match.
+If any special character, such as backslash (\), asterisk (*), or plus sign (+), is immediately after the left square bracket, it doesn't have its special meaning and is considered to be one of the characters to match.
+
+If a caret (^) is at the beginning of the entire regular expression, it matches the beginning of a line.
+If a dollar sign ($) is at the end of the entire regular expression, it matches the end of a line.
+If an entire regular expression is enclosed by a caret and dollar sign (^like this$), it matches an entire line. 
