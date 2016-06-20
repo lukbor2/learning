@@ -49,3 +49,7 @@ Error Message
 	git clean -f <directory or file> 
 	
 	to remove those files. After that git pull should work.
+	
+	Sometimes instead of git clean I used
+
+	git rm -r <directory or file>
