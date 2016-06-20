@@ -1,0 +1,5 @@
+Tango with Django, arrived here:
+
+End of chapter 4.
+
+Proceed with this: http://www.tangowithdjango.com/book17/chapters/templates_static.html
