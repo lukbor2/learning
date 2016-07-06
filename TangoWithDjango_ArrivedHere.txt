@@ -1,5 +1,8 @@
 Tango with Django, arrived here:
 
-End of chapter 4.
+Completed Chapter 5, but do the exercises at the end of the chapter before moving to next chapter!!
 
-Proceed with this: http://www.tangowithdjango.com/book17/chapters/templates_static.html
+Once the exercises are done proceed with
+
+http://www.tangowithdjango.com/book17/chapters/models.html
+
