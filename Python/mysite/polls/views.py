@@ -12,6 +12,8 @@ from django.utils import timezone
 
 from .models import Question, Choice
 
+import datetime
+
 """
 First version of the index view. Without render.
 
@@ -107,3 +109,18 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+def current_datetime(request):
+    now = datetime.datetime.now()
+    html = "<html><body>It is now %s .</body></html>" % now
+    return HttpResponse(html)
+
+def hours_ahead(request, offset):
+    try:
+        offset = int(offset) #This is to convert the strin into an integer
+    except ValueError:
+        raise Http404
+    dt = datetime.datetime.now() + datetime.timedelta(hours = offset)
+    html = '<html><body>In %s hours, it will be %s .</body></html>' % (offset, dt)
+    return HttpResponse(html)
+        
