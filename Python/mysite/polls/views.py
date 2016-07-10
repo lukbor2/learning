@@ -7,6 +7,8 @@ from django.views import generic
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.template import loader
+from django.template.loader import get_template
+from django.template import Context
 
 from django.utils import timezone
 
@@ -112,7 +114,8 @@ def vote(request, question_id):
 
 def current_datetime(request):
     now = datetime.datetime.now()
-    html = "<html><body>It is now %s .</body></html>" % now
+    t = get_template('polls/current_datetime.html')
+    html = t.render(Context({'current_date': now}))
     return HttpResponse(html)
 
 def hours_ahead(request, offset):
