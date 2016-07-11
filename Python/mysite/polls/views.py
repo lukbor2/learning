@@ -112,11 +112,20 @@ def vote(request, question_id):
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
+"""
+First version of current_datetime view. Before using render.
+
 def current_datetime(request):
     now = datetime.datetime.now()
     t = get_template('polls/current_datetime.html')
     html = t.render(Context({'current_date': now}))
     return HttpResponse(html)
+
+"""
+
+def current_datetime(request):
+    now = datetime.datetime.now()
+    return render(request, 'polls/current_datetime.html', {'current_date': now})
 
 def hours_ahead(request, offset):
     try:
@@ -124,6 +133,7 @@ def hours_ahead(request, offset):
     except ValueError:
         raise Http404
     dt = datetime.datetime.now() + datetime.timedelta(hours = offset)
-    html = '<html><body>In %s hours, it will be %s .</body></html>' % (offset, dt)
-    return HttpResponse(html)
+    # html = '<html><body>In %s hours, it will be %s .</body></html>' % (offset, dt)
+    # return HttpResponse(html)
+    return render(request, 'polls/hours_ahead.html', {'hour_offset': offset, 'next_time': dt})
         
