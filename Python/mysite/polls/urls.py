@@ -27,4 +27,5 @@ urlpatterns = [
     url(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
     url(r'^time/$', views.current_datetime, name = 'current_datetime'),
     url(r'^time/plus/(\d{1,2})/$', views.hours_ahead),
+    url(r'^info/$', views.display_meta),
 ]

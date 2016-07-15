@@ -137,3 +137,10 @@ def hours_ahead(request, offset):
     # return HttpResponse(html)
     return render(request, 'polls/hours_ahead.html', {'hour_offset': offset, 'next_time': dt})
         
+def display_meta(request):
+    values = request.META.items()
+    # values.sort()
+    html = []
+    for k, v in values:
+        html.append('<tr><td>%s</td><td>%s</td></tr>' % (k,v))
+    return HttpResponse('<table>%s</table>' % '\n'.join(html))
