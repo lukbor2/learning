@@ -140,4 +140,14 @@ After a branch has been merged, the branch can be removed:
 note that \textit{-d} works only on branches which have been merged.\\
 To delete a branch which has not been merged use \textit{-d} and \textit{-f} options together or just the \textit{-D} option.
 
+\section{Reset a branch}
+If you get the error\\ \\
+\textit{error: Your local changes to the following files would be overwritten by merge}\\ \\
+when using git pull, then try to use
+\begin{lstlisting}
+git reset --hard
+\end{lstlisting}
+
+That should fix the problem.
+
 \end{document}

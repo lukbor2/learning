@@ -1,5 +1,4 @@
 from django.db import models
-from gi.overrides.keysyms import blank
 
 # Create your models here.
 
