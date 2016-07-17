@@ -4,3 +4,7 @@ dist
 .sass-cache
 bower_components
 .pyc
+
+Python/mysite/books/__pycache__/
+Python/mysite/polls/__pycache__/
+Python/mysite/mysite/__pycache__/
