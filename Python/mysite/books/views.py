@@ -11,6 +11,9 @@ def search_form(request):
 
 """
 
+def debug(request):
+    pass
+
 def search(request):
     errors = []
     if 'q' in request.GET:
