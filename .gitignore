@@ -8,3 +8,5 @@ bower_components
 Python/mysite/books/__pycache__/
 Python/mysite/polls/__pycache__/
 Python/mysite/mysite/__pycache__/
+Python/mysite/books/migrations/__pycache__/
+Python/mysite/polls/migrations/__pycache__/
