@@ -3,6 +3,7 @@ from django.http.response import HttpResponse, HttpResponseRedirect
 from books.models import Book
 from books.forms import ContactForm
 from django.core.mail import send_mail
+from django.template import RequestContext
 
 """
 
@@ -44,3 +45,18 @@ def contact(request):
                 initial={'subject': 'I love this site!'}
             )
     return render(request, 'contact_form.html', {'form': form})
+
+def custom_proc(request):
+    "A context processor that provides 'app', 'user' and 'ip_address'"
+    return {
+        'app': 'books',
+        'user': request.user,
+        'ip_address': request.META['REMOTE_ADDR']
+        }
+    
+def view_1(request):
+    return render(request, 'template1.html', {'message': 'I am view 1.'}, context_instance=RequestContext(request, processors=[custom_proc]))
+
+
+def view_2(request):
+    return render(request, 'template2.html', {'message': 'I am view 2.', 'somevariable': 'A100B200C3'}, context_instance=RequestContext(request, processors=[custom_proc]))

@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 # Create your models here.
 
@@ -29,4 +30,10 @@ class Book(models.Model):
     
     def __str__(self):
         return self.title
+    
+    def _get_book_info(self):
+        """Example of a model method."""
+        return '%s %s %s' % (self.title, self.publisher, self.publication_date.strftime('%m%d%Y'))
+    
+    book_info = property(_get_book_info)
        
