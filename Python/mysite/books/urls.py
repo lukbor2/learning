@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from django.conf import settings
 from books import views
+from books.views import PublisherList
 
 app_name = 'books'
 
@@ -11,6 +12,7 @@ urlpatterns = [
     url(r'^contact/$', views.contact),
     url(r'^view1/$', views.view_1),
     url(r'^view2/$', views.view_2),
+    url(r'^publishers/$', PublisherList.as_view()),
 ]
 
 if settings.DEBUG:

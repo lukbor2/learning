@@ -5,6 +5,9 @@ from books.forms import ContactForm
 from django.core.mail import send_mail
 from django.template import RequestContext
 
+from django.views.generic import ListView
+from books.models import Publisher
+
 """
 
 def search_form(request):
@@ -60,3 +63,7 @@ def view_1(request):
 
 def view_2(request):
     return render(request, 'template2.html', {'message': 'I am view 2.', 'somevariable': 'A100B200C3'}, context_instance=RequestContext(request, processors=[custom_proc]))
+
+#example of a generic view
+class PublisherList(ListView):
+    model = Publisher
