@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.http.response import HttpResponse, HttpResponseRedirect
-from books.models import Book
 from books.forms import ContactForm
 from django.core.mail import send_mail
 from django.template import RequestContext
 
 from django.views.generic import ListView
-from books.models import Publisher
+from django.views.generic import DetailView
+from books.models import Publisher, Book
 
 """
 
@@ -67,3 +67,20 @@ def view_2(request):
 #example of a generic view
 class PublisherList(ListView):
     model = Publisher
+    # line below to provide a friendly context object rather than the standard object_list
+    context_object_name = 'list_of_publishers'
+
+#another generic view but adding extra context
+#look at the url config to call this view, it requires to use pk
+#so an example of the url would be http://127.0.0.1:8000/books/publishersdetails/1/
+class PublisherDetail(DetailView):
+	model = Publisher
+
+	def get_context_data(self, **kwargs):
+		#call base implementation first to get a context
+		context = super(PublisherDetail, self).get_context_data(**kwargs)
+		
+		#Add queryset of all the books
+		context['book_list'] = Book.objects.filter(publisher=pk)
+		return context
+

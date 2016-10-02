@@ -23,7 +23,7 @@ class Author(models.Model):
     email = models.EmailField(blank=True, verbose_name='e-mail')
     salutation = models.CharField(max_length=10)
     name = models.CharField(max_length=200)
-    headshot = models.ImageField(upload_to='author_headshots')
+    # headshot = models.ImageField(upload_to='author_headshots')
     
     def __str__(self):
         return u'%s %s' % (self.first_name, self.last_name)
