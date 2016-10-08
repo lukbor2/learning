@@ -1,6 +1,9 @@
 from django.test import TestCase
+from django.test.client import Client
+from django.test.client import RequestFactory
 
 from contacts.models import Contact
+from contacts.views import ListContactView
 
 class ContactsTests(TestCase):
     """Contact Model Tests"""
