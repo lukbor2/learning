@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
 from django.core.urlresolvers import reverse
+from . import forms
 
-from contacts.models import Contact
+from contacts.models import Contact, Address
 
 class ListContactView(ListView):
     model = Contact
@@ -11,7 +12,8 @@ class ListContactView(ListView):
 class CreateContactView(CreateView):
     model = Contact
     template_name = 'edit_contact.html'
-    fields = '__all__' #this is required in version of django I am using
+    # fields = '__all__' #this is required in version of django I am using
+    form_class = forms.ContactForm
     
     def get_success_url(self):
         return reverse('contacts-list')
@@ -26,7 +28,8 @@ class CreateContactView(CreateView):
 class UpdateContactView(UpdateView):
     model = Contact
     template_name = 'edit_contact.html'
-    fields = '__all__' #this is required in version of django I am using
+    # fields = '__all__' #this is required in version of django I am using
+    form_class = forms.ContactForm
     
     def get_success_url(self):
         return reverse('contacts-list')
@@ -49,3 +52,13 @@ class DeleteContactView(DeleteView):
 class ContactView(DetailView):
     model = Contact
     template_name = 'contact.html'
+    
+class EditContactAddressView(UpdateView): # TODO: Write a CreateView to create some addresses.
+    model = Contact
+    template_name = 'edit_addresses.html'
+    forms_class = forms.ContactAddressFormSet
+    fields = '__all__' #this is required in version of django I am using
+    
+    def get_success_url(self):
+        # redirect to contact view
+        return self.get_object().get_absolute_url()
