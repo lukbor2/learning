@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
+from django.views.generic.edit import FormView
 from django.core.urlresolvers import reverse
 from . import forms
 
@@ -53,11 +54,11 @@ class ContactView(DetailView):
     model = Contact
     template_name = 'contact.html'
     
-class EditContactAddressView(UpdateView): # TODO: Write a CreateView to create some addresses.
+class EditContactAddressView(UpdateView): 
     model = Contact
     template_name = 'edit_addresses.html'
-    forms_class = forms.ContactAddressFormSet
-    fields = '__all__' #this is required in version of django I am using
+    form_class = forms.ContactAddressFormSet
+    # fields = '__all__' #this is required in version of django I am using
     
     def get_success_url(self):
         # redirect to contact view

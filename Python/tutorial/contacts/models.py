@@ -8,7 +8,6 @@ class Contact(models.Model):
     last_name = models.CharField(max_length=255)
     email = models.EmailField()
     
-    fields = '__all__' #this is required in version of django I am using
     
     def __str__(self):
         return ' '.join([self.first_name, self.last_name])
@@ -24,7 +23,6 @@ class Address(models.Model):
     state = models.CharField(max_length = 2)
     postal_code = models.CharField(max_length = 20)
     
-    fields = '__all__' #this is required in version of django I am using
     
     class Meta:
         unique_together = ('contact', 'address_type',)
