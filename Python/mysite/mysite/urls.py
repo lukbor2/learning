@@ -1,4 +1,5 @@
-"""mysite URL Configuration
+"""
+mysite URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -19,5 +20,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^polls/', include('polls.urls')),
     url(r'^books/', include('books.urls')),
+    url(r'^bptrack/', include('bptrack.urls')),
     url(r'^admin/', admin.site.urls),
 ]
