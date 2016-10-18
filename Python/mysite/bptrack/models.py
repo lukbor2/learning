@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import date
 
 class Patient(models.Model):
     """ 
@@ -18,6 +19,11 @@ class Patient(models.Model):
     def __str__(self):
         return '%s %s %s'  % (self.first_name, self.last_name, self.date_of_birth.strftime('%m-%d-%Y'))
 
+
+    # remember that Model metadata is “anything that’s not a field”, such as ordering options
+    class Meta:
+        ordering = ['last_name', 'first_name']
+
 class BP_Measure(models.Model):
     """ 
     Each patient will be linked to one or more measures.
@@ -25,13 +31,19 @@ class BP_Measure(models.Model):
     BP measures (min and max) are expected in mmHg.
     Date, min, max and pulse are all mandatory fields.
     """
-    bp_measure_date = models.DateField(blank=False)
-    #TODO make the field bp_measure_date mandatory and not null. Default should be today.
-    bp_measure_min = models.IntegerField(blank=False)
-    bp_measure_max = models.IntegerField(blank=False)
-    bp_measure_pulse = models.IntegerField(blank=False)
-    bp_measure_note = models.CharField(max_length=255)
+    TIME_OF_DAY = (
+        ('MO', 'Morning'),
+        ('AF', 'Afternoon'),
+        ('EV', 'Evening'),
+        )
+    
     patient = models.ForeignKey(Patient)
+    bp_measure_date = models.DateField(blank=False, default=date.today, help_text='Day when the measure was taken')
+    bp_measure_min = models.IntegerField(blank=False, help_text='Min pressure in mmHG')
+    bp_measure_max = models.IntegerField(blank=False, help_text='Max pressure in mmHG')
+    bp_measure_pulse = models.IntegerField(blank=False, help_text='Pulse when the measure was taken')
+    bp_measure_time_of_day = models.CharField(blank=False, max_length=30, choices=TIME_OF_DAY, help_text='Pick one of the categories depending on the time when the measure was taken')
+    bp_measure_note = models.CharField(max_length=255, help_text= 'Free text')
 
     def __str__(self):
         return '%s %s %d %d %d %s' % (self.patient, self.bp_measure_date.strftime('%m-%d-%Y'), self.bp_measure_min, self.bp_measure_max, self.bp_measure_pulse, self.bp_measure_note)
