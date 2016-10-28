@@ -20,4 +20,10 @@
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 		<nature>org.python.pydev.pythonNature</nature>
 	</natures>
+	<variableList>
+		<variable>
+			<name>geckodriver</name>
+			<value>file:/usr/local/lib/python2.7/dist-packages</value>
+		</variable>
+	</variableList>
 </projectDescription>
