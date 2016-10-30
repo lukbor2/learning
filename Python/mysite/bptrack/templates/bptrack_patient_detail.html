@@ -1,0 +1,29 @@
+{% extends "bptrack_base.html" %}
+
+{% block title %}
+	BP Track Patient Detail 
+{% endblock %}
+
+{% block content %}
+<h2>Details for {{ patient_detail.first_name }} {{ patient_detail.last_name }}</h2>
+	<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Last Name</th>
+					<th>First Name</th>
+					<th>Date of Birth</th>
+					<th>Age</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{ patient_detail.id }}</td>
+					<td>{{ patient_detail.last_name }}</td>
+					<td>{{ patient_detail.first_name }}</td>
+					<td>{{ patient_detail.date_of_birth}}</td>
+					<td>{{ patient_detail.age}}</td>
+				</tr>
+			</tbody>	
+		</table>
+{% endblock %}
