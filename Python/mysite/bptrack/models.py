@@ -5,11 +5,12 @@ class Patient(models.Model):
     """ 
     Each patient will be linked to one or more measures.
     Each measure is linked to one and only one patient.
+    I use the package django-etc to use the verbose name in situations like table headers. So I control from the model the label used for the field.
     """
-    first_name = models.CharField(max_length=255)
-    last_name = models.CharField(max_length=255)
-    date_of_birth = models.DateField(blank=True, null=True)
-    age = models.IntegerField(blank=True, null=True)
+    first_name = models.CharField(max_length=255, verbose_name='First Name')
+    last_name = models.CharField(max_length=255, verbose_name='Last Name')
+    date_of_birth = models.DateField(blank=True, null=True, verbose_name='Date of Birth')
+    age = models.IntegerField(blank=True, null=True, verbose_name='age')
     email = models.EmailField(blank=True, verbose_name='e-mail')
 
     def calculate_age(self):

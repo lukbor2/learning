@@ -1,3 +1,9 @@
+<!-- I am using the package django-etc to use the fields' verbose names in the table header.
+So those headers are always controlled by what I have in the model.
+Note that  I have to use the context name (e.g. patient_detail) and I don't have to select the first object of the context.
+I just use the context name and the field.
+ -->
+
 {% extends "bptrack_base.html" %}
 
 {% block title %}
@@ -10,10 +16,11 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Last Name</th>
-					<th>First Name</th>
-					<th>Date of Birth</th>
-					<th>Age</th>
+					<th>{% load model_field %} {% model_field_verbose_name from patient_detail.last_name %}</th>
+					<th>{% load model_field %} {% model_field_verbose_name from patient_detail.first_name %}</th>
+					<th>{% load model_field %} {% model_field_verbose_name from patient_detail.date_of_birth %}</th>
+					<th>{% load model_field %} {% model_field_verbose_name from patient_detail.age %}</th>
+					<th>{% load model_field %} {% model_field_verbose_name from patient_detail.email %}</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -23,6 +30,7 @@
 					<td>{{ patient_detail.first_name }}</td>
 					<td>{{ patient_detail.date_of_birth}}</td>
 					<td>{{ patient_detail.age}}</td>
+					<td>{{ patient_detail.email}}</td>
 				</tr>
 			</tbody>	
 		</table>
