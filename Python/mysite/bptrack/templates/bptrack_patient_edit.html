@@ -1,0 +1,50 @@
+﻿{% extends "base.html" %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<!-- 
+
+# TODO: check wheter I can/need to use this code.
+
+{% if contact.id  %}
+<h1>Edit Contact</h1>
+{% else %}
+<h1>Add Contact</h1>
+{% endif %}
+
+-->
+
+<form action="{{ action }}" method="POST" >
+   {% csrf_token %}
+   {% if form.non_field_errors %}
+      <ul>
+         {% for error in form.non_field_errors %}
+            <li> {{ error }} </li>
+         {% endfor %}
+         
+         
+      </ul>
+   {% endif %}
+
+   {% for field in form %}
+      <div class="form-group">
+         {{field.label_tag}}
+           {{field|add_class:"form-control"}}
+      </div>
+   {% endfor %}
+   <input id="save_patient" type="submit" class="btn btn-primary" value="Save Patient"/> 
+
+<!--
+# TODO: check wheter I can/need to use this code.
+ 
+{% if patient.id %}
+   <a href="{% url "contacts-delete" pk=contact.id %}" role="button" class="btn btn-danger">Delete</a>
+   {% endif %}
+-->   
+
+</form> 
+<div>
+   <a href=" {% url "patient-list" %}">Back to Patient List</a>
+</div>
+{% endblock %}

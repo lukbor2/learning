@@ -5,7 +5,7 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from bptrack.models import Patient, BP_Measure
-from bptrack.forms import PatientForm
+from . import forms
 
 class PatientList(ListView):
     model = Patient
@@ -47,7 +47,18 @@ class PatientBPMeasure(ListView):
 
 class PatientCreate(CreateView):
     model = Patient
-    form_class = PatientForm
+    template_name = 'bptrack_patient_edit.html'
+    form_class = forms.PatientForm
+
+    def get_success_url(self):
+        return reverse('patient-list')
+    
+    def get_context_data(self, **kwargs):
+        
+        context = super(PatientCreate, self).get_context_data(**kwargs)
+        context['action'] = reverse('patient-add')
+        
+        return context
     
     
 
