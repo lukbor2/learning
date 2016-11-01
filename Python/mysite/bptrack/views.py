@@ -2,8 +2,10 @@ from django.shortcuts import render, get_object_or_404
 from django.http.response import HttpResponse, HttpResponseRedirect
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from bptrack.models import Patient, BP_Measure
+from bptrack.forms import PatientForm
 
 class PatientList(ListView):
     model = Patient
@@ -27,18 +29,26 @@ class PatientBPMeasure(ListView):
     Furthermore I make the patient data available in the context, so I can show these data in the template.
     """
     
-    
     template_name = 'bptrack_patient_measures.html'
     context_object_name = 'patient_measure'
     
     def get_queryset(self):
-        self.patient = get_object_or_404(Patient, id=self.args[0]) 
+        # First I get the patient object, not just the foreign key.
+        self.patient = get_object_or_404(Patient, id=self.args[0])
+        # Then I filter the queryset using the patient I just got.
         return BP_Measure.objects.filter(patient = self.patient)
     
     def get_context_data(self, **kwargs):
         context = super(PatientBPMeasure, self).get_context_data(**kwargs)
+        
+        # Extend the context to include the patient object.
         context['patient'] = self.patient
         return context
+
+class PatientCreate(CreateView):
+    model = Patient
+    form_class = PatientForm
+    
     
 
 def debug(request):

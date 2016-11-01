@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import date
+from django.core.urlresolvers import reverse
 
 class Patient(models.Model):
     """ 
@@ -19,6 +20,10 @@ class Patient(models.Model):
 
     def __str__(self):
         return '%s %s %s'  % (self.first_name, self.last_name, self.date_of_birth.strftime('%m-%d-%Y'))
+    
+    def get_absolute_url(self):
+        #I need this method because it is used in the Update and Delete views.
+        return reverse('patient-detail', kwargs={'pk': self.pk})
 
 
     # remember that Model metadata is “anything that’s not a field”, such as ordering options
