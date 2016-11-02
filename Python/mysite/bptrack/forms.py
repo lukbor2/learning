@@ -1,9 +1,13 @@
 from django import forms
 
+from bptrack.models import Patient
+
+"""
+
 class PatientForm(forms.ModelForm):
-    first_name = forms.CharField()
-    last_name = forms.CharField()
-    date_of_birth = forms.DateField()
-    age = forms.IntegerField()
-    email = forms.EmailField()
+    class Meta:
+        model = Patient
+        fields = ('first_name',)
+
+        """
 

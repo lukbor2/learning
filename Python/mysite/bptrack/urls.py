@@ -10,7 +10,7 @@ urlpatterns = [
     url(r'^home/$', PatientList.as_view(), name = 'patient-list'),
     url(r'^patient_detail/(?P<pk>[0-9]+)$', PatientDetail.as_view(), name = 'patient-detail'),
     url(r'^patient_bpmeasure/([0-9]+)$', PatientBPMeasure.as_view()),
-    url(r'^patient_add$', PatientCreate.as_view(), name = 'patient-add'),
+    url(r'^patient_add/$', PatientCreate.as_view(), name = 'patient-add'),
 ]
 
 if settings.DEBUG:

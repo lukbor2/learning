@@ -7,12 +7,16 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from bptrack.models import Patient, BP_Measure
 from . import forms
 
+from django.core.urlresolvers import reverse, reverse_lazy
+
 class PatientList(ListView):
     model = Patient
     template_name = 'bptrack_home.html'
 
     # Instead of using the standard context name object_list, I am setting my own name for clarity
     context_object_name = 'all_patients'
+
+
 
 class PatientDetail(DetailView):
     # General Note: the detail view seems to automatically expect the primary key of the model passed via the url.
@@ -47,20 +51,18 @@ class PatientBPMeasure(ListView):
 
 class PatientCreate(CreateView):
     model = Patient
-    template_name = 'bptrack_patient_edit.html'
-    form_class = forms.PatientForm
+    fields = ['first_name', 'last_name','date_of_birth', 'age', 'email']
+    # template_name = 'bptrack_patient_edit.html'
+    # form_class = forms.PatientForm
 
-    def get_success_url(self):
-        return reverse('patient-list')
-    
     def get_context_data(self, **kwargs):
-        
         context = super(PatientCreate, self).get_context_data(**kwargs)
-        context['action'] = reverse('patient-add')
         
+        # Extend the context to include the url of the patient-list view.
+        context['home'] = reverse_lazy('patient-list')
         return context
-    
-    
+
+    success_url = reverse_lazy('patient-list')
 
 def debug(request):
     pass
