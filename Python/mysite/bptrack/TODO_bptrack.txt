@@ -2,13 +2,18 @@
 
 #TODO:	Look at the TODOs in each file.
 
-#TODO:	Use bootstrap to add some styling in a quick way.
-		[DONE!, I've added bootstrap to a base template which I import in all other templates.]
-
 #TODO:	Page with a list of all patients. From there edit, add and delete a patient.
 		Try to have one command per each patient (i.e. a link to edit, a link to delete) and commands who act on multiple selected records.
 		From the same page I should be able to go to another page which shows a list of all BP measures for the given patient.
 		And from there I should be able to edit, add and delete a bp measure for that patient.
 
+#TODO:	In views.py, in the CreateView, why reverse_lazy works and just reverse does not work? reverse works in the tutorial app.
+		It would be interesting to understand.
+
 #TODO:	find a way to define labels for each field, for example in the model, so those labels can be used everywhere. For example in table headings.
 		[DONE!, I've used a package called django-etc which has a custom tag which can be used in the html templates.]
+#TODO:	Use bootstrap to add some styling in a quick way.
+		[DONE!, I've added bootstrap to a base template which I import in all other templates.]
+
+
+

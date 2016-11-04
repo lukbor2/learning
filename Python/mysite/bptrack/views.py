@@ -54,6 +54,7 @@ class PatientCreate(CreateView):
     fields = ['first_name', 'last_name','date_of_birth', 'age', 'email']
     # template_name = 'bptrack_patient_edit.html'
     # form_class = forms.PatientForm
+
     """
     def get_context_data(self, **kwargs):
         context = super(PatientCreate, self).get_context_data(**kwargs)
@@ -61,10 +62,18 @@ class PatientCreate(CreateView):
         # Extend the context to include the url of the patient-list view.
         context['home'] = reverse_lazy('patient-list')
         return context
-    """
 
-    def get_success_url(self):
-        return reverse('patient-list')
+   """
+    # Learning - the CreateView class has a success_url attribute which is the url used if the creation is successful.
+    # I had a lot of problems defining this attribute in a way which did not cause an error.
+    # Eventually it is working in this way:
+    success_url = reverse_lazy ('bptrack:patient-list')
+   
+    # I still do not understand why the same logic does not work using just reverse. In the tutorial reverse, not reverse_lazy is used and it works.
+    # Maybe it is something to try to understand. 
+
+    # Also using a hard coded url worked, but it is really not ideal:
+    # success_url = '/bptrack'
 
 def debug(request):
     pass
