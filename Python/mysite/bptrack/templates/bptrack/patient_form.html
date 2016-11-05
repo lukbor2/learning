@@ -15,6 +15,8 @@
 
 -->
 
+<!-- # TODO: In principle the action attribute in the form could be blank. Try to understand why in the tutorial app there was an action specified and passed to the context. -->
+
 <form action="{{ action }}" method="POST" >
    {% csrf_token %}
    {% if form.non_field_errors %}
@@ -33,7 +35,7 @@
            {{field|add_class:"form-control"}}
       </div>
    {% endfor %}
-   <input id="save_patient" type="submit" class="btn btn-primary" value="Save Patient Confirm"/> 
+   <input id="save_patient" type="submit" class="btn btn-primary" value="Save Patient"/> 
 
 <!--
 # TODO: check wheter I can/need to use this code.
