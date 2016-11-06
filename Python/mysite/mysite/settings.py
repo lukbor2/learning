@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_etc.etc',
+    'widget_tweaks',
     'books',
-    'bptrack',
+    'bptrack.apps.BptrackConfig',
 ]
 
 MIDDLEWARE_CLASSES = [
