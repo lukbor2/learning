@@ -22,6 +22,7 @@ I just use the context name and the field.
 					<th>{% load model_field %} {% model_field_verbose_name from all_patients.date_of_birth %}</th>
 					<th>{% load model_field %} {% model_field_verbose_name from all_patients.age %}</th>
 					<th>{% load model_field %} {% model_field_verbose_name from all_patients.email %}</th>
+					<th>Patient Details</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -32,7 +33,9 @@ I just use the context name and the field.
 					<td>{{ patient.first_name }}</td>
 					<td>{{ patient.date_of_birth}}</td>
 					<td>{{ patient.age}}</td>
-					<td>{{ patient.email}}</td>
+                    <td>{{ patient.email}}</td>
+                    {% url 'bptrack:patient-detail'  patient.id  as url_to_details %} <!-- Here I am building the url to the patient-detail view for the patient in each row. I don't need any logic in the view, I use the url tag here in the template. -->
+					<td><a href="{{ url_to_details }}">Details</a></td>
 				</tr>
 			{% endfor %}
 			</tbody>	

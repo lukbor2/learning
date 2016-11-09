@@ -22,7 +22,7 @@ class Patient(models.Model):
         return '%s %s %s'  % (self.first_name, self.last_name, self.date_of_birth.strftime('%m-%d-%Y'))
     
     def get_absolute_url(self):
-        # I need this method because it is used in the PatientCreate views.
+        # I need this method because it is used in the PatientCreate view to return the url to go when the form used to create a patient is successfully processed.
         # Note that I have to specify the app name, otherwise it does not work. I did not understand why.
         return reverse('bptrack:patient-detail', kwargs={'pk': self.pk})
 

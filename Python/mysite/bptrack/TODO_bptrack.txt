@@ -7,11 +7,20 @@
 		From the same page I should be able to go to another page which shows a list of all BP measures for the given patient.
 		And from there I should be able to edit, add and delete a bp measure for that patient.
 
-#TODO:	In views.py, in the CreateView, why reverse_lazy works and just reverse does not work? reverse works in the tutorial app.
+#TODO:	In views.py, in the PatientCreate view, why reverse_lazy works and just reverse does not work? reverse works in the tutorial app.
 		It would be interesting to understand. Furthermore, I did not understand why I have to specify the app name in the reverse_lazy.
 		In the tutorial app was not needed.
 
-#TODO:	Try to re-implement the CreateView using a html template which is not the standard one (modelname_form.html) and using a form class.
+#TODO:	Try to re-implement the PatientCreate view using a html template which is not the standard one (modelname_form.html) and using a form class.
+
+#TODO:	In the form used by PatientCreate view, do some more work to check the form is valid and handle the errors.
+
+#TODO:	In patient_form.html everything works leaving action="" in the form.
+		But in the tutorial app there was an action specified and passed to the context.
+		I would like to understand how that worked.
+
+
+-------------------------------------------------------------------
 
 #TODO:	find a way to define labels for each field, for example in the model, so those labels can be used everywhere. For example in table headings.
 		[DONE!, I've used a package called django-etc which has a custom tag which can be used in the html templates.]

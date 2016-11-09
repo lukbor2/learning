@@ -15,9 +15,15 @@
 
 -->
 
-<!-- # TODO: In principle the action attribute in the form could be blank. Try to understand why in the tutorial app there was an action specified and passed to the context. -->
+<!--
+    In an HTML form the action attribute defines the action to be performed when the form is submitted.
+    Usually is points to a url corresponding to a web page on the server side which will process the form data.
+    If the action attribute is omitted, the action is set to the current page.
+    I believe this is why in this example I can leave the action empty; the view takes care of executing the action and re-directing to the success_url page.
+    
+     -->
 
-<form action="{{ action }}" method="POST" >
+<form action="" method="POST" >
    {% csrf_token %}
    {% if form.non_field_errors %}
       <ul>

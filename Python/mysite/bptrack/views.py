@@ -16,8 +16,6 @@ class PatientList(ListView):
     # Instead of using the standard context name object_list, I am setting my own name for clarity
     context_object_name = 'all_patients'
 
-
-
 class PatientDetail(DetailView):
     # General Note: the detail view seems to automatically expect the primary key of the model passed via the url.
     # I don't have to do anything special to filter the object corresponding to the primary key.
@@ -26,6 +24,13 @@ class PatientDetail(DetailView):
     template_name = 'bptrack_patient_detail.html'
     
     context_object_name = 'patient_detail'
+
+    #Adding home to the context which holds the link to the home page so I can use it in the html template.
+    def get_context_data(self, **kwargs):
+        context = super(PatientDetail, self).get_context_data(**kwargs)
+        context['home_page'] = reverse('bptrack:patient-list') 
+        return context
+
     
 class PatientBPMeasure(ListView):
     """
