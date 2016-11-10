@@ -1,0 +1,42 @@
+{% extends "bptrack_base.html" %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+
+<!--
+   It looks like the DeleteView has the object to delete in the context, but not a form.
+   Using object I can show more details about what is being deleted.
+-->
+<h2>Patient Delete</h2>
+<form action="" method="POST" >
+   {% csrf_token %}
+   <p>Are you sure to delete this Patient ?</p>
+	<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>{% load model_field %} {% model_field_verbose_name from object.last_name %}</th>
+					<th>{% load model_field %} {% model_field_verbose_name from object.first_name %}</th>
+					<th>{% load model_field %} {% model_field_verbose_name from object.date_of_birth %}</th>
+					<th>{% load model_field %} {% model_field_verbose_name from object.age %}</th>
+					<th>{% load model_field %} {% model_field_verbose_name from object.email %}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{ object.id }}</td>
+					<td>{{ object.last_name }}</td>
+					<td>{{ object.first_name }}</td>
+					<td>{{ object.date_of_birth}}</td>
+					<td>{{ object.age}}</td>
+					<td>{{ object.email}}</td>
+				</tr>
+			</tbody>	
+		</table>
+
+
+   <input id="delete_patient" type="submit" class="btn btn-danger" value="Confirm Delete Patient"/> 
+
+</form> 
+{% endblock %}

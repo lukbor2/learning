@@ -26,6 +26,7 @@ class PatientDetail(DetailView):
     context_object_name = 'patient_detail'
 
     #Adding home to the context which holds the link to the home page so I can use it in the html template.
+    #Instead of doing this, I could have used the url tag directly in the html template.
     def get_context_data(self, **kwargs):
         context = super(PatientDetail, self).get_context_data(**kwargs)
         context['home_page'] = reverse('bptrack:patient-list') 
@@ -73,16 +74,7 @@ class PatientCreate(CreateView):
     fields = ['first_name', 'last_name','date_of_birth', 'age', 'email']
     # template_name = 'bptrack_patient_edit.html'
     # form_class = forms.PatientForm
-
-    
-    def get_context_data(self, **kwargs):
-        context = super(PatientCreate, self).get_context_data(**kwargs)
-        
-        # Extend the context to include the url of the patient-list view.
-        context['action'] = reverse('bptrack:patient-add')
-        return context
-
-   
+       
     """
     Learning - the CreateView class has a success_url attribute which is the url used if the creation is successful.
     I had a lot of problems defining this attribute in a way which did not cause an error.
@@ -98,6 +90,17 @@ class PatientCreate(CreateView):
     success_url = '/bptrack'
    
     """
+
+class PatientDelete(DeleteView):
+    """
+    Things learn about the DeleveView:
+    - the class has the object in the context, but not a form .
+    - unless specified via template_name attribute, the class is using a default template called modelname_confirm_delete.hmtl (in this case patient_confirm_delete.html).
+      The template must be stored in a folder named appname/templates/appname (in this case bptrack/templates/bptrack).
+
+    """
+    model = Patient
+    success_url = reverse_lazy('bptrack:patient-list')
 
 def debug(request):
     pass
