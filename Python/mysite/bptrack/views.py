@@ -1,13 +1,12 @@
-from django.shortcuts import render, get_object_or_404
-from django.http.response import HttpResponse, HttpResponseRedirect
+from django.shortcuts import get_object_or_404
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.core.urlresolvers import reverse, reverse_lazy
 
 from bptrack.models import Patient, BP_Measure
 # from . import forms
 
-from django.core.urlresolvers import reverse, reverse_lazy
 
 class PatientList(ListView):
     model = Patient
@@ -104,4 +103,19 @@ class PatientDelete(DeleteView):
 
 def debug(request):
     pass
+
+class PatientUpdate(UpdateView):
+    """
+    The logic of the UpdateView is very similar to the one of the Create View.
+    It needs the model and the fields to be used.
+    By default it uses the same template as the CreateView (i.e. modelname_form.hmtl, in this case patient_form.html, and
+    the template must be located in folder appname/templates/appname, in this case bptrack/templates/bptrack).
+    By default the success url is the get_absolute_url of the model.
+    I have defined that in the Patient so it works.
+
+    """
+
+
+    model = Patient
+    fields = ['first_name', 'last_name','date_of_birth', 'age', 'email']
 

@@ -36,7 +36,9 @@
 		</table>
 
 
-   <input id="delete_patient" type="submit" class="btn btn-danger" value="Confirm Delete Patient"/> 
+   <input id="delete_patient" type="submit" class="btn btn-danger" value="Confirm Delete Patient"/>
+   {% url 'bptrack:patient-list' as back_to_home %} 
+   <a href="{{ back_to_home }}" role="button" class="btn btn-info">Back to Patient List</a>
 
 </form> 
 {% endblock %}

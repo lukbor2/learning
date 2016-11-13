@@ -1,7 +1,4 @@
-﻿{% extends "bptrack_base.html" %}
-{% load widget_tweaks %}
-
-{% block content %}
+﻿{% extends "bptrack_base.html" %} {% load widget_tweaks %} {% block content %}
 
 <!-- 
 
@@ -23,35 +20,22 @@
     
      -->
 
-<form action="" method="POST" >
-   {% csrf_token %}
-   {% if form.non_field_errors %}
-      <ul>
-         {% for error in form.non_field_errors %}
-            <li> {{ error }} </li>
-         {% endfor %}
-         
-         
-      </ul>
-   {% endif %}
+<form action="" method="POST">
+    {% csrf_token %} {% if form.non_field_errors %}
+    <ul>
+        {% for error in form.non_field_errors %}
+        <li> {{ error }} </li>
+        {% endfor %}
 
-   {% for field in form %}
-      <div class="form-group">
-         {{field.label_tag}}
-           {{field|add_class:"form-control"}}
-      </div>
-   {% endfor %}
-   <input id="save_patient" type="submit" class="btn btn-primary" value="Save Patient"/> 
 
-<!--
-# TODO: check wheter I can/need to use this code.
- 
-{% if patient.id %}
-   <a href="{% url "contacts-delete" pk=contact.id %}" role="button" class="btn btn-danger">Delete</a>
-   {% endif %}
--->   
-
-</form> 
+    </ul>
+    {% endif %} {% for field in form %}
+    <div class="form-group">
+        {{field.label_tag}} {{field|add_class:"form-control"}}
+    </div>
+    {% endfor %}
+    <input id="save_patient" type="submit" class="btn btn-primary" value="Save Patient" />
+</form>
 <div>
 </div>
 {% endblock %}
