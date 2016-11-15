@@ -1,4 +1,10 @@
-#TODO:	Create a form and use it in the PatientCreate view.
+#TODO:	Write a second version of the views which create and update a patient, based on a Model Form to learn how these forms work.
+		My understanding is I have to do this:
+		1) Create a forms.py module and in this module create a form based on the ModelForm class.
+		2) Create a second version of PatientCreate / PatientUpdate views setting the form_class attibute so it points to the form I created in step 1) .
+		3) In the ModelForm class built in step 1), override the method clean_<fieldname> to build some custom validation (this is the main reason why we would use a ModelForm).
+		4) Test the validation rule(s) and properly display the error messages to the end user.
+
 
 #TODO:	Look at the TODOs in each file.
 
