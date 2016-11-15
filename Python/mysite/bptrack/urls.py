@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^patient_add/$', views.PatientCreate.as_view(), name = 'patient-add'),
     url(r'^patient_delete/(?P<pk>[0-9]+)$', views.PatientDelete.as_view(), name = 'patient-delete'),
     url(r'^patient_update/(?P<pk>[0-9]+)$', views.PatientUpdate.as_view(), name = 'patient-update'),
+    url(r'^patient_add2/$', views.PatientCreate_v2.as_view(), name = 'patient-add2'),
 ]
 
 if settings.DEBUG:

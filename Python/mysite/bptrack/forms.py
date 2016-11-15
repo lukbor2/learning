@@ -19,5 +19,5 @@ class PatientForm(ModelForm):
          """
         data = self.cleaned_data['last_name'] #Remember that cleaned_data is a dictionary and returns a Python object, not the string which was entered in the form.
         if "Borghi" not in data:
-            raise forms.ValidationError("Patient must be a Borghi") #Stupid validation, just to try something....
+            raise ValidationError("Patient must be a Borghi") #Stupid validation, just to try something....
         return data
