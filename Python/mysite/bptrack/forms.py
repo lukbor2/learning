@@ -18,6 +18,6 @@ class PatientForm(ModelForm):
         The method shall always return the field's data whether it's correct or not.
          """
         data = self.cleaned_data['last_name'] #Remember that cleaned_data is a dictionary and returns a Python object, not the string which was entered in the form.
-        if "Borghi" not in data:
-            raise ValidationError("Patient must be a Borghi") #Stupid validation, just to try something....
+        if "Borghi" != data:
+            raise ValidationError('Patient must be a Borghi') #Stupid validation, just to try something....
         return data

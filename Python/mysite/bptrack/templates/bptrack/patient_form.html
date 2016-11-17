@@ -22,17 +22,20 @@
 
 <form action="" method="POST">
     {% csrf_token %}
-    {% if form.errors %}
-    <!-- Accessing the .errors method triggers the form validation and returns the errors; including the custom validation like the one I built. -->
-    <ul>
-        {% for field in form.errors %}
-        <li> {{ field.errors }} </li>
-        {% endfor %}
-    </ul>
-    {% endif %}
+    <!-- Accessing the .errors method triggers the form validation, including the custom validation like the one I built.
+         Note that errros is a list associated with each field. So accessing the errors while I loop through the fields makes sense.
+         Furthermore, in this way I can display the error message close to the field itself.    
+    -->
     {% for field in form %}
     <div class="form-group">
         {{field.label_tag}} {{field|add_class:"form-control"}}
+        {% if field.errors %}
+            {% for error in field.errors %}
+                <ul>
+                    <li style="color: red"><h6><em> {{ error }} </em></h6> </li>
+                </ul>
+            {% endfor %}
+        {% endif %}
     </div>
     {% endfor %}
     <input id="save_patient" type="submit" class="btn btn-primary" value="Save Patient" />
