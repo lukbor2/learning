@@ -135,3 +135,6 @@ class PatientCreate_v2(CreateView):
 
     #TODO: understand how to trigger and use the validation of the form in these class based views.
     #I think I have to call the is_valid method or access form.errors, but then what do I do after that?
+    
+    def form_invalid(self, form):
+        return super().form_invalid(form)

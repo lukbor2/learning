@@ -22,10 +22,11 @@
 
 <form action="" method="POST">
     {% csrf_token %}
-    {% if form.non_field_errors %}
+    {% if form.errors %}
+    <!-- Accessing the .errors method triggers the form validation and returns the errors; including the custom validation like the one I built. -->
     <ul>
-        {% for error in form.non_field_errors %}
-        <li> {{ error }} </li>
+        {% for field in form.errors %}
+        <li> {{ field.errors }} </li>
         {% endfor %}
     </ul>
     {% endif %}
