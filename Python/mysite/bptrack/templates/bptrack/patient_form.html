@@ -1,7 +1,23 @@
+<<<<<<< HEAD
 ﻿{% extends "bptrack_base.html" %}
 {% load widget_tweaks %}
 
 {% block content %}
+=======
+﻿{% extends "bptrack_base.html" %} {% load widget_tweaks %} {% block content %}
+<h2>Add or Change Patient</h2>
+<!-- 
+
+# TODO: check wheter I can/need to use this code.
+
+{% if contact.id  %}
+<h1>Edit Contact</h1>
+{% else %}
+<h1>Add Contact</h1>
+{% endif %}
+
+-->
+>>>>>>> 04b65aba50c3348efe6405ce7e85060df8f4171a
 
 <!--
     In an HTML form the action attribute defines the action to be performed when the form is submitted.
@@ -13,6 +29,7 @@
 
 <form action="" method="POST">
     {% csrf_token %}
+<<<<<<< HEAD
     {% if form.non_field_errors %}
       <ul>
         {% for error in form.non_field_errors %}
@@ -28,4 +45,25 @@
     {% endfor %}
     <input id="save_patient" type="submit" class="btn btn-primary" value="Save Patient" />
 </form>
+=======
+    <!-- Accessing the .errors method triggers the form validation, including the custom validation like the one I built.
+         Note that errros is a list associated with each field. So accessing the errors while I loop through the fields makes sense.
+         Furthermore, in this way I can display the error message close to the field itself.    
+    -->
+    {% for field in form %}
+    <div class="form-group">
+        {{field.label_tag}} {{field|add_class:"form-control"}}
+        {% if field.errors %}
+            {% for error in field.errors %}
+                <ul>
+                    <li style="color: red"><h6><em> {{ error }} </em></h6> </li>
+                </ul>
+            {% endfor %}
+        {% endif %}
+    </div>
+    {% endfor %}
+    <input id="save_patient" type="submit" class="btn btn-primary" value="Save Patient" />
+</form>
+
+>>>>>>> 04b65aba50c3348efe6405ce7e85060df8f4171a
 {% endblock %}

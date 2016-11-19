@@ -5,7 +5,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse, reverse_lazy
 
 from bptrack.models import Patient, BP_Measure
-# from . import forms
+from . import forms
 
 
 class PatientList(ListView):
@@ -119,3 +119,20 @@ class PatientUpdate(UpdateView):
     model = Patient
     fields = ['first_name', 'last_name','date_of_birth', 'age', 'email']
 
+class PatientCreate_v2(CreateView):
+    """
+    v2 of the PatientCreate view.
+    In this version I am using a ModelForm which performs some custom validation.
+    """
+    model = Patient
+    
+    # As I am using the forom_class, fields must NOT be specified.
+    #fields = ['first_name', 'last_name','date_of_birth', 'age', 'email']
+    
+    # template_name = 'bptrack_patient_edit.html'
+    
+    form_class = forms.PatientForm
+
+    #TODO: understand how to trigger and use the validation of the form in these class based views.
+    #Check if / how to use the form_valid method.
+    
