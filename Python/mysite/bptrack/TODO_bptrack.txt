@@ -1,10 +1,11 @@
 
 #TODO:	Look at the TODOs in each file.
 
-#TODO:	Page with a list of all patients. From there edit, add and delete a patient.
-		Try to have one command per each patient (i.e. a link to edit, a link to delete) and commands who act on multiple selected records.
-		I should also have a search box to search for patients.
-		From the same page I should be able to go to another page which shows a list of all BP measures for the given patient.
+#TODO:	Implement a Delete command which acts on multiple selected records.
+
+#TODO:	Implement a search box to search for patients.
+
+#TODO:	For a selected patient (or via a link) go to another page which shows a list of all BP measures for the given patient.
 		And from there I should be able to edit, add and delete a bp measure for that patient.
 
 #TODO:	In views.py, in the PatientCreate view, why reverse_lazy works and just reverse does not work? reverse works in the tutorial app.
@@ -18,7 +19,6 @@
 #TODO:	In patient_form.html everything works leaving action="" in the form.
 		But in the tutorial app there was an action specified and passed to the context.
 		I would like to understand how that worked.
-
 
 -------------------------------------------------------------------
 
