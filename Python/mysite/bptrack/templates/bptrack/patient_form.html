@@ -1,16 +1,7 @@
-﻿{% extends "bptrack_base.html" %} {% load widget_tweaks %} {% block content %}
+﻿{% extends "bptrack_base.html" %}
+{% load widget_tweaks %}
 
-<!-- 
-
-# TODO: check wheter I can/need to use this code.
-
-{% if contact.id  %}
-<h1>Edit Contact</h1>
-{% else %}
-<h1>Add Contact</h1>
-{% endif %}
-
--->
+{% block content %}
 
 <!--
     In an HTML form the action attribute defines the action to be performed when the form is submitted.
@@ -21,21 +12,20 @@
      -->
 
 <form action="" method="POST">
-    {% csrf_token %} {% if form.non_field_errors %}
-    <ul>
+    {% csrf_token %}
+    {% if form.non_field_errors %}
+      <ul>
         {% for error in form.non_field_errors %}
-        <li> {{ error }} </li>
+          <li> {{ error }} </li>
         {% endfor %}
-
-
-    </ul>
-    {% endif %} {% for field in form %}
-    <div class="form-group">
-        {{field.label_tag}} {{field|add_class:"form-control"}}
-    </div>
+      </ul>
+    {% endif %}
+    
+    {% for field in form %}
+      <div class="form-group">
+          {{field.label_tag}} {{field|add_class:"form-control"}}
+       </div>
     {% endfor %}
     <input id="save_patient" type="submit" class="btn btn-primary" value="Save Patient" />
 </form>
-<div>
-</div>
 {% endblock %}

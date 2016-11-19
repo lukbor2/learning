@@ -1,9 +1,9 @@
-#TODO:	Create a form and use it in the PatientCreate view.
 
 #TODO:	Look at the TODOs in each file.
 
 #TODO:	Page with a list of all patients. From there edit, add and delete a patient.
 		Try to have one command per each patient (i.e. a link to edit, a link to delete) and commands who act on multiple selected records.
+		I should also have a search box to search for patients.
 		From the same page I should be able to go to another page which shows a list of all BP measures for the given patient.
 		And from there I should be able to edit, add and delete a bp measure for that patient.
 
@@ -26,6 +26,5 @@
 		[DONE!, I've used a package called django-etc which has a custom tag which can be used in the html templates.]
 #TODO:	Use bootstrap to add some styling in a quick way.
 		[DONE!, I've added bootstrap to a base template which I import in all other templates.]
-
 
 
