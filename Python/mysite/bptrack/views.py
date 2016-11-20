@@ -70,7 +70,7 @@ class PatientCreate(CreateView):
     """
 
     model = Patient
-    fields = ['first_name', 'last_name','date_of_birth', 'age', 'email']
+    fields = ['first_name', 'last_name','date_of_birth', 'email'] # I don't need the age field because it will be calculated.
     # template_name = 'bptrack_patient_edit.html'
     # form_class = forms.PatientForm
        
@@ -117,7 +117,7 @@ class PatientUpdate(UpdateView):
 
 
     model = Patient
-    fields = ['first_name', 'last_name','date_of_birth', 'age', 'email']
+    fields = ['first_name', 'last_name','date_of_birth','email'] # I don't need the age field because it will be calculated.
 
 class PatientCreate_v2(CreateView):
     """
@@ -135,4 +135,28 @@ class PatientCreate_v2(CreateView):
 
     #TODO: understand how to trigger and use the validation of the form in these class based views.
     #Check if / how to use the form_valid method.
-    
+
+class PatientListSearch(ListView):
+    model = Patient
+    template_name = 'bptrack_PatientSearch.html'
+
+    """
+    In order to access the request.GET I need to use self. But self can be used only inside a method.
+    In this case the method is queryset, which works well because it is the method where I filter the objects to display.
+
+    """
+
+    def queryset(self):
+        errors = []
+        # q is the name given to the search parameter. When the search page is loaded for the first time with url /search
+        # there is no parameter, therefore I just return all the patients.
+
+        if 'q' in self.request.GET:
+            q = self.request.GET['q']
+            if not q:
+                errors.append('Enter a search term.')
+                return Patient.objects.all()
+            else:
+                return Patient.objects.filter(last_name__icontains=q)
+        else:
+            return Patient.objects.all()

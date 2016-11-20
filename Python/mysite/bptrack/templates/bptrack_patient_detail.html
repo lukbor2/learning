@@ -29,12 +29,14 @@ I just use the context name and the field. This is how the custom tag works.
 					<td>{{ patient_detail.last_name }}</td>
 					<td>{{ patient_detail.first_name }}</td>
 					<td>{{ patient_detail.date_of_birth}}</td>
-					<td>{{ patient_detail.age}}</td>
+					<td>{{ patient_detail.calculate_age}}</td>
 					<td>{{ patient_detail.email}}</td>
 				</tr>
 			</tbody>	
 		</table>
 
+
+  {% url 'bptrack:patient-list' as home_page %}
   <a href="{{ home_page }}" role="button" class="btn btn-info">Back to Home Page</a>
 
   {% url 'bptrack:patient-update'  patient_detail.id as url_to_update %}
