@@ -3,8 +3,6 @@
 
 #TODO:	Implement a Delete command which acts on multiple selected records.
 
-#TODO:	calculate the age of a patient and save it in the database.
-
 #TODO:	For a selected patient (or via a link) go to another page which shows a list of all BP measures for the given patient.
 		And from there I should be able to edit, add and delete a bp measure for that patient.
 
@@ -35,3 +33,5 @@
 		4) Test the validation rule(s) and properly display the error messages to the end user.
 
 #TODO:	[DONE!] Implement a search box to search for patients.
+
+#TODO:	[DONE!] Calculate the age of a patient and save it in the database.
