@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- I am using bootstrap as a tool for basic styling.
+
+<head>
+    <!-- I am using bootstrap as a tool for basic styling.
             Having the reference to bootstrap here in the basic template allows me to use it everywhere else, but the reference is just in one place.
             -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-        <title>
-        	{% block title %} {% endblock%}
-        </title>
-        
-    </head>
-    
-    <body>
-        <div class="container">
-            <div class="row" style="display: table; width: 100%">
-                <div class="col-md-6" style="display: table-cell; vertical-align: middle">{% block title_1 %}{% endblock %}</div>
-                <div class="" style="display: table-cell; vertical-align: middle; text-align: right">{% block right_title_1 %}{% endblock %} {% block right_title_2 %}{% endblock %} </div>
-            </div>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <title>
+        {% block title %} {% endblock%}
+    </title>
 
-            <div class="row" style="display: table; width: 100%">
-                <div class="col-md-6" style="display: table-cell; vertical-align: middle; padding: 10px 10px">{% block search %}{% endblock %}</div>
-            </div>
-        {% block content %}
-        {% endblock %}
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" style="display: table; width: 100%">
+            <div class="col-md-6" style="display: table-cell; vertical-align: middle">{% block title_1 %}{% endblock %}</div>
+            <div class="" style="display: table-cell; vertical-align: middle; text-align: right">{% block right_title_1 %}{% endblock %} {% block right_title_2 %}{% endblock %} </div>
         </div>
-    </body>
+
+        <div class="row" style="display: table; width: 100%">
+            <div class="col-md-6" style="display: table-cell; vertical-align: middle; padding: 10px 10px">{% block search %}{% endblock %}</div>
+        </div>
+        {% block content %} {% endblock %}
+    </div>
+</body>
+
 </html>
