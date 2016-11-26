@@ -4,42 +4,35 @@ Note that  I have to use the context name (e.g. patient_detail) and I don't have
 I just use the context name and the field. This is how the custom tag works.
  -->
 
-{% extends "bptrack_base.html" %}
-
-{% block title %}
-	BP Track Patient Detail 
-{% endblock %}
-
-{% block content %}
+{% extends "bptrack_base.html" %} {% block title %} BP Track Patient Detail {% endblock %} {% block breadcrumb %}
+<li><a href="{% url 'bptrack:patient-list' %}">Home</a></li>
+<li class="active">Patient Detail</li>
+{% endblock %} {% block content %}
 <h2>Details for {{ patient_detail.first_name }} {{ patient_detail.last_name }}</h2>
-	<table class="table table-bordered">
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>{% load model_field %} {% model_field_verbose_name from patient_detail.last_name %}</th>
-					<th>{% load model_field %} {% model_field_verbose_name from patient_detail.first_name %}</th>
-					<th>{% load model_field %} {% model_field_verbose_name from patient_detail.date_of_birth %}</th>
-					<th>{% load model_field %} {% model_field_verbose_name from patient_detail.age %}</th>
-					<th>{% load model_field %} {% model_field_verbose_name from patient_detail.email %}</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>{{ patient_detail.id }}</td>
-					<td>{{ patient_detail.last_name }}</td>
-					<td>{{ patient_detail.first_name }}</td>
-					<td>{{ patient_detail.date_of_birth}}</td>
-					<td>{{ patient_detail.calculate_age}}</td>
-					<td>{{ patient_detail.email}}</td>
-				</tr>
-			</tbody>	
-		</table>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>{% load model_field %} {% model_field_verbose_name from patient_detail.last_name %}</th>
+            <th>{% load model_field %} {% model_field_verbose_name from patient_detail.first_name %}</th>
+            <th>{% load model_field %} {% model_field_verbose_name from patient_detail.date_of_birth %}</th>
+            <th>{% load model_field %} {% model_field_verbose_name from patient_detail.age %}</th>
+            <th>{% load model_field %} {% model_field_verbose_name from patient_detail.email %}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ patient_detail.id }}</td>
+            <td>{{ patient_detail.last_name }}</td>
+            <td>{{ patient_detail.first_name }}</td>
+            <td>{{ patient_detail.date_of_birth}}</td>
+            <td>{{ patient_detail.calculate_age}}</td>
+            <td>{{ patient_detail.email}}</td>
+        </tr>
+    </tbody>
+</table>
 
 
-  {% url 'bptrack:patient-list' as home_page %}
-  <a href="{{ home_page }}" role="button" class="btn btn-info">Back to Home Page</a>
-
-  {% url 'bptrack:patient-update'  patient_detail.id as url_to_update %}
-  <a href="{{ url_to_update }}" role="button" class="btn btn-primary">Edit Patient Details</a>
-
-{% endblock %}
+{% url 'bptrack:patient-list' as home_page %}
+<a href="{{ home_page }}" role="button" class="btn btn-info">Back to Home Page</a> {% url 'bptrack:patient-update' patient_detail.id as url_to_update %}
+<a href="{{ url_to_update }}" role="button" class="btn btn-primary">Edit Patient Details</a> {% endblock %}

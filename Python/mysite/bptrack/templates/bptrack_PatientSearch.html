@@ -5,7 +5,8 @@ I just use the context name and the field.
  -->
 
 
-{% extends "bptrack_base.html" %} {% block title %} BP Track Search {% endblock %} {% block title_1 %}
+{% extends "bptrack_base.html" %} {% block title %} BP Track Search {% endblock %} {% block breadcrumb %}
+<li><a href="{% url 'bptrack:patient-list' %}">Home</a></li> {% endblock %} {% block title_1 %}
 <h2>Patients</h2>
 {% endblock %} {% block right_title_1 %} {% url 'bptrack:patient-add' as url_to_add %}
 <a href="{{ url_to_add }}" role="button" class="btn btn-success">Add New Patient</a> {% endblock %} {% block right_title_2 %} {% url 'bptrack:patient-add2' as url_to_add2 %}
@@ -26,9 +27,9 @@ I just use the context name and the field.
             <th>{% load model_field %} {% model_field_verbose_name from object_list.age %}</th>
             <th>{% load model_field %} {% model_field_verbose_name from object_list.email %}</th>
             <th>Calculated Age</th>
-            <th>Patient Details</th>
-            <th>Patient Edit</th>
-            <th>Patient Delete</th>
+            <th></th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -43,12 +44,12 @@ I just use the context name and the field.
             <td>{{ patient.calculate_age}}</td>
             {% url 'bptrack:patient-detail' patient.id as url_to_details %}
             <!-- Here I am building the url to the patient-detail view for the patient in each row. I don't need any logic in the view, I use the url tag here in the template. -->
-            <td><a href="{{ url_to_details }}">Details</a></td>
+            <td align="middle"><a href="{{ url_to_details }}" title="Details"><span class="glyphicon glyphicon-zoom-in"></span></a></td>
             {% url 'bptrack:patient-update' patient.id as url_to_update %}
-            <td><a href="{{ url_to_update }}">Edit</a></td>
+            <td align="middle"><a href="{{ url_to_update }}" title="Edit"><span class="glyphicon glyphicon-edit"></span></a></td>
             {% url 'bptrack:patient-delete' patient.id as url_to_delete %}
             <!-- Here I am building the url to the patient-delete view for the patient in each row. I don't need any logic in the view, I use the url tag here in the template. -->
-            <td><a href="{{ url_to_delete }}">Delete</a></td>
+            <td align="middle"><a href="{{ url_to_delete }}" title="Delete"><span class="glyphicon glyphicon-trash"></span> </a></td>
         </tr>
         {% endfor %}
     </tbody>
