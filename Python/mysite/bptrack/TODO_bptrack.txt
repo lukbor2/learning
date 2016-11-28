@@ -1,7 +1,17 @@
 
-#TODO:	Look at the TODOs in each file.
+#TODO:	Write down learnings and "how-to" in a document.
 
 #TODO:	Implement a Delete command which acts on multiple selected records.
+
+		Here (http://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp) there are info about how to build a dropdown with Bootstrap.
+		Here (http://www.w3schools.com/bootstrap/bootstrap_forms_inputs.asp) there are info about how to build checkboxes with Bootstrap.
+		With the url in the dropdown I can call a view which deletes the records selected with the checkboxes.
+		But I still don't know how to pass the selected records to the view.
+		Links to check:
+		https://www.djangorocks.com/snippets/deleting-multiple-rows-from-your-database.html
+		http://python.6.x6.nabble.com/Checkboxes-for-a-list-of-items-like-in-Django-admin-interface-td3142240.html
+		http://stackoverflow.com/questions/1975179/creating-django-admin-like-actions-for-non-admin-front-end-users-how-to
+
 
 #TODO:	For a selected patient (or via a link) go to another page which shows a list of all BP measures for the given patient.
 		And from there I should be able to edit, add and delete a bp measure for that patient.
@@ -17,6 +27,8 @@
 #TODO:	In patient_form.html everything works leaving action="" in the form.
 		But in the tutorial app there was an action specified and passed to the context.
 		I would like to understand how that worked.
+
+#TODO:	Check that when a patient is deleted, all the measures related to that patient are deleted too.
 
 -------------------------------------------------------------------
 

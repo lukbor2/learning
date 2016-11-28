@@ -11,9 +11,11 @@ I just use the context name and the field.
 {% endblock %} {% block right_title_1 %} {% url 'bptrack:patient-add' as url_to_add %}
 <a href="{{ url_to_add }}" role="button" class="btn btn-success">Add New Patient</a> {% endblock %} {% block right_title_2 %} {% url 'bptrack:patient-add2' as url_to_add2 %}
 <a href="{{ url_to_add2 }}" role="button" class="btn btn-success">Add New Patient v2</a> {% endblock %} {% block search %}
-<form action="" method="get">
-    <input type="text" name="q">
-    <input type="submit" value="Last Name Search">
+<form class="form-inline" action="" method="get">
+    <div class="form-group">
+        <input type="text" class="form-control" name="q">
+    </div>
+        <input type="submit" value="Last Name Search" class="btn btn-primary">
 </form>
 {% endblock %} {% block content %}
 
