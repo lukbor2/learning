@@ -1,0 +1,21 @@
+{% extends "bptrack_base.html" %}
+
+{% block title %}
+	BP Track Patient Measures 
+{% endblock %}
+
+{% block content %}
+	<!-- Note how I use patient which was added in the view to the context.
+	patient is not just the foreign key, it is the entire object, so I can access its attributes  -->
+	 
+	<h2>Details for {{ patient.first_name }} {{ patient.last_name }} </h2>
+
+{% for measure in patient_measure %}
+	<ul>
+		<li> {{ measure }}
+	</ul>
+
+
+{% endfor %}
+	
+{% endblock %}

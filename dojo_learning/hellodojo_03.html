@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <!-- load Dojo -->
+    <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"
+            data-dojo-config="async: true"></script>
+    <title>Tutorial: Hello Dojo! Number 3</title>
+</head>
+<body>
+    <h1 id="greeting">Hello</h1>
+    <script>
+        require([
+            'dojo/dom',
+            'dojo/fx',
+            'dojo/domReady!'
+        ], function (dom, fx) {
+            var greeting = dom.byId('greeting');
+            greeting.innerHTML += ' from Dojo Again!';
+
+            // Adding an animation
+
+            fx.slideTo({
+                node: greeting,
+                top: 100,
+                left: 200
+            }).play();
+        });
+    </script>
+</body>
+</html>
