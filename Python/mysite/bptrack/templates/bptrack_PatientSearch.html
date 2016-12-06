@@ -3,7 +3,9 @@ So those headers are always controlled by what I have in the model.
 Note that  I have to use the context name (object_list) and I don't have to select the first object of the context.
 I just use the context name and the field.
  -->
-{% extends "bptrack_base.html" %} {% block title %} BP Track Search {% endblock %} {% block breadcrumb %}
+{% extends "bptrack_base.html" %}
+{% block title %} BP Track Search {% endblock %}
+{% block breadcrumb %}
 <li><a href="{% url 'bptrack:patient-list' %}">Home</a></li>
 {% endblock %} {% block title_1 %}
 <h2>Patients</h2>
