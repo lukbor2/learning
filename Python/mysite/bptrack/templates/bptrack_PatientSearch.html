@@ -3,10 +3,9 @@ So those headers are always controlled by what I have in the model.
 Note that  I have to use the context name (object_list) and I don't have to select the first object of the context.
 I just use the context name and the field.
  -->
-
-
 {% extends "bptrack_base.html" %} {% block title %} BP Track Search {% endblock %} {% block breadcrumb %}
-<li><a href="{% url 'bptrack:patient-list' %}">Home</a></li> {% endblock %} {% block title_1 %}
+<li><a href="{% url 'bptrack:patient-list' %}">Home</a></li>
+{% endblock %} {% block title_1 %}
 <h2>Patients</h2>
 {% endblock %} {% block right_title_1 %} {% url 'bptrack:patient-add' as url_to_add %}
 <a href="{{ url_to_add }}" role="button" class="btn btn-success">Add New Patient</a> {% endblock %} {% block right_title_2 %} {% url 'bptrack:patient-add2' as url_to_add2 %}
@@ -15,22 +14,18 @@ I just use the context name and the field.
     <div class="form-group">
         <input type="text" class="form-control" name="q">
     </div>
-        <input type="submit" value="Last Name Search" class="btn btn-primary">
+    <input type="submit" value="Last Name Search" class="btn btn-primary">
 </form>
-{% endblock %}
-{% block actions %}
-    <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Action
+{% endblock %} {% block actions %}
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Action
         <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-            <li><a href="#">Delete Selected</a></li> <!-- Remove # and link to right view -->
-        </ul>
-    </div>
-
-{% endblock %}
-
-{% block content %}
-
+    <ul class="dropdown-menu">
+        <li><a href="#">Delete Selected</a></li>
+        <!-- Remove # and link to right view -->
+    </ul>
+</div>
+{% endblock %} {% block content %}
 <table class="table table-striped table-bordered">
     <thead>
         <tr>
