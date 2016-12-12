@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^patient_delete/(?P<pk>[0-9]+)$', views.PatientDelete.as_view(), name = 'patient-delete'),
     url(r'^patient_update/(?P<pk>[0-9]+)$', views.PatientUpdate.as_view(), name = 'patient-update'),
     url(r'^patient_add2/$', views.PatientCreate_v2.as_view(), name = 'patient-add2'),
+    url(r'^patient_selected_delete/$', views.SelectedPatientDelete.as_view(), name = 'selected-patient-delete'),
     url(r'^old_home/$', views.PatientList.as_view(), name = 'patient-list-old'),
 ]
 
