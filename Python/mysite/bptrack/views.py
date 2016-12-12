@@ -162,6 +162,9 @@ class PatientListSearch(ListView):
         else:
             return Patient.objects.all()
 
+    def post(self, request):
+        return HttpResponse('Hi, from PatientListSearch View!! This is POST method')
+
 class SelectedPatientDelete(View):
     """
     Problems so far. The views is called as expected, but the get method, not the post, is used.

@@ -14,7 +14,7 @@
 
     <!--
     The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
-    The initial-scale=1 part sets the initial zoom level when the page is first loaded by the browser. 
+    The initial-scale=1 part sets the initial zoom level when the page is first loaded by the browser.
     -->
 
     <title>
@@ -35,9 +35,10 @@
 
         <div class="row" style="display: table; width: 100%">
             <div class="col-md-6" style="display: table-cell; vertical-align: middle; padding: 10px 10px">{% block search %}{% endblock %}</div>
-            <div class="" style="display: table-cell; vertical-align: middle; text-align: right">{% block actions %}{% endblock %} </div>
         </div>
-        {% block content %} {% endblock %}
+        {% block content %}
+            <div class="" style="display: table-cell; vertical-align: middle; text-align: right">{% block actions %}{% endblock %} </div>
+        {% endblock %}
     </div>
 </body>
 
