@@ -3,94 +3,78 @@ So those headers are always controlled by what I have in the model.
 Note that  I have to use the context name (object_list) and I don't have to select the first object of the context.
 I just use the context name and the field.
  -->
-{% extends "bptrack_base.html" %}
-{% block title %} BP Track Search {% endblock %}
-{% block breadcrumb %}
+{% extends "bptrack_base.html" %} {% block title %} BP Track Search {% endblock %} {% block breadcrumb %}
 <li><a href="{% url 'bptrack:patient-list' %}">Home</a></li>
-{% endblock %}
-
-{% block title_1 %}
+{% endblock %} {% block title_1 %}
 <h2>Patients</h2>
-{% endblock %}
-
-{% block right_title_1 %}
-{% url 'bptrack:patient-add' as url_to_add %}
-<a href="{{ url_to_add }}" role="button" class="btn btn-success">Add New Patient</a>
-{% endblock %}
-{% block right_title_2 %}
-{% url 'bptrack:patient-add2' as url_to_add2 %}
-<a href="{{ url_to_add2 }}" role="button" class="btn btn-success">Add New Patient v2</a>
-{% endblock %}
-
-{% block search %}
+{% endblock %} {% block right_title_1 %} {% url 'bptrack:patient-add' as url_to_add %}
+<a href="{{ url_to_add }}" role="button" class="btn btn-success">Add New Patient</a> {% endblock %} {% block right_title_2 %} {% url 'bptrack:patient-add2' as url_to_add2 %}
+<a href="{{ url_to_add2 }}" role="button" class="btn btn-success">Add New Patient v2</a> {% endblock %} {% block search %}
 <form class="form-inline" action="" method="get">
-  <div class="form-group">
-    <input type="text" class="form-control" name="q">
-  </div>
-  <input type="submit" value="Last Name Search" class="btn btn-primary">
+    <div class="form-group">
+        <input type="text" class="form-control" name="q">
+    </div>
+    <input type="submit" value="Last Name Search" class="btn btn-primary">
 </form>
-{% endblock %}
-
-
-
-{% block content %}
+{% endblock %} {% block content %}
 <form class="" action="" method="post">
-   {% csrf_token %}
-  {% block actions %}
-  <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="" data-toggle="dropdown">Action
+    {% csrf_token %} {% block actions %}
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="" data-toggle="dropdown">Action
           <span class="caret"></span></button>
-          <ul class="dropdown-menu">
+        <ul class="dropdown-menu">
             {% url 'bptrack:selected-patient-delete' as url_delete_selected %}
-              <li><button type="submit" class="btn btn-link" name="Action" value="DeleteSelected">Delete Selected</button></li>
-    <!--
+            <li><button type="submit" class="btn btn-link" name="Action" value="DeleteSelected">Delete Selected</button></li>
+            <!--
     For what I read, it is not possible to use a DeleteView because it expects one record only. Therefore I have to build my own view.
     I had to include the actions within a form because I want to call the html POST method and it seems the only way to do it is within a form.
     Because the form has action="" it means the same view displaying the home page will be invoked and I have to implement the post method in that view.
     -->
         </ul>
-  </div>
-{% endblock %}
-<table class="table table-striped table-bordered">
-  <thead>
-    <tr>
-      <th></th>
-      <th>ID</th>
-      <th>{% load model_field %} {% model_field_verbose_name from object_list.last_name %}</th>
-      <th>{% load model_field %} {% model_field_verbose_name from object_list.first_name %}</th>
-      <th>{% load model_field %} {% model_field_verbose_name from object_list.date_of_birth %}</th>
-      <th>{% load model_field %} {% model_field_verbose_name from object_list.age %}</th>
-      <th>{% load model_field %} {% model_field_verbose_name from object_list.email %}</th>
-      <th>Calculated Age</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for patient in object_list %}
-    <tr>
-      <td><div class="checkbox"> <label><input type="checkbox" value="" name="selected_for_action"></label> </div></td>
-      <td>{{ patient.id }}</td>
-      <td>{{ patient.last_name }}</td>
-      <td>{{ patient.first_name }}</td>
-      <td>{{ patient.date_of_birth}}</td>
-      <td>{{ patient.age}}</td>
-      <td>{{ patient.email}}</td>
-      <td>{{ patient.calculate_age}}</td>
-      {% url 'bptrack:patient-detail' patient.id as url_to_details %}
-      <!-- Here I am building the url to the patient-detail view for the patient in each row. I don't need any logic in the view, I use the url tag here in the template. -->
-      <td align="middle"><a href="{{ url_to_details }}" title="Details"><span class="glyphicon glyphicon-zoom-in"></span></a></td>
-      {% url 'bptrack:patient-update' patient.id as url_to_update %}
-      <td align="middle"><a href="{{ url_to_update }}" title="Edit"><span class="glyphicon glyphicon-edit"></span></a></td>
-      {% url 'bptrack:patient-delete' patient.id as url_to_delete %}
-      <!-- Here I am building the url to the patient-delete view for the patient in each row. I don't need any logic in the view, I use the url tag here in the template. -->
-      <td align="middle"><a href="{{ url_to_delete }}" title="Delete"><span class="glyphicon glyphicon-trash"></span> </a></td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-{% url 'bptrack:patient-list' as url_back_to_search %}
-<a href="{{ url_back_to_search }}">Reset Search</a>
+    </div>
+    {% endblock %}
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th></th>
+                <th>ID</th>
+                <th>{% load model_field %} {% model_field_verbose_name from object_list.last_name %}</th>
+                <th>{% load model_field %} {% model_field_verbose_name from object_list.first_name %}</th>
+                <th>{% load model_field %} {% model_field_verbose_name from object_list.date_of_birth %}</th>
+                <th>{% load model_field %} {% model_field_verbose_name from object_list.age %}</th>
+                <th>{% load model_field %} {% model_field_verbose_name from object_list.email %}</th>
+                <th>Calculated Age</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for patient in object_list %}
+            <tr>
+                <td>
+                    <div class="checkbox"> <label><input type="checkbox" value="" name="selected_for_action"></label> </div>
+                </td>
+                <td>{{ patient.id }}</td>
+                <td>{{ patient.last_name }}</td>
+                <td>{{ patient.first_name }}</td>
+                <td>{{ patient.date_of_birth}}</td>
+                <td>{{ patient.age}}</td>
+                <td>{{ patient.email}}</td>
+                <td>{{ patient.calculate_age}}</td>
+                {% url 'bptrack:patient-detail' patient.id as url_to_details %}
+                <!-- Here I am building the url to the patient-detail view for the patient in each row. I don't need any logic in the view, I use the url tag here in the template. -->
+                <td align="middle"><a href="{{ url_to_details }}" title="Details"><span class="glyphicon glyphicon-zoom-in"></span></a></td>
+                {% url 'bptrack:patient-update' patient.id as url_to_update %}
+                <td align="middle"><a href="{{ url_to_update }}" title="Edit"><span class="glyphicon glyphicon-edit"></span></a></td>
+                {% url 'bptrack:patient-delete' patient.id as url_to_delete %}
+                <!-- Here I am building the url to the patient-delete view for the patient in each row. I don't need any logic in the view, I use the url tag here in the template. -->
+                <td align="middle"><a href="{{ url_to_delete }}" title="Delete"><span class="glyphicon glyphicon-trash"></span> </a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% url 'bptrack:patient-list' as url_back_to_search %}
+    <a href="{{ url_back_to_search }}">Reset Search</a>
 </form>
 {% endblock %}
