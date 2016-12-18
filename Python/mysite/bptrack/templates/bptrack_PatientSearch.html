@@ -6,16 +6,18 @@ I just use the context name and the field.
 {% extends "bptrack_base.html" %}
 {% block title %} BP Track Search {% endblock %}
 {% block breadcrumb %}
-<li><a href="{% url 'bptrack:patient-list' %}">Home</a></li>
+  <li><a href="{% url 'bptrack:patient-list' %}">Home</a></li>
 {% endblock %}
 {% block title_1 %}
-<h2>Patients</h2>
+  <h2>Patients</h2>
 {% endblock %}
-{% block right_title_1 %} {% url 'bptrack:patient-add' as url_to_add %}
-<a href="{{ url_to_add }}" role="button" class="btn btn-success">Add New Patient</a>
+{% block right_title_1 %}
+  {% url 'bptrack:patient-add' as url_to_add %}
+  <a href="{{ url_to_add }}" role="button" class="btn btn-success">Add New Patient</a>
 {% endblock %}
-{% block right_title_2 %} {% url 'bptrack:patient-add2' as url_to_add2 %}
-<a href="{{ url_to_add2 }}" role="button" class="btn btn-success">Add New Patient v2</a>
+{% block right_title_2 %}
+  {% url 'bptrack:patient-add2' as url_to_add2 %}
+  <a href="{{ url_to_add2 }}" role="button" class="btn btn-success">Add New Patient v2</a>
 {% endblock %}
 {% block search %}
 <form class="form-inline" action="" method="get">
