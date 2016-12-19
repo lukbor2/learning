@@ -12,6 +12,10 @@
 		http://python.6.x6.nabble.com/Checkboxes-for-a-list-of-items-like-in-Django-admin-interface-td3142240.html
 		http://stackoverflow.com/questions/1975179/creating-django-admin-like-actions-for-non-admin-front-end-users-how-to
 
+		I have a first version of this feature.
+		Now I should implement a confirmation message in the browser (it looks like Bootstrap does have this capability).
+		http://www.w3schools.com/bootstrap/bootstrap_modal.asp
+		In the view I should render a template to handle better the error case.
 
 #TODO:	For a selected patient (or via a link) go to another page which shows a list of all BP measures for the given patient.
 		And from there I should be able to edit, add and delete a bp measure for that patient.

@@ -5,20 +5,25 @@ I just use the context name and the field.
  -->
 {% extends "bptrack_base.html" %}
 {% block title %} BP Track Search {% endblock %}
+
 {% block breadcrumb %}
   <li><a href="{% url 'bptrack:patient-list' %}">Home</a></li>
 {% endblock %}
+
 {% block title_1 %}
   <h2>Patients</h2>
 {% endblock %}
+
 {% block right_title_1 %}
   {% url 'bptrack:patient-add' as url_to_add %}
   <a href="{{ url_to_add }}" role="button" class="btn btn-success">Add New Patient</a>
 {% endblock %}
+
 {% block right_title_2 %}
   {% url 'bptrack:patient-add2' as url_to_add2 %}
   <a href="{{ url_to_add2 }}" role="button" class="btn btn-success">Add New Patient v2</a>
 {% endblock %}
+
 {% block search %}
 <form class="form-inline" action="" method="get">
   <div class="form-group">
@@ -27,9 +32,11 @@ I just use the context name and the field.
   <input type="submit" value="Last Name Search" class="btn btn-primary">
 </form>
 {% endblock %}
+
 {% block content %}
 <form class="" action="" method="post">
-  {% csrf_token %} {% block actions %}
+  {% csrf_token %}
+  {% block actions %}
   <div class="dropdown">
     <button class="btn btn-primary dropdown-toggle" type="" data-toggle="dropdown">Action
           <span class="caret"></span></button>
@@ -64,23 +71,24 @@ I just use the context name and the field.
       {% for patient in object_list %}
       <tr>
         <td>
-          <div class="checkbox"> <label><input type="checkbox" value="" name="selected_for_action"></label> </div>
+          <div class="checkbox"> <label><input type="checkbox" value="{{ patient.id}}" name="selected_for_action"></label> </div>
+          <!-- The value is what is submit via the POST method. This is why I put there the patient id. So the actions can use that id.-->
         </td>
-        <td>{{ patient.id }}</td>
-        <td>{{ patient.last_name }}</td>
-        <td>{{ patient.first_name }}</td>
-        <td>{{ patient.date_of_birth}}</td>
-        <td>{{ patient.age}}</td>
-        <td>{{ patient.email}}</td>
-        <td>{{ patient.calculate_age}}</td>
+        <td style="vertical-align:middle">{{ patient.id }}</td>
+        <td style="vertical-align:middle">{{ patient.last_name }}</td>
+        <td style="vertical-align:middle">{{ patient.first_name }}</td>
+        <td style="vertical-align:middle">{{ patient.date_of_birth}}</td>
+        <td style="vertical-align:middle">{{ patient.age}}</td>
+        <td style="vertical-align:middle">{{ patient.email}}</td>
+        <td style="vertical-align:middle">{{ patient.calculate_age}}</td>
         {% url 'bptrack:patient-detail' patient.id as url_to_details %}
         <!-- Here I am building the url to the patient-detail view for the patient in each row. I don't need any logic in the view, I use the url tag here in the template. -->
-        <td align="middle"><a href="{{ url_to_details }}" title="Details"><span class="glyphicon glyphicon-zoom-in"></span></a></td>
+        <td style="vertical-align:middle"><a href="{{ url_to_details }}" title="Details"><span class="glyphicon glyphicon-zoom-in"></span></a></td>
         {% url 'bptrack:patient-update' patient.id as url_to_update %}
-        <td align="middle"><a href="{{ url_to_update }}" title="Edit"><span class="glyphicon glyphicon-edit"></span></a></td>
+        <td style="vertical-align:middle"><a href="{{ url_to_update }}" title="Edit"><span class="glyphicon glyphicon-edit"></span></a></td>
         {% url 'bptrack:patient-delete' patient.id as url_to_delete %}
         <!-- Here I am building the url to the patient-delete view for the patient in each row. I don't need any logic in the view, I use the url tag here in the template. -->
-        <td align="middle"><a href="{{ url_to_delete }}" title="Delete"><span class="glyphicon glyphicon-trash"></span> </a></td>
+        <td style="vertical-align:middle"><a href="{{ url_to_delete }}" title="Delete"><span class="glyphicon glyphicon-trash"></span> </a></td>
       </tr>
       {% endfor %}
     </tbody>

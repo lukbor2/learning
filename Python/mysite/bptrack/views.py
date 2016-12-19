@@ -163,7 +163,18 @@ class PatientListSearch(ListView):
             return Patient.objects.all()
 
     def post(self, request):
-        return HttpResponse('Hi, from PatientListSearch View!! This is POST method')
+        selected_ids = request.POST.getlist('selected_for_action')
+        object_list = Patient.objects.filter(pk__in = selected_ids)
+        # getlist always returns a list of value. It makes sense to use it here because all checkboxes in the html file have the same name.
+        # Therefore, selected_ids is a list of the ids of the patients and using the __in works.
+        count = object_list.count()
+        if object_list.count() <1:
+            return HttpResponse('No record selected.')
+        else:
+            object_list.delete()
+            return render (request, 'bptrack_PatientSearch.html', {'object_list': Patient.objects.all()})
+            # Note how I use the same template used by the list view, but I render it with the list of patients after the one(s) selected have been deleted.
+            # I use render and I pass object_list in the context because that's what the template expects.
 
 class SelectedPatientDelete(View):
     """
