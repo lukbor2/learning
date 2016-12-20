@@ -1,3 +1,5 @@
+Check this page for ATOM packages (https://www.sitepoint.com/10-essential-atom-add-ons/)
+
 
 #TODO:	Write down learnings and "how-to" in a document.
 
@@ -14,7 +16,7 @@
 
 		I have a first version of this feature.
 		Now I should implement a confirmation message in the browser (it looks like Bootstrap does have this capability).
-		http://www.w3schools.com/bootstrap/bootstrap_modal.asp
+		http://getbootstrap.com/javascript/#modals
 		In the view I should render a template to handle better the error case.
 
 #TODO:	For a selected patient (or via a link) go to another page which shows a list of all BP measures for the given patient.
