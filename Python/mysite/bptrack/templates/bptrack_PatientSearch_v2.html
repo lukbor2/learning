@@ -103,15 +103,11 @@ I just use the context name and the field.
     <a href="{{ url_back_to_search }}">Reset Search</a>
     
     <!-- Bootstrap modal. To show a window which asks to confirm the Delete Action -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-         aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close"
-                            data-dismiss="modal" aria-hidden="true">
-                            &times;
-                        </button>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel">
                             Confirm Selected Action
                         </h4>
@@ -120,12 +116,8 @@ I just use the context name and the field.
                         Delete Selected Records?
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default"
-                        data-dismiss="modal">NO
-                    </button>
-                    <button type="submit" class="btn btn-primary">
-                        Delete!
-                    </button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">NO</button>
+                    <button type="submit" class="btn btn-primary">Delete!</button>
                 </div>
             </div><!-- /.modal-content -->
         </div>
