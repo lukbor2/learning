@@ -46,7 +46,12 @@ I just use the context name and the field.
             <!--  I don't think the line below is needed anymore. It's probably something old.
                  {% url 'bptrack:selected-patient-delete' as url_delete_selected %}
             -->
-
+            <!-- I use the code below to list the availabile actions (at the moment just one).
+                 Furthermore, note how the button is used to trigger the modal dialog box which is used
+                 to ask confirmation for the selected action.
+                 It is crucial to declare the button type="button".
+                 Whithout it the modal is not triggered.    
+            -->
             <li><button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Delete Selected</button></li>
             
             <!--
