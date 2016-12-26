@@ -47,7 +47,7 @@ I just use the context name and the field.
                  {% url 'bptrack:selected-patient-delete' as url_delete_selected %}
             -->
 
-            <li><button class="btn btn-link" data-toggle="modal" data-target="#myModal">Delete Selected</button></li>
+            <li><button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Delete Selected</button></li>
             
             <!--
             For what I read, it is not possible to use a DeleteView because it expects one record only. Therefore I have to build my own view.
@@ -117,7 +117,7 @@ I just use the context name and the field.
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">NO</button>
-                    <button type="submit" class="btn btn-primary">Delete!</button>
+                    <button type="submit" class="btn btn-primary">YES, Delete!</button>
                 </div>
             </div><!-- /.modal-content -->
         </div>
