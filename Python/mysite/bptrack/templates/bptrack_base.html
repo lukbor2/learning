@@ -3,11 +3,21 @@
 
 <head>
     <!-- I am using bootstrap as a tool for basic styling.
-            Having the reference to bootstrap here in the basic template allows me to use it everywhere else, but the reference is just in one place.
-            -->
+         Having the reference to bootstrap here in the basic template allows me to use it everywhere else.
+         Note the block of code below this which loads bootstrap from a local file.
+         It is an approach to consider as an alterntive.
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        -->
+
+    <!-- The code below loads Bootstrap from a local file, not from the network.
+         Note it is requires a folder named "static" to be created and the "load static" to be used.
+         Looking for the "static" folder is a default behavior of Django apps. --> 
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'bptrack/dist/css/bootstrap.min.css' %}" />
+    <script src="{% static 'bptrack/dist/js/jquery.min.js' %}"></script>
+    <script src="{% static 'bptrack/dist/js/bootstrap.min.js' %}"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">

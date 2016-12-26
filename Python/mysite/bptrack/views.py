@@ -140,7 +140,7 @@ class PatientCreate_v2(CreateView):
 
 class PatientListSearch(ListView):
     model = Patient
-    template_name = 'bptrack_PatientSearch.html'
+    template_name = 'bptrack_PatientSearch_v2.html'
 
     """
     In order to access the request.GET I need to use self. But self can be used only inside a method.

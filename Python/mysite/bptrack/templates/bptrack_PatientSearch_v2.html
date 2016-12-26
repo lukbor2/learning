@@ -44,10 +44,11 @@ I just use the context name and the field.
         </button>
         <ul class="dropdown-menu" role="menu">
             <!--  I don't think the line below is needed anymore. It's probably something old.
-                
-                  {% url 'bptrack:selected-patient-delete' as url_delete_selected %}
+                 {% url 'bptrack:selected-patient-delete' as url_delete_selected %}
             -->
-            <li><button type="submit" class="btn btn-link" name="Action" value="DeleteSelected">Delete Selected</button></li>
+
+            <li><button class="btn btn-link" data-toggle="modal" data-target="#myModal">Delete Selected</button></li>
+            
             <!--
             For what I read, it is not possible to use a DeleteView because it expects one record only. Therefore I have to build my own view.
             I had to include the actions within a form because I want to call the html POST method and it seems the only way to do it is within a form.
@@ -100,6 +101,7 @@ I just use the context name and the field.
     </table>
     {% url 'bptrack:patient-list' as url_back_to_search %}
     <a href="{{ url_back_to_search }}">Reset Search</a>
+    
     <!-- Bootstrap modal. To show a window which asks to confirm the Delete Action -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
          aria-labelledby="myModalLabel" aria-hidden="true">
@@ -121,7 +123,7 @@ I just use the context name and the field.
                     <button type="button" class="btn btn-default"
                         data-dismiss="modal">NO
                     </button>
-                    <button type="button" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary">
                         Delete!
                     </button>
                 </div>
