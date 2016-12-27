@@ -15,20 +15,25 @@ class PatientList(ListView):
     model = Patient
     template_name = 'bptrack_home.html'
 
-    # Instead of using the standard context name object_list, I am setting my own name for clarity
+    # Instead of using the standard context name object_list, I am setting my
+    # own name for clarity
     context_object_name = 'all_patients'
 
 class PatientDetail(DetailView):
-    # General Note: the detail view seems to automatically expect the primary key of the model passed via the url.
-    # I don't have to do anything special to filter the object corresponding to the primary key.
+    # General Note: the detail view seems to automatically expect the primary
+    # key of the model passed via the url.
+    # I don't have to do anything special to filter the object corresponding to
+    # the primary key.
 
     model = Patient
     template_name = 'bptrack_patient_detail.html'
 
     context_object_name = 'patient_detail'
 
-    #Adding home to the context which holds the link to the home page so I can use it in the html template.
-    #Instead of doing this, I could have used the url tag directly in the html template.
+    #Adding home to the context which holds the link to the home page so I can
+    #use it in the html template.
+    #Instead of doing this, I could have used the url tag directly in the html
+    #template.
     def get_context_data(self, **kwargs):
         context = super(PatientDetail, self).get_context_data(**kwargs)
         context['home_page'] = reverse('bptrack:patient-list')
@@ -44,6 +49,7 @@ class PatientBPMeasure(ListView):
     template_name = 'bptrack_patient_measures.html'
     context_object_name = 'patient_measure'
 
+    # As I am defining the queryset, the queryset superseds the model (which is not even specified).
     def get_queryset(self):
         # First I get the patient object, not just the foreign key.
         self.patient = get_object_or_404(Patient, id=self.args[0])
@@ -75,7 +81,7 @@ class PatientCreate(CreateView):
     model = Patient
     fields = ['first_name', 'last_name','date_of_birth', 'email'] # I don't need the age field because it will be calculated.
     # template_name = 'bptrack_patient_edit.html'
-    # form_class = forms.PatientForm
+                                                                     # form_class = forms.PatientForm
 
     """
     Learning - the CreateView class has a success_url attribute which is the url used if the creation is successful.
@@ -120,7 +126,6 @@ class PatientUpdate(UpdateView):
 
     model = Patient
     fields = ['first_name', 'last_name','date_of_birth','email'] # I don't need the age field because it will be calculated.
-
 class PatientCreate_v2(CreateView):
     """
     v2 of the PatientCreate view.
@@ -135,9 +140,9 @@ class PatientCreate_v2(CreateView):
 
     form_class = forms.PatientForm
 
-    #TODO: understand how to trigger and use the validation of the form in these class based views.
+    #TODO: understand how to trigger and use the validation of the form in
+    #these class based views.
     #Check if / how to use the form_valid method.
-
 class PatientListSearch(ListView):
     model = Patient
     template_name = 'bptrack_PatientSearch_v2.html'
@@ -149,7 +154,8 @@ class PatientListSearch(ListView):
 
     def queryset(self):
         errors = []
-        # q is the name given to the search parameter. When the search page is loaded for the first time with url /search
+        # q is the name given to the search parameter.  When the search page is
+        # loaded for the first time with url /search
         # there is no parameter, therefore I just return all the patients.
 
         if 'q' in self.request.GET:
@@ -165,17 +171,21 @@ class PatientListSearch(ListView):
     def post(self, request):
         selected_ids = request.POST.getlist('selected_for_action')
         object_list = Patient.objects.filter(pk__in = selected_ids)
-        # getlist always returns a list of value. It makes sense to use it here because all checkboxes in the html file have the same name.
-        # Therefore, selected_ids is a list of the ids of the patients and using the __in works.
+        # getlist always returns a list of value.  It makes sense to use it
+        # here because all checkboxes in the html file have the same name.
+        # Therefore, selected_ids is a list of the ids of the patients and
+        # using the __in works.
         count = object_list.count()
-        if object_list.count() <1:
+        if object_list.count() < 1:
             return HttpResponse('No record selected.')
         else:
             object_list.delete()
-            return render (request, 'bptrack_PatientSearch.html', {'object_list': Patient.objects.all()})
-            # Note how I use the same template used by the list view, but I render it with the list of patients after the one(s) selected have been deleted.
-            # I use render and I pass object_list in the context because that's what the template expects.
-
+            return render(request, 'bptrack_PatientSearch.html', {'object_list': Patient.objects.all()})
+            # Note how I use the same template used by the list view, but I
+            # render it with the list of patients after the one(s) selected
+            # have been deleted.
+            # I use render and I pass object_list in the context because that's
+            # what the template expects.
 class SelectedPatientDelete(View):
     """
     Problems so far. The views is called as expected, but the get method, not the post, is used.

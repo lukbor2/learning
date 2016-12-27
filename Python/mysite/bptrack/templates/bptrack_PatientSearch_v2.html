@@ -7,29 +7,29 @@ I just use the context name and the field.
 {% block title %} BP Track Search {% endblock %}
 
 {% block breadcrumb %}
-  <li><a href="{% url 'bptrack:patient-list' %}">Home</a></li>
+<li><a href="{% url 'bptrack:patient-list' %}">Home</a></li>
 {% endblock %}
 
 {% block title_1 %}
-  <h2>Patients</h2>
+<h2>Patients</h2>
 {% endblock %}
 
 {% block right_title_1 %}
   {% url 'bptrack:patient-add' as url_to_add %}
-  <a href="{{ url_to_add }}" role="button" class="btn btn-success">Add New Patient</a>
+<a href="{{ url_to_add }}" role="button" class="btn btn-success">Add New Patient</a>
 {% endblock %}
 
 {% block right_title_2 %}
   {% url 'bptrack:patient-add2' as url_to_add2 %}
-  <a href="{{ url_to_add2 }}" role="button" class="btn btn-success">Add New Patient v2</a>
+<a href="{{ url_to_add2 }}" role="button" class="btn btn-success">Add New Patient v2</a>
 {% endblock %}
 
 {% block search %}
 <form class="form-inline" action="" method="get">
-  <div class="form-group">
-    <input type="text" class="form-control" name="q">
-  </div>
-  <input type="submit" value="Last Name Search" class="btn btn-primary">
+    <div class="form-group">
+        <input type="text" class="form-control" name="q">
+    </div>
+    <input type="submit" value="Last Name Search" class="btn btn-primary">
 </form>
 {% endblock %}
 
@@ -50,10 +50,10 @@ I just use the context name and the field.
                  Furthermore, note how the button is used to trigger the modal dialog box which is used
                  to ask confirmation for the selected action.
                  It is crucial to declare the button type="button".
-                 Whithout it the modal is not triggered.    
+                 Whithout it the modal is not triggered.
             -->
             <li><button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">Delete Selected</button></li>
-            
+
             <!--
             For what I read, it is not possible to use a DeleteView because it expects one record only. Therefore I have to build my own view.
             I had to include the actions within a form because I want to call the html POST method and it seems the only way to do it is within a form.
@@ -94,7 +94,7 @@ I just use the context name and the field.
                 <td style="vertical-align:middle">{{ patient.calculate_age}}</td>
                 {% url 'bptrack:patient-detail' patient.id as url_to_details %}
                 <!-- Here I am building the url to the patient-detail view for the patient in each row. I don't need any logic in the view, I use the url tag here in the template. -->
-                <td style="vertical-align:middle"><a href="{{ url_to_details }}" title="Details"><span class="glyphicon glyphicon-zoom-in"></span></a></td>
+                <td style="vertical-align:middle"><a href="{{ url_to_details }}" title="Patient Details"><span class="glyphicon glyphicon-zoom-in"></span></a></td>
                 {% url 'bptrack:patient-update' patient.id as url_to_update %}
                 <td style="vertical-align:middle"><a href="{{ url_to_update }}" title="Edit"><span class="glyphicon glyphicon-edit"></span></a></td>
                 {% url 'bptrack:patient-delete' patient.id as url_to_delete %}
@@ -106,19 +106,19 @@ I just use the context name and the field.
     </table>
     {% url 'bptrack:patient-list' as url_back_to_search %}
     <a href="{{ url_back_to_search }}">Reset Search</a>
-    
+
     <!-- Bootstrap modal. To show a window which asks to confirm the Delete Action -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">
-                            Confirm Selected Action
-                        </h4>
-                    </div>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        Confirm Selected Action
+                    </h4>
+                </div>
                 <div class="modal-body">
-                        Delete Selected Records?
+                    Delete Selected Records?
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">NO</button>
