@@ -1,20 +1,20 @@
+Check this page for ATOM packages (https://www.sitepoint.com/10-essential-atom-add-ons/)
+
 
 #TODO:	Write down learnings and "how-to" in a document.
 
+#TODO:	Implement login for users, so that a user can see the measures belonging to the user only.
+		Look at sessions too (I think they are linked to users).
+
 #TODO:	Implement a Delete command which acts on multiple selected records.
 
-		Here (http://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp) there are info about how to build a dropdown with Bootstrap.
-		Here (http://www.w3schools.com/bootstrap/bootstrap_forms_inputs.asp) there are info about how to build checkboxes with Bootstrap.
-		With the url in the dropdown I can call a view which deletes the records selected with the checkboxes.
-		But I still don't know how to pass the selected records to the view.
-		Links to check:
-		https://www.djangorocks.com/snippets/deleting-multiple-rows-from-your-database.html
-		http://python.6.x6.nabble.com/Checkboxes-for-a-list-of-items-like-in-Django-admin-interface-td3142240.html
-		http://stackoverflow.com/questions/1975179/creating-django-admin-like-actions-for-non-admin-front-end-users-how-to
-
+		I have what I wanted. The only thing left is a better way to handle the error in case there are no records selected.
+		In the view I should render a template to handle better the error case.
 
 #TODO:	For a selected patient (or via a link) go to another page which shows a list of all BP measures for the given patient.
 		And from there I should be able to edit, add and delete a bp measure for that patient.
+
+#TODO: From the homepage, create a new action which allows to add measures to the selected patient.
 
 #TODO:	In views.py, in the PatientCreate view, why reverse_lazy works and just reverse does not work? reverse works in the tutorial app.
 		It would be interesting to understand. Furthermore, I did not understand why I have to specify the app name in the reverse_lazy.

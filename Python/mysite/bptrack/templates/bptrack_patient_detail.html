@@ -4,10 +4,15 @@ Note that  I have to use the context name (e.g. patient_detail) and I don't have
 I just use the context name and the field. This is how the custom tag works.
  -->
 
-{% extends "bptrack_base.html" %} {% block title %} BP Track Patient Detail {% endblock %} {% block breadcrumb %}
+{% extends "bptrack_base.html" %}
+{% block title %} BP Track Patient Detail {% endblock %}
+
+{% block breadcrumb %}
 <li><a href="{% url 'bptrack:patient-list' %}">Home</a></li>
 <li class="active">Patient Detail</li>
-{% endblock %} {% block content %}
+{% endblock %}
+
+{% block content %}
 <h2>Details for {{ patient_detail.first_name }} {{ patient_detail.last_name }}</h2>
 <table class="table table-bordered">
     <thead>
