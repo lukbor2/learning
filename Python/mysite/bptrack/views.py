@@ -126,6 +126,7 @@ class PatientUpdate(UpdateView):
 
     model = Patient
     fields = ['first_name', 'last_name','date_of_birth','email'] # I don't need the age field because it will be calculated.
+
 class PatientCreate_v2(CreateView):
     """
     v2 of the PatientCreate view.
@@ -143,6 +144,7 @@ class PatientCreate_v2(CreateView):
     #TODO: understand how to trigger and use the validation of the form in
     #these class based views.
     #Check if / how to use the form_valid method.
+
 class PatientListSearch(ListView):
     model = Patient
     template_name = 'bptrack_PatientSearch_v2.html'
@@ -186,6 +188,7 @@ class PatientListSearch(ListView):
             # have been deleted.
             # I use render and I pass object_list in the context because that's
             # what the template expects.
+
 class SelectedPatientDelete(View):
     """
     Problems so far. The views is called as expected, but the get method, not the post, is used.
@@ -196,3 +199,12 @@ class SelectedPatientDelete(View):
 
     def get(self, request):
         return HttpResponse('Hi, from SelectedPatientDelete View!! This is GET method')
+
+class PatientBPMeasureCreate(CreateView):
+    """
+    Implementing this CreateView without using a form because I don't need any specific validation, so I keep it simple.
+    """
+    
+    model = BP_Measure 
+    fields = ['patient', 'bp_measure_date','bp_measure_min', 'bp_measure_max', 'bp_measure_pulse', 'bp_measure_time_of_day', 'bp_measure_note'] 
+   

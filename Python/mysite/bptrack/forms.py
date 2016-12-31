@@ -3,7 +3,7 @@ from bptrack.models import Patient
 
 class PatientForm(ModelForm):
     """
-    I am created a form based on the class ModelForm so I can re-use the fields defined
+    I have created a form based on the class ModelForm so I can re-use the fields defined
     in the corresponding model.
     Furthermore, with the form I can implement some custom validation.
     Custom validation is not really required in this app, but I wanted to try something.

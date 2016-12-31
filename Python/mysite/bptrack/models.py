@@ -55,7 +55,7 @@ class BP_Measure(models.Model):
     bp_measure_max = models.IntegerField(blank=False, help_text='Max pressure in mmHG')
     bp_measure_pulse = models.IntegerField(blank=False, help_text='Pulse when the measure was taken')
     bp_measure_time_of_day = models.CharField(blank=False, max_length=30, choices=TIME_OF_DAY, help_text='Pick one of the categories depending on the time when the measure was taken')
-    bp_measure_note = models.CharField(max_length=255, help_text= 'Free text')
+    bp_measure_note = models.CharField(blank=True, null=True, max_length=255, help_text= 'Free text')
 
     def __str__(self):
         return '%s %s %d %d %d %s' % (self.patient, self.bp_measure_date.strftime('%m-%d-%Y'), self.bp_measure_min, self.bp_measure_max, self.bp_measure_pulse, self.bp_measure_note)
@@ -66,9 +66,6 @@ saved and also how to save the result of this "something" in the db.
 It turns out the best way to do it are the signals.
 Basically, pre_save is a signal and with the method below I intercept the signal and do something before the instance is saved.
 """
-
 @receiver(pre_save, sender=Patient)
 def set_age(sender, instance, **kwargs):
     instance.age = (date.today().year - instance.date_of_birth.year)
-
-
