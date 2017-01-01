@@ -5,7 +5,6 @@
 <li class="active">Enter BP Measure</li>
 {% endblock%}
 {% block content %}
-<h2>Add BP Measure</h2>
 <!-- 
 
 # TODO: check wheter I can/need to use this code.
@@ -23,11 +22,11 @@
     Usually is points to a url corresponding to a web page on the server side which will process the form data.
     If the action attribute is omitted, the action is set to the current page.
     I believe this is why in this example I can leave the action empty; the view takes care of executing the action and re-directing to the success_url page.
-    
      -->
 
 <form action="" method="POST">
-    {% csrf_token %} {% if form.non_field_errors %}
+    {% csrf_token %}
+    {% if form.non_field_errors %}
     <ul>
         {% for error in form.non_field_errors %}
         <li> {{ error }} </li>
@@ -40,17 +39,24 @@
          Furthermore, in this way I can display the error message close to the field itself.    
     -->
     {% for field in form %}
+        {% if field.id_for_label == "id_patient" %}
+            <h1>Here it is.</h1>
+            {% endif %}
+
     <div class="form-group">
-        {{field.label_tag}} {{field|add_class:"form-control"}} {% if field.errors %} {% for error in field.errors %}
-        <ul>
-            <li style="color: red">
-                <h6><em> {{ error }} </em></h6>
-            </li>
-        </ul>
-        {% endfor %} {% endif %}
+        {{field.label_tag}} {{field|add_class:"form-control"}}
+        {% if field.errors %}
+            {% for error in field.errors %}
+                <ul>
+                     <li style="color: red">
+                     <h6><em> {{ error }} </em></h6>
+                    </li>
+                </ul>
+            {% endfor %}
+        {% endif %}
     </div>
     {% endfor %}
-    <input id="save_patient" type="submit" class="btn btn-primary" value="Save Patient" />
+    <input id="save_bpmeasure" type="submit" class="btn btn-primary" value="Save BP Measure" />
 </form>
 
 {% endblock %}

@@ -7,11 +7,19 @@
 <li class="active">Patient BP Measures</li>
 {% endblock %}
 
+{% block title_1 %}
+	<h2>BP Measures for {{ patient.first_name }} {{ patient.last_name }} </h2>
+{% endblock %}
+
+{% block right_title_1 %}
+  {% url 'bptrack:bpmeasure-add' patient.id as url_to_add %}
+<a href="{{ url_to_add }}" role="button" class="btn btn-success">Add New BP Measure</a>
+{% endblock %}
+
 {% block content %}
 	<!-- Note how I use patient which was added in the view to the context.
 	patient is not just the foreign key, it is the entire object, so I can access its attributes  -->
 	 
-	<h2>BP Measures for {{ patient.first_name }} {{ patient.last_name }} </h2>
 
 <table class="table table-bordered">
     <thead>

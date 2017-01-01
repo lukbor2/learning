@@ -16,6 +16,10 @@ Check this page for ATOM packages (https://www.sitepoint.com/10-essential-atom-a
 		And from there I should be able to edit, add and delete a bp measure for that patient.
 		In this view order the records by bpmeasure date descending.
 
+		I am implementing this feature by passing the patient id in the URL. I wonder if this is the best way of doing this especially by a security perspective.
+		I should think about this.
+
+
 #TODO: From the homepage, create a new action which allows to add measures to the selected patient.
 
 #TODO:	In views.py, in the PatientCreate view, why reverse_lazy works and just reverse does not work? reverse works in the tutorial app.

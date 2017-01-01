@@ -59,7 +59,7 @@ class BP_Measure(models.Model):
 
     def __str__(self):
         return '%s %s %d %d %d %s' % (self.patient, self.bp_measure_date.strftime('%m-%d-%Y'), self.bp_measure_min, self.bp_measure_max, self.bp_measure_pulse, self.bp_measure_note)
-
+    
 """
 Even if it does not make sense to save the age in the db, I wanted to learn how to do something before an instance is
 saved and also how to save the result of this "something" in the db.
