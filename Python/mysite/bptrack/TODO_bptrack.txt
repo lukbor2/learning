@@ -20,6 +20,9 @@ Check this page for ATOM packages (https://www.sitepoint.com/10-essential-atom-a
 		I should think about this.
 		I was reading there are ways to avoid passing id in URL. For example by overrinding the get_object method.
 		Look here too http://stackoverflow.com/questions/25312626/how-to-prevent-user-changing-url-pk-to-see-other-submission-data-django
+		At the end of the day it seems passing the ID in the URL is not a wrong approach, but I should implement two things:
+		1) check a user is logged in
+		2) check the user is allowed to view/edit the object whose id is in the URL
 
 
 #TODO: From the homepage, create a new action which allows to add measures to the selected patient.
