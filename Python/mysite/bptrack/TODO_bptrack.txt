@@ -18,6 +18,8 @@ Check this page for ATOM packages (https://www.sitepoint.com/10-essential-atom-a
 
 		I am implementing this feature by passing the patient id in the URL. I wonder if this is the best way of doing this especially by a security perspective.
 		I should think about this.
+		I was reading there are ways to avoid passing id in URL. For example by overrinding the get_object method.
+		Look here too http://stackoverflow.com/questions/25312626/how-to-prevent-user-changing-url-pk-to-see-other-submission-data-django
 
 
 #TODO: From the homepage, create a new action which allows to add measures to the selected patient.
