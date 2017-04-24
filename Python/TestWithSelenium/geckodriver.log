@@ -260,3 +260,11 @@ JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, li
 JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
 1492985882415	Marionette	INFO	New connections will no longer be accepted
 [Child 4330] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-4Fdt0Z/firefox-53.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 346
+1492992532136	geckodriver	INFO	Listening on 127.0.0.1:59848
+1492992533137	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.YoXJr4qi9APg
+1492992533138	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492992533142	geckodriver::marionette	INFO	Connecting to Marionette on localhost:38269
+1492992536347	Marionette	INFO	Listening on port 38269
+1492992536396	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
