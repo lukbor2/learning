@@ -24,13 +24,9 @@ def process_list(urls):
 def check_urls(urls):
     results = []
     for url in urls:
-        print("Now Processing: " + str(url) + "\n")
+        #print("Now Processing: " + str(url) + "\n")
         r = requests.get(url)
-        try:
-            r.raise_for_status()
-            result = (r.status_code, r.history, url, 'OK')
-        except HTTPError:
-            result = (r.status_code, [], url, "ERROR!")
+        result = (r.status_code, url)
         results.append(result)
     return results
 
@@ -40,7 +36,7 @@ if __name__ == "__main__":
     urls_list = []
     urls_list.append(site) #starting point is just the url of the site.
     urls_to_check = [] #this is where I store all the urls which will have to be checked.
-    depth = 1 #I use this variable to control how many iterations I will do. i.e. how deep in the tree I will go to check the links.
+    depth = 2 #I use this variable to control how many iterations I will do. i.e. how deep in the tree I will go to check the links.
     i = 0
     while i < depth:
         urls = process_list(urls_list)
@@ -57,10 +53,11 @@ if __name__ == "__main__":
     for result in urls_to_check:
         f.write(str(result) + '\n')
 
+    print("Number of links to check = " + str(len(urls_to_check)))
     time_start = time.time()
     for result in check_urls(urls_to_check):
         f.write(str(result) + '\n')
     time_end = time.time()
-    print("Execution time - Version 2: " + time_start - time_end)
+    print("Execution time - Version 2: " + str(time_end - time_start ))
 
     f.close()

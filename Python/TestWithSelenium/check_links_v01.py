@@ -65,6 +65,6 @@ if __name__ == "__main__":
     for result in check_urls(urls_to_check):
         f.write(str(result) + '\n')
     time_end = time.time()
-    print("Execution time - Version 1: " + time_start - time_end)
+    print("Execution time - Version 1: " + str(time_end - time_start ))
 
     f.close()
