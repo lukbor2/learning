@@ -32,11 +32,12 @@ def check_urls(urls):
 
 if __name__ == "__main__":
     file_name = 'links_check.txt' #name of the text file where results are written.
-    site = 'https://www.ghirardelli.com'
+    #site = 'https://www.ghirardelli.com'
+    site = 'http://127.0.0.1/testpage_home.html'
     urls_list = []
     urls_list.append(site) #starting point is just the url of the site.
     urls_to_check = [] #this is where I store all the urls which will have to be checked.
-    depth = 2 #I use this variable to control how many iterations I will do. i.e. how deep in the tree I will go to check the links.
+    depth = 3 #I use this variable to control how many iterations I will do. i.e. how deep in the tree I will go to check the links.
     i = 0
     while i < depth:
         urls = process_list(urls_list)
