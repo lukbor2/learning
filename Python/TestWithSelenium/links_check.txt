@@ -1,0 +1,10 @@
+http://127.0.0.1/testpage_03.html
+http://127.0.0.1/testpage_02.html
+http://127.0.0.1/testpage_03_01.html
+http://127.0.0.1/testpage_02_01.html
+http://127.0.0.1/testpage_01.html
+(200, 'http://127.0.0.1/testpage_03.html')
+(404, 'http://127.0.0.1/testpage_02.html')
+(200, 'http://127.0.0.1/testpage_03_01.html')
+(404, 'http://127.0.0.1/testpage_02_01.html')
+(404, 'http://127.0.0.1/testpage_01.html')
