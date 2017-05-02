@@ -37,7 +37,7 @@ if __name__ == "__main__":
     urls_list = []
     urls_list.append(site) #starting point is just the url of the site.
     urls_to_check = [] #this is where I store all the urls which will have to be checked.
-    depth = 3 #I use this variable to control how many iterations I will do. i.e. how deep in the tree I will go to check the links.
+    depth = 2 #I use this variable to control how many iterations I will do. i.e. how deep in the tree I will go to check the links.
     i = 0
     while i < depth:
         urls = process_list(urls_list)
