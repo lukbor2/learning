@@ -1,0 +1,17 @@
+/*
+	My css file which shall work together and replace the standard one.
+*/
+<SharePoint:CssRegistration Name="Themable/contoso.css" runat="server" />
+<SharePoint:CssRegistration name="/_catalogs/masterpage/contoso/contoso.css" 
+runat="server">
+
+
+a { /* Comment */ color: /* Comment */ Red; }
+
+body {
+    background-color: lightblue;
+}
+
+.body {
+    background-color: lawngreen;
+}
