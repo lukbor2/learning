@@ -40,13 +40,13 @@ for country in root.findall('country'):
 # Trying to use the csv library now.
 
 # Reading and printing each line of a .csv file.
-with open ('units_of_measure.csv', newline='') as f:
+with open ('units_of_measure.csv') as f:
     reader = csv.reader(f)
     for row in reader:
         print(row)
 
 # Writing into a simple .csv file
-with open ('test_csv_write.csv', 'w', newline='') as f:
+with open ('test_csv_write.csv', 'w') as f:
     writer = csv.writer(f)
     head = ['Name', 'Surname', 'Place of Birth'] # This is the header.
     writer.writerow(head) # Writing just one row.
@@ -58,7 +58,7 @@ with open ('test_csv_write.csv', 'w', newline='') as f:
 
 # Now, trying to write a csv file from the test xml I am using.
 
-f = open('country_test.csv', 'w', newline='')
+f = open('country_test.csv', 'w')
 writer = csv.writer(f)
 
 head = ['Country_Name', 'Country_Rank', 'Year', 'Country_gdppc'] # This is the header.
