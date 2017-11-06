@@ -1,0 +1,270 @@
+1492911727259	geckodriver	INFO	Listening on 127.0.0.1:46887
+1492911728231	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.7NP0cPtXHFjm
+1492911728233	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492911728237	geckodriver::marionette	INFO	Connecting to Marionette on localhost:38844
+1492911731646	Marionette	INFO	Listening on port 38844
+1492911731754	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492911820176	geckodriver	INFO	Listening on 127.0.0.1:52402
+1492911821175	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.DhlJ5MJqoIFV
+1492911821176	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492911821179	geckodriver::marionette	INFO	Connecting to Marionette on localhost:42650
+1492911824475	Marionette	INFO	Listening on port 42650
+1492911824521	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492911852476	geckodriver	INFO	Listening on 127.0.0.1:43739
+1492911853477	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.9GX9zkyRMCIw
+1492911853478	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492911853482	geckodriver::marionette	INFO	Connecting to Marionette on localhost:45407
+1492911856926	Marionette	INFO	Listening on port 45407
+1492911857011	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492911883632	geckodriver	INFO	Listening on 127.0.0.1:37978
+1492911884633	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.4IaBxb2FbCfl
+1492911884634	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492911884637	geckodriver::marionette	INFO	Connecting to Marionette on localhost:41821
+1492911887940	Marionette	INFO	Listening on port 41821
+1492911887998	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492911940358	geckodriver	INFO	Listening on 127.0.0.1:49387
+1492911941358	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.PrOZITbfKRbj
+1492911941359	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492911941363	geckodriver::marionette	INFO	Connecting to Marionette on localhost:39481
+1492911944629	Marionette	INFO	Listening on port 39481
+1492911944700	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492912083892	geckodriver	INFO	Listening on 127.0.0.1:59044
+1492912084892	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.NdiHviSC1VRr
+1492912084893	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492912084896	geckodriver::marionette	INFO	Connecting to Marionette on localhost:43534
+1492912088116	Marionette	INFO	Listening on port 43534
+1492912088215	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492912140877	geckodriver	INFO	Listening on 127.0.0.1:38511
+1492912141879	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.EDszZCvY0BB3
+1492912141880	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492912141883	geckodriver::marionette	INFO	Connecting to Marionette on localhost:42164
+1492912145231	Marionette	INFO	Listening on port 42164
+1492912145310	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492912214507	geckodriver	INFO	Listening on 127.0.0.1:48769
+1492912215509	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.igcWKTRIl7YO
+1492912215510	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492912215514	geckodriver::marionette	INFO	Connecting to Marionette on localhost:32832
+1492912218840	Marionette	INFO	Listening on port 32832
+1492912218942	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492912350408	geckodriver	INFO	Listening on 127.0.0.1:37823
+1492912351407	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.4186JW9wf0Yx
+1492912351408	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492912351412	geckodriver::marionette	INFO	Connecting to Marionette on localhost:43044
+1492912354724	Marionette	INFO	Listening on port 43044
+1492912354827	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492912390568	geckodriver	INFO	Listening on 127.0.0.1:51195
+1492912391570	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.JqllnBtpFJy2
+1492912391571	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492912391575	geckodriver::marionette	INFO	Connecting to Marionette on localhost:36313
+1492912394861	Marionette	INFO	Listening on port 36313
+1492912394927	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492912458449	geckodriver	INFO	Listening on 127.0.0.1:43498
+1492912459449	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.cLmbEaXPoVEL
+1492912459450	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492912459454	geckodriver::marionette	INFO	Connecting to Marionette on localhost:41982
+1492912462736	Marionette	INFO	Listening on port 41982
+1492912462781	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492912498192	geckodriver	INFO	Listening on 127.0.0.1:46273
+1492912499192	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.PgCuMsyeVVPW
+1492912499193	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492912499197	geckodriver::marionette	INFO	Connecting to Marionette on localhost:39901
+1492912502747	Marionette	INFO	Listening on port 39901
+1492912502841	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492912560824	geckodriver	INFO	Listening on 127.0.0.1:49312
+1492912561823	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.OOrnt7c2Gugq
+1492912561824	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492912561826	geckodriver::marionette	INFO	Connecting to Marionette on localhost:39486
+1492912565345	Marionette	INFO	Listening on port 39486
+1492912565461	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492912571149	Marionette	INFO	New connections will no longer be accepted
+[Child 6960] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-4Fdt0Z/firefox-53.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 346
+1492915451410	geckodriver	INFO	Listening on 127.0.0.1:37153
+1492915452411	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.AW8iGXrYQXCC
+1492915452413	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492915452416	geckodriver::marionette	INFO	Connecting to Marionette on localhost:40907
+1492915456213	Marionette	INFO	Listening on port 40907
+1492915456259	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492915550720	geckodriver	INFO	Listening on 127.0.0.1:37282
+1492915551720	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.KM3qgs1kO1Pp
+1492915551721	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492915551725	geckodriver::marionette	INFO	Connecting to Marionette on localhost:46877
+1492915555468	Marionette	INFO	Listening on port 46877
+1492915555542	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492915566628	Marionette	INFO	New connections will no longer be accepted
+1492916187863	geckodriver	INFO	Listening on 127.0.0.1:43797
+1492916188865	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.mb78K5BRPfvs
+1492916188865	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492916188868	geckodriver::marionette	INFO	Connecting to Marionette on localhost:39964
+1492916192525	Marionette	INFO	Listening on port 39964
+1492916192613	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492916264981	geckodriver	INFO	Listening on 127.0.0.1:55792
+1492916265981	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.G6EMkHok2XrW
+1492916265983	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492916265986	geckodriver::marionette	INFO	Connecting to Marionette on localhost:45072
+1492916269411	Marionette	INFO	Listening on port 45072
+1492916269525	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492916280797	Marionette	INFO	New connections will no longer be accepted
+1492916327472	geckodriver	INFO	Listening on 127.0.0.1:44551
+1492916328471	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.gEORobuYSj5X
+1492916328472	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492916328475	geckodriver::marionette	INFO	Connecting to Marionette on localhost:45424
+1492916331787	Marionette	INFO	Listening on port 45424
+1492916331893	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492916348167	Marionette	INFO	New connections will no longer be accepted
+1492928013287	geckodriver	INFO	Listening on 127.0.0.1:47372
+1492928014285	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.uhsirgQ3iZoq
+1492928014286	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492928014290	geckodriver::marionette	INFO	Connecting to Marionette on localhost:35400
+1492928017681	Marionette	INFO	Listening on port 35400
+1492928017758	Marionette	WARN	TLS certificate errors will be ignored for this session
+1492928040095	geckodriver	INFO	Listening on 127.0.0.1:40305
+1492928041093	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.NuC35vDpzbGb
+1492928041094	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492928041097	geckodriver::marionette	INFO	Connecting to Marionette on localhost:42139
+1492928044318	Marionette	INFO	Listening on port 42139
+1492928044412	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492928117512	geckodriver	INFO	Listening on 127.0.0.1:39462
+1492928118510	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.ic3JdaxqSsmt
+1492928118513	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492928118517	geckodriver::marionette	INFO	Connecting to Marionette on localhost:43649
+1492928121898	Marionette	INFO	Listening on port 43649
+1492928121953	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492928138764	Marionette	INFO	New connections will no longer be accepted
+1492928169734	geckodriver	INFO	Listening on 127.0.0.1:41724
+1492928170729	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.jsy1W3YrHQbk
+1492928170730	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492928170734	geckodriver::marionette	INFO	Connecting to Marionette on localhost:43704
+1492928174038	Marionette	INFO	Listening on port 43704
+1492928174090	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492928190427	Marionette	INFO	New connections will no longer be accepted
+[Child 10907] WARNING: pipe error (18): Connection reset by peer: file /build/firefox-4Fdt0Z/firefox-53.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 346
+1492928728914	geckodriver	INFO	Listening on 127.0.0.1:60578
+1492928729914	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.akO882mNyIsb
+1492928729914	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492928729917	geckodriver::marionette	INFO	Connecting to Marionette on localhost:45953
+1492928733494	Marionette	INFO	Listening on port 45953
+1492928733576	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492929010048	geckodriver	INFO	Listening on 127.0.0.1:47841
+1492929011048	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.jQ0daFZ8IAUf
+1492929011048	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492929011050	geckodriver::marionette	INFO	Connecting to Marionette on localhost:46059
+1492929014523	Marionette	INFO	Listening on port 46059
+1492929014567	Marionette	WARN	TLS certificate errors will be ignored for this session
+1492929038593	Marionette	INFO	New connections will no longer be accepted
+1492929774935	geckodriver	INFO	Listening on 127.0.0.1:59507
+1492929775935	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.lkn2jIVmNW73
+1492929775935	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492929775939	geckodriver::marionette	INFO	Connecting to Marionette on localhost:36451
+1492929779543	Marionette	INFO	Listening on port 36451
+1492929779678	Marionette	WARN	TLS certificate errors will be ignored for this session
+1492929797288	Marionette	INFO	New connections will no longer be accepted
+[Child 13129] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-4Fdt0Z/firefox-53.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 346
+1492930102500	geckodriver	INFO	Listening on 127.0.0.1:38273
+1492930103499	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.ZLiwW2emEUmI
+1492930103499	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492930103502	geckodriver::marionette	INFO	Connecting to Marionette on localhost:35663
+1492930107113	Marionette	INFO	Listening on port 35663
+1492930107221	Marionette	WARN	TLS certificate errors will be ignored for this session
+1492930124030	Marionette	INFO	New connections will no longer be accepted
+1492930164051	geckodriver	INFO	Listening on 127.0.0.1:35064
+1492930165050	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.VT425rjVn3HJ
+1492930165051	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492930165053	geckodriver::marionette	INFO	Connecting to Marionette on localhost:34898
+1492930168732	Marionette	INFO	Listening on port 34898
+1492930168775	Marionette	WARN	TLS certificate errors will be ignored for this session
+1492930186323	Marionette	INFO	New connections will no longer be accepted
+[Child 13529] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-4Fdt0Z/firefox-53.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 346
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+1492930288775	geckodriver	INFO	Listening on 127.0.0.1:33833
+1492930289774	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.0rHS6fo2bcKW
+1492930289775	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492930289777	geckodriver::marionette	INFO	Connecting to Marionette on localhost:43890
+1492930293250	Marionette	INFO	Listening on port 43890
+1492930293328	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492930482473	Marionette	INFO	New connections will no longer be accepted
+[Child 13701] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-4Fdt0Z/firefox-53.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 346
+1492985208380	geckodriver	INFO	Listening on 127.0.0.1:47540
+1492985209346	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.LlBlF1JMJ80P
+1492985209347	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492985209351	geckodriver::marionette	INFO	Connecting to Marionette on localhost:32999
+1492985213016	Marionette	INFO	Listening on port 32999
+1492985213186	Marionette	WARN	TLS certificate errors will be ignored for this session
+1492985229922	Marionette	INFO	New connections will no longer be accepted
+1492985312028	geckodriver	INFO	Listening on 127.0.0.1:33003
+1492985313024	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.mC1brTrZ5ItX
+1492985313025	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492985313029	geckodriver::marionette	INFO	Connecting to Marionette on localhost:35167
+1492985316465	Marionette	INFO	Listening on port 35167
+1492985316620	Marionette	WARN	TLS certificate errors will be ignored for this session
+1492985332678	Marionette	INFO	New connections will no longer be accepted
+1492985682101	geckodriver	INFO	Listening on 127.0.0.1:45696
+1492985683097	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.j2J9yvmku0nX
+1492985683099	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492985683103	geckodriver::marionette	INFO	Connecting to Marionette on localhost:43868
+1492985686574	Marionette	INFO	Listening on port 43868
+1492985686652	Marionette	WARN	TLS certificate errors will be ignored for this session
+1492985703601	Marionette	INFO	New connections will no longer be accepted
+1492985734509	geckodriver	INFO	Listening on 127.0.0.1:33612
+1492985735505	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.kUB0VnuTaoME
+1492985735506	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492985735510	geckodriver::marionette	INFO	Connecting to Marionette on localhost:46197
+1492985738729	Marionette	INFO	Listening on port 46197
+1492985738830	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+1492985882415	Marionette	INFO	New connections will no longer be accepted
+[Child 4330] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-4Fdt0Z/firefox-53.0+build6/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 346
+1492992532136	geckodriver	INFO	Listening on 127.0.0.1:59848
+1492992533137	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.YoXJr4qi9APg
+1492992533138	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1492992533142	geckodriver::marionette	INFO	Connecting to Marionette on localhost:38269
+1492992536347	Marionette	INFO	Listening on port 38269
+1492992536396	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement
+JavaScript warning: https://www.ghirardelli.com/wcsstore/dojo18/dojo/dojo.js, line 14: unreachable code after return statement

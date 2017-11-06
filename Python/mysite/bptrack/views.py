@@ -126,6 +126,7 @@ class PatientUpdate(UpdateView):
 
     model = Patient
     fields = ['first_name', 'last_name','date_of_birth','email'] # I don't need the age field because it will be calculated.
+
 class PatientCreate_v2(CreateView):
     """
     v2 of the PatientCreate view.
@@ -143,6 +144,7 @@ class PatientCreate_v2(CreateView):
     #TODO: understand how to trigger and use the validation of the form in
     #these class based views.
     #Check if / how to use the form_valid method.
+
 class PatientListSearch(ListView):
     model = Patient
     template_name = 'bptrack_PatientSearch_v2.html'
@@ -186,6 +188,7 @@ class PatientListSearch(ListView):
             # have been deleted.
             # I use render and I pass object_list in the context because that's
             # what the template expects.
+
 class SelectedPatientDelete(View):
     """
     Problems so far. The views is called as expected, but the get method, not the post, is used.
@@ -196,3 +199,30 @@ class SelectedPatientDelete(View):
 
     def get(self, request):
         return HttpResponse('Hi, from SelectedPatientDelete View!! This is GET method')
+
+class PatientBPMeasureCreate(CreateView):
+    """
+    Implementing this CreateView without using a form because I don't need any specific validation, so I keep it simple.
+    """
+    
+    model = BP_Measure
+    # In the fields I do not include patient (the foreign key) because I take it from the parameter in the URL. 
+    fields = ['bp_measure_date','bp_measure_min', 'bp_measure_max', 'bp_measure_pulse', 'bp_measure_time_of_day', 'bp_measure_note'] 
+
+    def get_context_data(self, **kwargs):
+        context = super(PatientBPMeasureCreate, self).get_context_data(**kwargs)
+
+        # Extend the context to include the patient object.
+        context['selected_patient_id'] = self.kwargs['fk']
+        return context
+    # I overwrite the form_valid method to set the patient foreign key equal to the patient the user has selected which is represented
+    # by the fk parameter in the url.
+    # In other words, this is how I don't ask the user to specify a patient when the form is filled in, because the patient comes from the url.
+    def form_valid(self, form):
+        form.instance.patient = Patient.objects.get(pk = int(self.kwargs['fk']))
+        return super(PatientBPMeasureCreate, self).form_valid(form)
+    
+    def get_success_url(self):
+        return reverse_lazy('bptrack:patient-bpmeasures', args={self.kwargs['fk']})
+
+   

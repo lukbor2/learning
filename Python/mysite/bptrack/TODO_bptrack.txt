@@ -8,11 +8,22 @@ Check this page for ATOM packages (https://www.sitepoint.com/10-essential-atom-a
 
 #TODO:	Implement a Delete command which acts on multiple selected records.
 
-		I have what I wanted. The only thing left is a better way to handle the error in case there are no records selected.
-		In the view I should render a template to handle better the error case.
+		I have what I wanted. There are some things left to do:
+		1) A better way to handle the error in case there are no records selected. In the view I should render a template to handle better the error case.
+		2) A way to handle different actions, for example Delete action and Add BP Measure Action. 
 
 #TODO:	For a selected patient (or via a link) go to another page which shows a list of all BP measures for the given patient.
 		And from there I should be able to edit, add and delete a bp measure for that patient.
+		In this view order the records by bpmeasure date descending.
+
+		I am implementing this feature by passing the patient id in the URL. I wonder if this is the best way of doing this especially by a security perspective.
+		I should think about this.
+		I was reading there are ways to avoid passing id in URL. For example by overrinding the get_object method.
+		Look here too http://stackoverflow.com/questions/25312626/how-to-prevent-user-changing-url-pk-to-see-other-submission-data-django
+		At the end of the day it seems passing the ID in the URL is not a wrong approach, but I should implement two things:
+		1) check a user is logged in
+		2) check the user is allowed to view/edit the object whose id is in the URL
+
 
 #TODO: From the homepage, create a new action which allows to add measures to the selected patient.
 
