@@ -115,7 +115,7 @@ if __name__ == "__main__":
 	
 
 
-	# Cleaning up
+	# Cleaning up....
 	print('Cleaning up...')
 	models.Publication.objects.all().delete()
 	print(models.Publication.objects.all())
