@@ -33,3 +33,24 @@ class Choice(models.Model):
 	def __str__(self):
 		return self.choice_text
 
+#Examples of how to use the Many-To-Many API. It does not have anything to do with the polls app.
+
+class Publication(models.Model):
+    title = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        ordering = ('title',)
+
+class Article(models.Model):
+    headline = models.CharField(max_length=100)
+    publications = models.ManyToManyField(Publication)
+
+    def __str__(self):
+        return self.headline
+
+    class Meta:
+        ordering = ('headline',)
+
