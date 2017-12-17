@@ -3,7 +3,7 @@ var page = require('webpage').create(),
   t, address;
 
 if (system.args.length === 1) {
-  console.log('Usage: loadspeed.js <some URL>');
+  console.log('Usage: loadspeed.js <some URL> Remeber to use http:// in the url');
   phantom.exit();
 }
 
