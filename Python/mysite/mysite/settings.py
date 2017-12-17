@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'books',
     'bptrack.apps.BptrackConfig',
+    'catalog.apps.CatalogConfig',
 ]
 
 MIDDLEWARE_CLASSES = [
