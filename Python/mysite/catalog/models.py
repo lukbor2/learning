@@ -32,6 +32,11 @@ class Book(models.Model):
     def __str__(self):
         return self.title
 
+    def display_genre(self):
+         return ', '.join([genre.name for genre in self.genre.all()[:3]])
+    
+    display_genre.short_description = 'Genre'
+
     def get_absolute_url(self):
         """
         Returns the url to access a particular book instance.
@@ -58,7 +63,8 @@ class BookInstance(models.Model):
         ordering = ["due_back"]
 
     def __str__(self):
-        return '%s (%s)' % (self.id, self.id.book.title)
+        # return '%s (%s)' % (self.id, self.id.book.title) CHECK. This does NOT WORK.
+        return '%s (%s)' % (self.id, self.id)
 
 class Author(models.Model):
     first_name = models.CharField(max_length=100)
