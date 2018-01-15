@@ -22,16 +22,28 @@ def index(request):
 	num_genres = Genre.objects.all().count()
 	num_books_with_word = Book.objects.filter(title__icontains='la').count()
 
+	#Using sessions. Number of visits to this view, as counted in the session variable.
+	num_visits = request.session.get('num_visits', 0) #Get the first value of num_visits
+	request.session['num_visits'] = num_visits + 1
+
 	# Render the HTML template index.html with the data in the context variable
 	return render(
         request,
         'index.html',
         context={'num_books':num_books,'num_instances':num_instances,'num_instances_available':num_instances_available,'num_authors':num_authors,
-		 'page_title': page_title, 'num_genres': num_genres, 'num_books_with_word':num_books_with_word },
+		 'page_title': page_title, 'num_genres': num_genres, 'num_books_with_word':num_books_with_word, 'num_visits':num_visits },
     )
 
 class BookListView(generic.ListView):
 	model = Book
+	paginate_by = 2 #To show 2 records per page at a time. Need to change the base html template to handle pagination.
 
 class BookDetailView(generic.DetailView):
 	model = Book
+
+class AuthorListView(generic.ListView):
+	model = Author
+	paginate_by = 2
+
+class AuthorDetailView(generic.DetailView):
+	model = Author

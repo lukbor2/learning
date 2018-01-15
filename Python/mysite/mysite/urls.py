@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^bptrack/', include('bptrack.urls')),
     url(r'^catalog/', include('catalog.urls')),
     url(r'^admin/', admin.site.urls),
+    url('accounts/', include('django.contrib.auth.urls')),
 ]

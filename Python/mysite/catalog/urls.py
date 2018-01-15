@@ -5,7 +5,8 @@ from . import views
 #app_name = 'catalog'
 urlpatterns = [
 	url('books/', views.BookListView.as_view(), name='books'),
-	#url(r'^book/([0-9]+)$', views.BookDetailView.as_view(), name='book-detail'),
-	url(r'^book/(?P<pk>\d+)/$', views.BookDetailView.as_view(), name='book-detail'),
+	url(r'^book/(?P<pk>[0-9]+)$', views.BookDetailView.as_view(), name='book-detail'),
+	url('authors/', views.AuthorListView.as_view(), name='authors'),
+	url(r'^author/(?P<pk>[0-9]+)$', views.AuthorDetailView.as_view(), name='author-detail'),
 	url('', views.index, name='index'),
 ]
