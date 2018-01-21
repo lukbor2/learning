@@ -36,6 +36,8 @@
           {% if perms.catalog.can_mark_returned %}
             <li>Librarians ONLY</li>
             <li><a href="{% url 'all-borrowed-books' %}">All Borrowed Books</a></li>
+            <li><a href="{% url 'book-create' %}">Add New Book</a></li>
+            <li><a href="{% url 'author-create' %}">Add New Author</a></li>
           {% endif %}
 
       </ul>
