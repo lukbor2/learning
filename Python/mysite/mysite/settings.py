@@ -20,10 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'akl5p%7wcobg^!bo&w8g92fl=4qvbk#y*^h-blu4m!d3nptknk'
+#SECRET_KEY = 'akl5p%7wcobg^!bo&w8g92fl=4qvbk#y*^h-blu4m!d3nptknk'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'akl5p%7wcobg^!bo&w8g92fl=4qvbk#y*^h-blu4m!d3nptknk')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
+DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
 ALLOWED_HOSTS = []
 
@@ -129,3 +131,6 @@ STATIC_URL = '/static/'
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/catalog'
+
+SOUTH_TESTS_MIGRATE = False
+DST_RUN_SOUTH_MIGRATIONS = False
