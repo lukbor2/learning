@@ -50,7 +50,7 @@ class BP_Measure(models.Model):
         ('EV', 'Evening'),
         )
 
-    patient = models.ForeignKey(Patient)
+    patient = models.ForeignKey(Patient, on_delete=models.SET_NULL)
     bp_measure_date = models.DateField(blank=False, default=date.today, help_text='Day when the measure was taken')
     bp_measure_min = models.IntegerField(blank=False, help_text='Min pressure in mmHG')
     bp_measure_max = models.IntegerField(blank=False, help_text='Max pressure in mmHG')
