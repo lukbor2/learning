@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #'django-etc.etc',
-    'widget_tweaks',
+    #'widget_tweaks',
     'books',
     'bptrack.apps.BptrackConfig',
     'catalog.apps.CatalogConfig',
