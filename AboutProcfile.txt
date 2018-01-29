@@ -1,0 +1,5 @@
+About the Procfile, look at these links:
+
+https://stackoverflow.com/questions/30081246/procfile-for-heroku-for-django-1-8
+
+https://devcenter.heroku.com/articles/django-app-configuration
