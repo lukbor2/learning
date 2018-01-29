@@ -5,7 +5,8 @@ from django.views import generic
 # Create your views here.
 
 from django.http import HttpResponse, HttpResponseRedirect
-from django.core.urlresolvers import reverse
+#from django.core.urlresolvers import reverse
+from django.urls import reverse, reverse_lazy
 from django.template import loader
 from django.template.loader import get_template
 from django.template import Context
@@ -51,7 +52,7 @@ class IndexView(generic.ListView):
         ).order_by('-pub_date')[:5]
 
 
-"""   
+"""
 First version of the detail view.
 
 def detail(request, question_id):
@@ -87,7 +88,7 @@ First version of the result view was removed after introducing the generic views
 def results(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     return render(request, 'polls/results.html', {'question': question})
-    
+
 """
 
 class ResultsView(generic.DetailView):
@@ -136,7 +137,7 @@ def hours_ahead(request, offset):
     # html = '<html><body>In %s hours, it will be %s .</body></html>' % (offset, dt)
     # return HttpResponse(html)
     return render(request, 'polls/hours_ahead.html', {'hour_offset': offset, 'next_time': dt})
-        
+
 def display_meta(request):
     values = request.META.items()
     # values.sort()

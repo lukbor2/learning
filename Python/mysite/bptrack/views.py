@@ -2,7 +2,8 @@ from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.core.urlresolvers import reverse, reverse_lazy
+#from django.core.urlresolvers import reverse, reverse_lazy
+from django.urls import reverse, reverse_lazy
 from django.http import HttpResponse
 from django.views import View
 
@@ -204,10 +205,10 @@ class PatientBPMeasureCreate(CreateView):
     """
     Implementing this CreateView without using a form because I don't need any specific validation, so I keep it simple.
     """
-    
+
     model = BP_Measure
-    # In the fields I do not include patient (the foreign key) because I take it from the parameter in the URL. 
-    fields = ['bp_measure_date','bp_measure_min', 'bp_measure_max', 'bp_measure_pulse', 'bp_measure_time_of_day', 'bp_measure_note'] 
+    # In the fields I do not include patient (the foreign key) because I take it from the parameter in the URL.
+    fields = ['bp_measure_date','bp_measure_min', 'bp_measure_max', 'bp_measure_pulse', 'bp_measure_time_of_day', 'bp_measure_note']
 
     def get_context_data(self, **kwargs):
         context = super(PatientBPMeasureCreate, self).get_context_data(**kwargs)
@@ -221,8 +222,6 @@ class PatientBPMeasureCreate(CreateView):
     def form_valid(self, form):
         form.instance.patient = Patient.objects.get(pk = int(self.kwargs['fk']))
         return super(PatientBPMeasureCreate, self).form_valid(form)
-    
+
     def get_success_url(self):
         return reverse_lazy('bptrack:patient-bpmeasures', args={self.kwargs['fk']})
-
-   

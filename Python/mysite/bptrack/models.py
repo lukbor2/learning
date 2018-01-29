@@ -1,11 +1,12 @@
 from django.db import models
 from datetime import date
-from django.core.urlresolvers import reverse
+#from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
 
 class Patient(models.Model):
-    """ 
+    """
     Each patient will be linked to one or more measures.
     Each measure is linked to one and only one patient.
     I use the package django-etc to use the verbose name in situations like table headers. So I control from the model the label used for the field.
@@ -26,7 +27,7 @@ class Patient(models.Model):
 
     def __str__(self):
         return '%s %s %s'  % (self.first_name, self.last_name, self.date_of_birth.strftime('%m-%d-%Y'))
-    
+
     def get_absolute_url(self):
         # I need this method because it is used in the PatientCreate view to return the url to go when the form used to create a patient is successfully processed.
         # Note that I have to specify the app name, otherwise it does not work. I did not understand why.
@@ -37,7 +38,7 @@ class Patient(models.Model):
         ordering = ['last_name', 'first_name']
 
 class BP_Measure(models.Model):
-    """ 
+    """
     Each patient will be linked to one or more measures.
     Each measure is linked to one and only one patient.
     BP measures (min and max) are expected in mmHg.
@@ -48,8 +49,8 @@ class BP_Measure(models.Model):
         ('AF', 'Afternoon'),
         ('EV', 'Evening'),
         )
-    
-    patient = models.ForeignKey(Patient)
+
+    patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
     bp_measure_date = models.DateField(blank=False, default=date.today, help_text='Day when the measure was taken')
     bp_measure_min = models.IntegerField(blank=False, help_text='Min pressure in mmHG')
     bp_measure_max = models.IntegerField(blank=False, help_text='Max pressure in mmHG')
@@ -59,7 +60,7 @@ class BP_Measure(models.Model):
 
     def __str__(self):
         return '%s %s %d %d %d %s' % (self.patient, self.bp_measure_date.strftime('%m-%d-%Y'), self.bp_measure_min, self.bp_measure_max, self.bp_measure_pulse, self.bp_measure_note)
-    
+
 """
 Even if it does not make sense to save the age in the db, I wanted to learn how to do something before an instance is
 saved and also how to save the result of this "something" in the db.
