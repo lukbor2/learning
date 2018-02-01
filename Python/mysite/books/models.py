@@ -21,7 +21,7 @@ class Author(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=40)
     email = models.EmailField(blank=True, verbose_name='e-mail')
-    salutation = models.CharField(max_length=100)
+    #salutation = models.CharField(max_length=100)
     name = models.CharField(max_length=200)
     # headshot = models.ImageField(upload_to='author_headshots')
 
