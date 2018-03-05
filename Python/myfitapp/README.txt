@@ -27,3 +27,4 @@ TODOs
 - Implement the owner-detail view and update url.py
 - Implement the device-detail view and update url.py
 - Implement the activty-detail view and update url.py
+- Check here how to use Bootstrap with Django (https://django-bootstrap3.readthedocs.io/en/latest/index.html) or here (https://tutorial.djangogirls.org/en/css/)
