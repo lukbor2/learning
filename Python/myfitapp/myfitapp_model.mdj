@@ -1399,6 +1399,35 @@
 										},
 										{
 											"_type": "UMLOperationView",
+											"_id": "AAAAAAFhh0zz6j1Wohg=",
+											"_parent": {
+												"$ref": "AAAAAAFhhtv++TuRd7g="
+											},
+											"model": {
+												"$ref": "AAAAAAFhh0zzwT1T8SU="
+											},
+											"visible": true,
+											"enabled": true,
+											"lineColor": "#000000",
+											"fillColor": "#ffffff",
+											"fontColor": "#000000",
+											"font": "Arial;13;0",
+											"showShadow": true,
+											"containerChangeable": false,
+											"containerExtending": false,
+											"left": 85,
+											"top": 349,
+											"width": 246,
+											"height": 13,
+											"autoResize": false,
+											"underline": false,
+											"text": "+get_absolute_url(self)",
+											"horizontalAlignment": 0,
+											"verticalAlignment": 5,
+											"wordWrap": false
+										},
+										{
+											"_type": "UMLOperationView",
 											"_id": "AAAAAAFhh0IO7z0hIak=",
 											"_parent": {
 												"$ref": "AAAAAAFhhtv++TuRd7g="
@@ -1416,7 +1445,7 @@
 											"containerChangeable": false,
 											"containerExtending": false,
 											"left": 85,
-											"top": 349,
+											"top": 364,
 											"width": 246,
 											"height": 13,
 											"autoResize": false,
@@ -1445,41 +1474,12 @@
 											"containerChangeable": false,
 											"containerExtending": false,
 											"left": 85,
-											"top": 364,
-											"width": 246,
-											"height": 13,
-											"autoResize": false,
-											"underline": false,
-											"text": "+set_activity_time(self)",
-											"horizontalAlignment": 0,
-											"verticalAlignment": 5,
-											"wordWrap": false
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAFhh0zz6j1Wohg=",
-											"_parent": {
-												"$ref": "AAAAAAFhhtv++TuRd7g="
-											},
-											"model": {
-												"$ref": "AAAAAAFhh0zzwT1T8SU="
-											},
-											"visible": true,
-											"enabled": true,
-											"lineColor": "#000000",
-											"fillColor": "#ffffff",
-											"fontColor": "#000000",
-											"font": "Arial;13;0",
-											"showShadow": true,
-											"containerChangeable": false,
-											"containerExtending": false,
-											"left": 85,
 											"top": 379,
 											"width": 246,
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "+get_absolute_url(self)",
+											"text": "+set_activity_time(self)",
 											"horizontalAlignment": 0,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -5571,73 +5571,6 @@
 						},
 						{
 							"_type": "UMLOperation",
-							"_id": "AAAAAAFhh0IOuz0eFIo=",
-							"_parent": {
-								"$ref": "AAAAAAFhhtv+9juIP9w="
-							},
-							"name": "set_activity_date",
-							"documentation": "This operation takes activity_time_original and sets the activity_date field.",
-							"stereotype": "",
-							"visibility": "public",
-							"isStatic": false,
-							"isLeaf": false,
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAFhh0YdnT0q3bs=",
-									"_parent": {
-										"$ref": "AAAAAAFhh0IOuz0eFIo="
-									},
-									"name": "self",
-									"visibility": "public",
-									"isStatic": false,
-									"isLeaf": false,
-									"type": "",
-									"isReadOnly": false,
-									"isOrdered": false,
-									"isUnique": false,
-									"direction": "in"
-								}
-							],
-							"concurrency": "sequential",
-							"isQuery": false,
-							"isAbstract": false
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAFhh0eqXz0vkko=",
-							"_parent": {
-								"$ref": "AAAAAAFhhtv+9juIP9w="
-							},
-							"name": "set_activity_time",
-							"documentation": "This operation takes activity_time_original and sets the activity_time field.",
-							"visibility": "public",
-							"isStatic": false,
-							"isLeaf": false,
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAFhh0gD/j02Zqs=",
-									"_parent": {
-										"$ref": "AAAAAAFhh0eqXz0vkko="
-									},
-									"name": "self",
-									"visibility": "public",
-									"isStatic": false,
-									"isLeaf": false,
-									"type": "",
-									"isReadOnly": false,
-									"isOrdered": false,
-									"isUnique": false,
-									"direction": "in"
-								}
-							],
-							"concurrency": "sequential",
-							"isQuery": false,
-							"isAbstract": false
-						},
-						{
-							"_type": "UMLOperation",
 							"_id": "AAAAAAFhh0zzwT1T8SU=",
 							"_parent": {
 								"$ref": "AAAAAAFhhtv+9juIP9w="
@@ -5671,12 +5604,79 @@
 						},
 						{
 							"_type": "UMLOperation",
+							"_id": "AAAAAAFhh0IOuz0eFIo=",
+							"_parent": {
+								"$ref": "AAAAAAFhhtv+9juIP9w="
+							},
+							"name": "set_activity_date",
+							"documentation": "This operation takes activity_time_original and sets the activity_date field.\n\nDo I implement this method in the model or in the view?",
+							"stereotype": "",
+							"visibility": "public",
+							"isStatic": false,
+							"isLeaf": false,
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFhh0YdnT0q3bs=",
+									"_parent": {
+										"$ref": "AAAAAAFhh0IOuz0eFIo="
+									},
+									"name": "self",
+									"visibility": "public",
+									"isStatic": false,
+									"isLeaf": false,
+									"type": "",
+									"isReadOnly": false,
+									"isOrdered": false,
+									"isUnique": false,
+									"direction": "in"
+								}
+							],
+							"concurrency": "sequential",
+							"isQuery": false,
+							"isAbstract": false
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAFhh0eqXz0vkko=",
+							"_parent": {
+								"$ref": "AAAAAAFhhtv+9juIP9w="
+							},
+							"name": "set_activity_time",
+							"documentation": "This operation takes activity_time_original and sets the activity_time field.\n\nDo I implement this method in the model or in the view?",
+							"visibility": "public",
+							"isStatic": false,
+							"isLeaf": false,
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFhh0gD/j02Zqs=",
+									"_parent": {
+										"$ref": "AAAAAAFhh0eqXz0vkko="
+									},
+									"name": "self",
+									"visibility": "public",
+									"isStatic": false,
+									"isLeaf": false,
+									"type": "",
+									"isReadOnly": false,
+									"isOrdered": false,
+									"isUnique": false,
+									"direction": "in"
+								}
+							],
+							"concurrency": "sequential",
+							"isQuery": false,
+							"isAbstract": false
+						},
+						{
+							"_type": "UMLOperation",
 							"_id": "AAAAAAFhydsXC5XMb74=",
 							"_parent": {
 								"$ref": "AAAAAAFhhtv+9juIP9w="
 							},
 							"name": "set_activity_duration",
-							"documentation": "I will use this method to convert the activity_duration into hr:mm:ss format (set the 3 attributes in the class).",
+							"documentation": "I will use this method to convert the activity_duration into hr:mm:ss format (set the 3 attributes in the class).\n\nDo I implement this method in the model or in the view?",
 							"visibility": "public",
 							"isStatic": false,
 							"isLeaf": false,
