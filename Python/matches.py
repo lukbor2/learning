@@ -1,5 +1,6 @@
 """Given a number of players generate a table where players play in teams of 2"""
 
+from random import shuffle
 
 """fuction create_teams creates teams of 2 players based on the players list"""
 def create_teams():
@@ -15,6 +16,7 @@ def create_teams():
 
 """fuction create_table creates the table for the tournament based on the list of teams"""
 def create_table(teams):
+    shuffle(teams)
     table=[]
     cnt=0
     for x in teams:
@@ -27,6 +29,7 @@ def create_table(teams):
           #the intersection is empty
           if len((team1 & team2)) == 0:
               table.append([x,y])
+    shuffle(table)
     return table
 
 """function print_teams is used just to print the teams in a better format"""
