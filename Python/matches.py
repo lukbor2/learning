@@ -46,13 +46,25 @@ def print_table(table):
     for x in table:
         print(repr(x[0])+ ' vs ' + repr(x[1]))
 
+"""Write the matches to a csv file"""
+def generate_file(table):
+	f = open('partite.csv', 'w+')
+	for x in table:
+		for y in range(0,2):
+			f.write(str(x[y][0]))
+			f.write('-')
+			f.write(str(x[y][1]))
+			f.write(',')
+		f.write('\n')
+	f.close()
+
 #Change the list players to add/remove players
-players=['Luca','Guido','Raffa','Claudio'] 
+players=['Luca','Guido','Raffa','Claudio', 'Gherra', 'Mauro'] 
 
 teams = create_teams()
 print_teams(teams)
 
 table = create_table(teams)
 print_table(table)
-      
-    
+
+generate_file(table)
