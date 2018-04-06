@@ -1,0 +1,19 @@
+"Claudio, Gherra",1,,
+"Guido, Claudio",3,,
+"Guido, Gherra",2,,
+"Guido, Raffa",1,,
+"Luca, Claudio",2,,
+"Luca, Gherra",4,,
+"Luca, Guido",5,,
+"Luca, Raffa",3,"Both Luca and Raffa have 1 match only after step 2, so in step 3 this seems the best choice.",
+"Raffa, Claudio",4,"After selecting team1, Raffa is selected for team2 because it has the lowest amount of matches played.",
+"Raffa, Gherra",5,,
+,,,
+,,"Claudio, Gherra","Guido, Raffa"
+,,"Luca, Claudio","Guido, Gherra"
+,,"Luca, Raffa","Guido, Claudio"
+,,"Luca, Gherra","Raffa, Claudio"
+,,"Luca, Guido","Raffa, Gherra"
+,,,
+Sort the teams in ascending orders.,,,
+"Look at the number of matches played so far both to compose team1 and team2  (in some cases it makes sense to look at this for team1, in other cases for team2).",,,

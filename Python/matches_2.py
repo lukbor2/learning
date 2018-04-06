@@ -48,8 +48,8 @@ def create_short_table(teams):
 	#shuffle(teams)
 	f.write('Starting teams: ' + str(teams) + '\n')
 	short_table=[]
+	x = teams[0]
 	while teams != []:
-		x = teams[0]
 		team1 = set(x)
 		f.write('team1: ' + str(team1) + '\n')
 		ranking = count_players(short_table) #Now I have an ordered dictionary; the first element is the player with the smaller number of matches.
@@ -68,17 +68,29 @@ def create_short_table(teams):
 					break
 		else:
 			cnt = 0
-			y = find_team(teams, player, team1)
-			while y == []:
-				cnt += 1
-				player = list(ranking.keys())[cnt]
-				y = find_team(teams, player, team1)
+			y = find_team2(teams, player, team1) # y might be [] in case player is part of the team1.
+			if y == []:
+				for k in ranking:
+					player = str(k)
+					y = find_team2(teams, player, team1)
+					if y != []:
+						break
 			short_table.append([x,y])
 			teams.remove(y)
-			teams.remove(x)	
-					
+			teams.remove(x)
+		
 		f.write('short table: ' + str(short_table) +'\n')
 		f.write('teams: ' + str(teams) +'\n')
+		
+		ranking = count_players(short_table)
+		f.write('Ranking: ' + str(ranking) + '\n')
+		player1 = list(ranking.keys())[0]	
+		player2 = list(ranking.keys())[1]	
+		f.write('Player1: ' + str(player1) +'\n')
+		f.write('Player2: ' + str(player2) +'\n')
+		x = find_team1(teams, str(player1), str(player2), ranking, f)		
+		f.write('Find Team1: ' + str(x) +'\n')
+			
 
 	f.close()
 	return(short_table)
@@ -131,8 +143,11 @@ def count_players(table):
 	print(ranking)
 	return(ranking)
 
-"""finds a team where the player is playing"""
-def find_team(teams, player, current_team):
+"""
+Used to pick team2 looking at the player with the lowest amount of matches so far.
+The function returns a team.
+"""
+def find_team2(teams, player, current_team):
 	res = []
 	for x in teams:
 		if player in x:
@@ -142,8 +157,31 @@ def find_team(teams, player, current_team):
 				break
 	return(res)
 
+"""
+TODO: function to pick team1.
+In this function I should look first at picking a team where both players have the lowest amount of matches so far, not just one player.
+"""
+def find_team1(teams, player1, player2, ranking, file):
+	res = []
+	#First looking for a team with both players.
+	for x in teams:
+		if (player1 in x) and (player2 in x):
+			res = x
+			break
+	if res == []:
+		for k in ranking:
+			player2 = str(k)
+			for x in teams:
+				file.write("In find_team1, " + str(x) + ' ' + player1 + ' ' + player2 + '\n')
+				if (player1 in x) and (player2 in x) and (player1 != player2):
+					res = x
+					break
+			if res != []:
+				break
+	return(res)
+
 #Change the list players to add/remove players
-players=['Luca','Guido','Raffa','Claudio', 'Gherra', ] 
+players=['Luca','Guido','Raffa','Claudio', 'Gherra', 'Mauro', 'Marcello', 'Sabba'] 
 
 teams = create_teams()
 print_teams(teams)
