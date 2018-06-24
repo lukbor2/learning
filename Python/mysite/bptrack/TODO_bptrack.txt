@@ -1,0 +1,60 @@
+Check this page for ATOM packages (https://www.sitepoint.com/10-essential-atom-add-ons/)
+
+
+#TODO:	Write down learnings and "how-to" in a document.
+
+#TODO:	Implement login for users, so that a user can see the measures belonging to the user only.
+		Look at sessions too (I think they are linked to users).
+
+#TODO:	Implement a Delete command which acts on multiple selected records.
+
+		I have what I wanted. There are some things left to do:
+		1) A better way to handle the error in case there are no records selected. In the view I should render a template to handle better the error case.
+		2) A way to handle different actions, for example Delete action and Add BP Measure Action. 
+
+#TODO:	For a selected patient (or via a link) go to another page which shows a list of all BP measures for the given patient.
+		And from there I should be able to edit, add and delete a bp measure for that patient.
+		In this view order the records by bpmeasure date descending.
+
+		I am implementing this feature by passing the patient id in the URL. I wonder if this is the best way of doing this especially by a security perspective.
+		I should think about this.
+		I was reading there are ways to avoid passing id in URL. For example by overrinding the get_object method.
+		Look here too http://stackoverflow.com/questions/25312626/how-to-prevent-user-changing-url-pk-to-see-other-submission-data-django
+		At the end of the day it seems passing the ID in the URL is not a wrong approach, but I should implement two things:
+		1) check a user is logged in
+		2) check the user is allowed to view/edit the object whose id is in the URL
+
+
+#TODO: From the homepage, create a new action which allows to add measures to the selected patient.
+
+#TODO:	In views.py, in the PatientCreate view, why reverse_lazy works and just reverse does not work? reverse works in the tutorial app.
+		It would be interesting to understand. Furthermore, I did not understand why I have to specify the app name in the reverse_lazy.
+		In the tutorial app was not needed.
+
+#TODO:	Try to re-implement the PatientCreate view using a html template which is not the standard one (modelname_form.html) and using a form class.
+
+#TODO:	When validating the form, in case of errors, move focus to the first field with errors (I think for this I will need some javascript / jquery).
+
+#TODO:	In patient_form.html everything works leaving action="" in the form.
+		But in the tutorial app there was an action specified and passed to the context.
+		I would like to understand how that worked.
+
+#TODO:	Check that when a patient is deleted, all the measures related to that patient are deleted too.
+
+-------------------------------------------------------------------
+
+#TODO:	find a way to define labels for each field, for example in the model, so those labels can be used everywhere. For example in table headings.
+		[DONE!, I've used a package called django-etc which has a custom tag which can be used in the html templates.]
+#TODO:	Use bootstrap to add some styling in a quick way.
+		[DONE!, I've added bootstrap to a base template which I import in all other templates.]
+
+#TODO:	[DONE!] Write a second version of the views which create and update a patient, based on a Model Form to learn how these forms work.
+		My understanding is I have to do this:
+		1) Create a forms.py module and in this module create a form based on the ModelForm class.
+		2) Create a second version of PatientCreate / PatientUpdate views setting the form_class attibute so it points to the form I created in step 1) .
+		3) In the ModelForm class built in step 1), override the method clean_<fieldname> to build some custom validation (this is the main reason why we would use a ModelForm).
+		4) Test the validation rule(s) and properly display the error messages to the end user.
+
+#TODO:	[DONE!] Implement a search box to search for patients.
+
+#TODO:	[DONE!] Calculate the age of a patient and save it in the database.

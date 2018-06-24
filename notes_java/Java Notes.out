@@ -1,0 +1,75 @@
+\BOOKMARK [0][-]{chapter.1}{Access Control}{}
+\BOOKMARK [1][-]{section.1.1}{Introduction}{chapter.1}
+\BOOKMARK [1][-]{section.1.2}{Package: The Library Unit}{chapter.1}
+\BOOKMARK [1][-]{section.1.3}{Java Access Specifiers}{chapter.1}
+\BOOKMARK [2][-]{subsection.1.3.1}{Package Access}{section.1.3}
+\BOOKMARK [2][-]{subsection.1.3.2}{Public Access}{section.1.3}
+\BOOKMARK [2][-]{subsection.1.3.3}{Private Access}{section.1.3}
+\BOOKMARK [2][-]{subsection.1.3.4}{Protected Access}{section.1.3}
+\BOOKMARK [1][-]{section.1.4}{Interface and Implementation}{chapter.1}
+\BOOKMARK [0][-]{chapter.2}{Reusing Classes}{}
+\BOOKMARK [1][-]{section.2.1}{Introduction: Composition and Inheritance}{chapter.2}
+\BOOKMARK [1][-]{section.2.2}{Composition Syntax}{chapter.2}
+\BOOKMARK [1][-]{section.2.3}{Inheritance Syntax}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.3.1}{Inheritance and Initialization}{section.2.3}
+\BOOKMARK [2][-]{subsection.2.3.2}{Combining Composition and Inheritance}{section.2.3}
+\BOOKMARK [1][-]{section.2.4}{Choosing Composition vs Inheritance}{chapter.2}
+\BOOKMARK [1][-]{section.2.5}{Upcasting}{chapter.2}
+\BOOKMARK [1][-]{section.2.6}{The final Keyword}{chapter.2}
+\BOOKMARK [2][-]{subsection.2.6.1}{Final Data}{section.2.6}
+\BOOKMARK [2][-]{subsection.2.6.2}{Blank Finals}{section.2.6}
+\BOOKMARK [2][-]{subsection.2.6.3}{Final Arguments}{section.2.6}
+\BOOKMARK [2][-]{subsection.2.6.4}{Final Methods}{section.2.6}
+\BOOKMARK [2][-]{subsection.2.6.5}{Final Classes}{section.2.6}
+\BOOKMARK [1][-]{section.2.7}{Initialization and Class Loading}{chapter.2}
+\BOOKMARK [0][-]{chapter.3}{Polymorphism}{}
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}
+\BOOKMARK [1][-]{section.3.2}{What Does it Mean?}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.2.1}{Perspective 1 \(Shape Example\)}{section.3.2}
+\BOOKMARK [2][-]{subsection.3.2.2}{Perspective 2 \(Instrument Example\)}{section.3.2}
+\BOOKMARK [1][-]{section.3.3}{Pitfall 1 - Overriding private Methods}{chapter.3}
+\BOOKMARK [1][-]{section.3.4}{Pitfall 2 - Fields and static Methods}{chapter.3}
+\BOOKMARK [1][-]{section.3.5}{Constructors and Polymorphism}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.5.1}{Polymorphic Methods Inside Constructors}{section.3.5}
+\BOOKMARK [1][-]{section.3.6}{Covariant Return Types}{chapter.3}
+\BOOKMARK [1][-]{section.3.7}{Designing With Inheritance}{chapter.3}
+\BOOKMARK [2][-]{subsection.3.7.1}{Substitution vs. Extension}{section.3.7}
+\BOOKMARK [0][-]{chapter.4}{Interfaces}{}
+\BOOKMARK [1][-]{section.4.1}{Abstract Classes and Methods}{chapter.4}
+\BOOKMARK [1][-]{section.4.2}{Interfaces}{chapter.4}
+\BOOKMARK [1][-]{section.4.3}{Complete Decoupling}{chapter.4}
+\BOOKMARK [1][-]{section.4.4}{Multiple Inheritance in Java}{chapter.4}
+\BOOKMARK [1][-]{section.4.5}{Extending an Interface With Inheritance}{chapter.4}
+\BOOKMARK [1][-]{section.4.6}{Fields in Interfaces}{chapter.4}
+\BOOKMARK [1][-]{section.4.7}{Interfaces and Factories}{chapter.4}
+\BOOKMARK [1][-]{section.4.8}{Interfaces Summary}{chapter.4}
+\BOOKMARK [0][-]{chapter.5}{Inner Classes}{}
+\BOOKMARK [1][-]{section.5.1}{Basic Form}{chapter.5}
+\BOOKMARK [1][-]{section.5.2}{Inner Classes in Methods and Scopes}{chapter.5}
+\BOOKMARK [0][-]{chapter.6}{Holding Your Objects}{}
+\BOOKMARK [1][-]{section.6.1}{Generics and Type-safe Containers}{chapter.6}
+\BOOKMARK [1][-]{section.6.2}{Basic concepts \(keep in mind the taxonomy picture\)}{chapter.6}
+\BOOKMARK [1][-]{section.6.3}{Adding Groups of Elements}{chapter.6}
+\BOOKMARK [1][-]{section.6.4}{Printing Containers}{chapter.6}
+\BOOKMARK [1][-]{section.6.5}{List}{chapter.6}
+\BOOKMARK [1][-]{section.6.6}{Iterator}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.6.1}{ListIterator}{section.6.6}
+\BOOKMARK [1][-]{section.6.7}{LinkedList}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.7.1}{Stack}{section.6.7}
+\BOOKMARK [1][-]{section.6.8}{Set}{chapter.6}
+\BOOKMARK [1][-]{section.6.9}{Map}{chapter.6}
+\BOOKMARK [1][-]{section.6.10}{Queue}{chapter.6}
+\BOOKMARK [2][-]{subsection.6.10.1}{Priority Queue}{section.6.10}
+\BOOKMARK [1][-]{section.6.11}{Foreach and Iterators}{chapter.6}
+\BOOKMARK [1][-]{section.6.12}{Reverse Iterator}{chapter.6}
+\BOOKMARK [0][-]{chapter.7}{Error Handling With Exceptions}{}
+\BOOKMARK [1][-]{section.7.1}{Basic Exceptions}{chapter.7}
+\BOOKMARK [2][-]{subsection.7.1.1}{Exception Arguments}{section.7.1}
+\BOOKMARK [1][-]{section.7.2}{Catching An Exception}{chapter.7}
+\BOOKMARK [2][-]{subsection.7.2.1}{The Try Block}{section.7.2}
+\BOOKMARK [2][-]{subsection.7.2.2}{Exception Handlers}{section.7.2}
+\BOOKMARK [1][-]{section.7.3}{Creating Your Own Exceptions}{chapter.7}
+\BOOKMARK [1][-]{section.7.4}{Exceptions and Logging}{chapter.7}
+\BOOKMARK [0][-]{chapter.8}{Miscellaneous}{}
+\BOOKMARK [1][-]{section.8.1}{Primitive types, Wrapper types and Autoboxing}{chapter.8}
+\BOOKMARK [1][-]{section.8.2}{The static keyword}{chapter.8}

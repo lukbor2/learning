@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Template 2</title>
+{% load books_custom_template %}
+</head>
+<body>
+<h1>{{ message }}</h1>
+<ul>
+	<li>App is: {{ app }}</li>
+	<li>User is: {{ user }}</li>
+	<li>IP Address is: {{ ip_address }}</li>
+</ul>
+<p>Using custom filter: {{ somevariable|cut:"0" }}</p>
+<p>Another custom filter: {{ somevariable|lower }}</p>
+</body>
+</html>

@@ -1,0 +1,153 @@
+\documentclass[10pt,letterpaper]{book}
+\usepackage[bookmarks]{hyperref}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\begin{document}
+\title{github Notes}
+\tableofcontents
+\chapter{github basics}
+\section{Initialize a repository}
+Go to the folder where you want to create a repository. Then use \textit{git init} command:
+\begin{lstlisting}
+	git init
+\end{lstlisting}
+The repository is initialized and the hidden folder .git is created.
+\section{Check the status of a repository}
+\begin{lstlisting}
+	git status
+\end{lstlisting}
+It reveals whether there are non-tracked files. i.e. files which need to be added to the repository and other information about the repository (for examples files to commit).
+
+\section{Add files to the repository}
+\begin{lstlisting}
+	git add <filename>
+	git add -A .
+\end{lstlisting}
+The last command adds all files and folders below the current one.
+It is possible to use wild-cards, but in those cases remember to use the single quotes. For example:
+\begin{lstlisting}
+        git add '*.txt'
+\end{lstlisting}
+
+\section{Committing changes}
+Once added a file goes into the staging area. It means it is added but has not been committed yet. To commit changes:
+\begin{lstlisting}
+	git commit -m "message goes here"
+\end{lstlisting}
+This command will commit all the changes to all files.
+
+\section{Viewing logs}
+To see a log of all changes there is a dedicated command:
+\begin{lstlisting}
+	git log
+	git log --summary
+\end{lstlisting}
+
+\section{Pushing local repository to remote server}
+To push the local repository to the github server we need to add a remote repository:
+\begin{lstlisting}
+	git remote add origin <url of the remote repository>
+\end{lstlisting}
+
+\textit{origin} is the name usually used for the remote repository, but another name can be used too.
+So now my remote repository is called origin and the main branch of my local repository is \textit{master}.
+
+\section{Push to remote repository}
+Once the remote repository is ready, we shall push the local changes to the remote repository. Using the -u option allows to remember the configuration \textit{push} has to use:
+\begin{lstlisting}
+	git push -u origin master
+\end{lstlisting}
+
+\section{Pull from remote repository}
+Other people have done some work and they have pushed their changes to the remote repository. I can pull those changes to my local repository.
+\begin{lstlisting}
+	git pull origin master
+\end{lstlisting}
+
+\section{Check differences}
+To check the differences between the current status (after a pull) and my last commit I can use the \textit{diff} command.
+\begin{lstlisting}
+	git diff HEAD
+\end{lstlisting}
+
+\textit{HEAD} is a pointer that holds your position within all your different commits. By default \textit{HEAD} points to your most recent commit, so it can be used as a quick way to reference that commit.\\
+To show the differences in staged files (i.e. files not committed yet):
+\begin{lstlisting}
+	git diff --staged
+\end{lstlisting}
+
+\section{Remove staged files}
+To remove a staged file use the \textit{reset} command:
+\begin{lstlisting}
+	git reset <filename>
+\end{lstlisting}
+
+\section{Rewind to a commit point}
+To "rewind" everything back to the point where a certain commit was made use the \textit{checkout} command:
+\begin{lstlisting}
+	git checkout -- <filename>
+\end{lstlisting}
+
+\section{Branches}
+A branch is a copy of an existing repository. I can work on a branch, make commits and then merge the branch back into the master repository.\\
+To create a branch use the \textit{branch} command.
+\begin{lstlisting}
+	git branch <branchname>
+	git checkout <branchname> --> switches to new branch
+	git checkout -b <branchname> --> creates a new branch and switches to it
+\end{lstlisting}
+Once a branch is ready and commit, it can be pushed to the remote repository too.
+
+\section{Remove files}
+To remove files from a repository use the \textit{rm} command:
+\begin{lstlisting}
+	git rm <filename>
+\end{lstlisting}
+The \textit{rm} command, not only removes the files from the disk, it also stages the removal of the files from the repository.\\
+To recursively remove all folders and files from the given directory us the \textit{-r} option:
+\begin{lstlisting}
+	git rm -r <foldername>
+\end{lstlisting}
+If a file is removed with the standard \textit{rm} command (I mean the OS command), then either \textit{git rm} must be used later or use:
+\begin{lstlisting}
+	git commit -a
+\end{lstlisting}
+The \textit{-a} option auto-removes deleted files.
+
+\section{Merging a branch}
+To merge a branch with the master. First switch to the master:
+\begin{lstlisting}
+	git checkout master
+\end{lstlisting}
+then merge
+\begin{lstlisting}
+	git merge <branchname>
+\end{lstlisting}
+If you're hosting your repo on GitHub, you can do something called a pull request. A pull request allows the boss of the project to look through your changes and make comments before deciding to merge in the change.
+
+\section{Remove a branch}
+After a branch has been merged, the branch can be removed:
+\begin{lstlisting}
+	git branch -d <branchname>
+\end{lstlisting}
+note that \textit{-d} works only on branches which have been merged.\\
+To delete a branch which has not been merged use \textit{-d} and \textit{-f} options together or just the \textit{-D} option.
+
+\section{Reset a branch}
+If you get the error\\ \\
+\textit{error: Your local changes to the following files would be overwritten by merge}\\ \\
+when using git pull, then try to use
+\begin{lstlisting}
+git reset --hard
+\end{lstlisting}
+
+That should fix the problem.
+
+\end{document}

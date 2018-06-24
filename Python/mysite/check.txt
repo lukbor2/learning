@@ -1,0 +1,322 @@
+# This is an auto-generated Django model module.
+# You'll have to do the following manually to clean this up:
+#   * Rearrange models' order
+#   * Make sure each model has one field with primary_key=True
+#   * Make sure each ForeignKey has `on_delete` set to the desired behavior.
+#   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
+# Feel free to rename the models, but don't rename db_table values or field names.
+from __future__ import unicode_literals
+
+from django.db import models
+
+
+class AuthGroup(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    name = models.CharField(unique=True, max_length=80)
+
+    class Meta:
+        managed = False
+        db_table = 'auth_group'
+
+
+class AuthGroupPermissions(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    group = models.ForeignKey(AuthGroup, models.DO_NOTHING)
+    permission = models.ForeignKey('AuthPermission', models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'auth_group_permissions'
+        unique_together = (('group', 'permission'),)
+
+
+class AuthPermission(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    content_type = models.ForeignKey('DjangoContentType', models.DO_NOTHING)
+    codename = models.CharField(max_length=100)
+    name = models.CharField(max_length=255)
+
+    class Meta:
+        managed = False
+        db_table = 'auth_permission'
+        unique_together = (('content_type', 'codename'),)
+
+
+class AuthUser(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    password = models.CharField(max_length=128)
+    last_login = models.DateTimeField(blank=True, null=True)
+    is_superuser = models.BooleanField()
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    email = models.CharField(max_length=254)
+    is_staff = models.BooleanField()
+    is_active = models.BooleanField()
+    date_joined = models.DateTimeField()
+    username = models.CharField(unique=True, max_length=150)
+
+    class Meta:
+        managed = False
+        db_table = 'auth_user'
+
+
+class AuthUserGroups(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    user = models.ForeignKey(AuthUser, models.DO_NOTHING)
+    group = models.ForeignKey(AuthGroup, models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'auth_user_groups'
+        unique_together = (('user', 'group'),)
+
+
+class AuthUserUserPermissions(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    user = models.ForeignKey(AuthUser, models.DO_NOTHING)
+    permission = models.ForeignKey(AuthPermission, models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'auth_user_user_permissions'
+        unique_together = (('user', 'permission'),)
+
+
+class BooksAuthor(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=40)
+    email = models.CharField(max_length=254)
+    name = models.CharField(max_length=200)
+    salutation = models.CharField(max_length=10)
+
+    class Meta:
+        managed = False
+        db_table = 'books_author'
+
+
+class BooksBook(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    title = models.CharField(max_length=100)
+    publisher = models.ForeignKey('BooksPublisher', models.DO_NOTHING)
+    publication_date = models.DateField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'books_book'
+
+
+class BooksBookAuthors(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    book = models.ForeignKey(BooksBook, models.DO_NOTHING)
+    author = models.ForeignKey(BooksAuthor, models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'books_book_authors'
+
+
+class BooksPublisher(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    name = models.CharField(max_length=30)
+    address = models.CharField(max_length=50)
+    city = models.CharField(max_length=60)
+    state_province = models.CharField(max_length=30)
+    country = models.CharField(max_length=50)
+    website = models.CharField(max_length=200)
+
+    class Meta:
+        managed = False
+        db_table = 'books_publisher'
+
+
+class BptrackBpMeasure(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    patient = models.ForeignKey('BptrackPatient', models.DO_NOTHING)
+    bp_measure_date = models.DateField()
+    bp_measure_max = models.IntegerField()
+    bp_measure_min = models.IntegerField()
+    bp_measure_pulse = models.IntegerField()
+    bp_measure_time_of_day = models.CharField(max_length=30)
+    bp_measure_note = models.CharField(max_length=255, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'bptrack_bp_measure'
+
+
+class BptrackPatient(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    first_name = models.CharField(max_length=255)
+    date_of_birth = models.DateField(blank=True, null=True)
+    age = models.IntegerField(blank=True, null=True)
+    email = models.CharField(max_length=254)
+    last_name = models.CharField(max_length=255)
+
+    class Meta:
+        managed = False
+        db_table = 'bptrack_patient'
+
+
+class CatalogAuthor(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    date_of_birth = models.DateField(blank=True, null=True)
+    date_of_death = models.DateField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'catalog_author'
+
+
+class CatalogBook(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    title = models.CharField(max_length=200)
+    summary = models.CharField(max_length=1000)
+    isbn = models.CharField(max_length=13)
+    author = models.ForeignKey(CatalogAuthor, models.DO_NOTHING, blank=True, null=True)
+    language = models.ForeignKey('CatalogLanguage', models.DO_NOTHING, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'catalog_book'
+
+
+class CatalogBookGenre(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    book = models.ForeignKey(CatalogBook, models.DO_NOTHING)
+    genre = models.ForeignKey('CatalogGenre', models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'catalog_book_genre'
+        unique_together = (('book', 'genre'),)
+
+
+class CatalogBookinstance(models.Model):
+    id = models.CharField(primary_key=True, max_length=32)
+    imprint = models.CharField(max_length=200)
+    due_back = models.DateField(blank=True, null=True)
+    status = models.CharField(max_length=1)
+    book = models.ForeignKey(CatalogBook, models.DO_NOTHING, blank=True, null=True)
+    borrower = models.ForeignKey(AuthUser, models.DO_NOTHING, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'catalog_bookinstance'
+
+
+class CatalogGenre(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    name = models.CharField(max_length=200)
+
+    class Meta:
+        managed = False
+        db_table = 'catalog_genre'
+
+
+class CatalogLanguage(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    name = models.CharField(max_length=200)
+
+    class Meta:
+        managed = False
+        db_table = 'catalog_language'
+
+
+class DjangoAdminLog(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    object_id = models.TextField(blank=True, null=True)
+    object_repr = models.CharField(max_length=200)
+    action_flag = models.PositiveSmallIntegerField()
+    change_message = models.TextField()
+    content_type = models.ForeignKey('DjangoContentType', models.DO_NOTHING, blank=True, null=True)
+    user = models.ForeignKey(AuthUser, models.DO_NOTHING)
+    action_time = models.DateTimeField()
+
+    class Meta:
+        managed = False
+        db_table = 'django_admin_log'
+
+
+class DjangoContentType(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    app_label = models.CharField(max_length=100)
+    model = models.CharField(max_length=100)
+
+    class Meta:
+        managed = False
+        db_table = 'django_content_type'
+        unique_together = (('app_label', 'model'),)
+
+
+class DjangoMigrations(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    app = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
+    applied = models.DateTimeField()
+
+    class Meta:
+        managed = False
+        db_table = 'django_migrations'
+
+
+class DjangoSession(models.Model):
+    session_key = models.CharField(primary_key=True, max_length=40)
+    session_data = models.TextField()
+    expire_date = models.DateTimeField()
+
+    class Meta:
+        managed = False
+        db_table = 'django_session'
+
+
+class PollsArticle(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    headline = models.CharField(max_length=100)
+
+    class Meta:
+        managed = False
+        db_table = 'polls_article'
+
+
+class PollsArticlePublications(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    article = models.ForeignKey(PollsArticle, models.DO_NOTHING)
+    publication = models.ForeignKey('PollsPublication', models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'polls_article_publications'
+        unique_together = (('article', 'publication'),)
+
+
+class PollsChoice(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    choice_text = models.CharField(max_length=200)
+    votes = models.IntegerField()
+    question = models.ForeignKey('PollsQuestion', models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'polls_choice'
+
+
+class PollsPublication(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    title = models.CharField(max_length=30)
+
+    class Meta:
+        managed = False
+        db_table = 'polls_publication'
+
+
+class PollsQuestion(models.Model):
+    id = models.IntegerField(primary_key=True)  # AutoField?
+    question_text = models.CharField(max_length=200)
+    pub_date = models.DateTimeField()
+
+    class Meta:
+        managed = False
+        db_table = 'polls_question'

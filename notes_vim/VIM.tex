@@ -1,0 +1,106 @@
+\documentclass[10pt,letterpaper]{book}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{listings}
+
+
+\begin{document}
+\title{VIM - Notes}
+\tableofcontents
+\chapter{Commands}
+\section{Movements}
+\paragraph{w}: Move one word forward
+\paragraph{b}: Move one word backward
+\paragraph{\textdollar}: Move to end of line
+\paragraph{0}: Move to beginning of line
+\section{Misc}
+\paragraph{i}: Enter insert mode at the position of the cursor
+\paragraph{I}: Enter insert mode at beginning of the line
+\paragraph{<esc>}: Enter normal mode.
+\paragraph{a}: Enter insert mode and append at one character after cursor's current position.
+\paragraph{A}: Enter insert mode and append at end of the line.
+\paragraph{R}: Enter replace mode (basically to overwrite stuff)
+\paragraph{.}: The dot command lets us repeat the last change.
+\paragraph{u}: Undo last change.
+\paragraph{<C-a>, <C-x>}: perform addition and subtraction on numbers.
+\paragraph{gU}: converts into upper case. Must be used with something else. For example \textit{gUap} converts an entire paragraph, \textit{gUaw} converts a word, etc.
+\paragraph{gu}: converts into lower case. Must be used with something else. For example \textit{guap} converts an entire paragraph, \textit{guaw} converts a word, etc.
+\section{Delete Stuff}
+\paragraph{x}: The x command deletes the character under the cursor.
+\paragraph{s}: Deletes character under the cursor and enters insert mode.
+\paragraph{dw}: Delete the word the cursor is on
+\paragraph{db}: Delete the word before the one the cursor is on
+\paragraph{dd}: Delete entire line
+\paragraph{dap}: Delete entire paragraph
+\paragraph{cw}: Delete to the end of the word and then drop into Insert mode
+\paragraph{cb}: Delete from the beginning of the word and then drop into Insert mode
+\paragraph{cc}: Delete entire line and then drop into insert mode
+\paragraph{cap}: Delete entire paragraph and then drop into Insert mode
+\\ \\
+\textbf{NOTE}: all the c and d commands can be used with a number n before, which means the command is repeated n times. For example: \textit{3dd} will delete 3 lines, \textit{3dw} will delete 3 words, etc.
+\paragraph{<C-h>}: from Insert Mode, delete back 1 character
+\paragraph{<C-w>}: from Insert Mode, delete back 1 word
+\paragraph{<C-u>}: from Insert Mode, delete back to start of line
+
+\section{Indentation}
+\paragraph{>G}:The >G command increases the indentation from the current line until the end of the file.
+\paragraph{>>}: Intent current line
+\paragraph{=}: Autoindent
+\section{Search}
+\paragraph{f\{char\}}: Look ahead for the next occurrence of the specified character and then move the cursor directly to it if a match is found.
+\paragraph{F\{char\}}: Look backwards for the next occurrence of the specified character and then move the cursor directly to it if a match is found.
+\paragraph{t\{char\}}: Forward to the character before the next occurrence of \{char\}
+\paragraph{T\{char\}}: Backward to the character before the next occurrence of \{char\}
+\paragraph{;}: repeat the last search that the \textit{f\{char\}} (or \textit{F\{char\}}) command performed
+\paragraph{,}: repeat the last \textit{f\{char\}} (or \textit{F\{char\}} or \textit{t\{char\}} or \textit{T\{char\}})search in the reverse direction
+\paragraph{/pattern}: scan document for next match
+\paragraph{?pattern}: scan document for previous match
+\paragraph{n}: repeat \textit{/pattern} (o \textit{?pattern})
+\paragraph{N}: reverse \textit{/pattern} (o \textit{?pattern})
+\paragraph{*}: search for word under the cursor (n and N work with * too)
+\paragraph{:noh}: clears the highlight effect after a search is made
+\paragraph{:set ignorecase}: set searching not case sensitive (can be added to .vimrc too)
+\paragraph{:set smartcase}: set searching not case sensitive if pattern is all lowercase; if pattern has one uppercase then it is case sensitive (can be added to .vimrc too) 
+\section{Copy and Paste}
+\paragraph{yy}: copy a line into register
+\paragraph{yw}: copy the word the cursor is on into register
+\paragraph{yb}: copy the word before the one the cursor is on into register\\ \\
+\textbf{NOTE}: all the y commands can be used with a number n before, which means the command is repeated n times. For example: \textit{3yy} will copy 3 lines, \textit{3yw} will copy 3 words, etc.
+\paragraph{p}: paste register
+\paragraph{<C-r>0}: paster register 0 from Insert Mode
+\section{Multiple Files}
+\paragraph{:ls}: Buffers list. The one with the \% symbol is the active one
+\paragraph{<C-\^{}>}: toggle between files.
+\paragraph{:bN}: where N is the buffer number, switch to buffer N.
+\paragraph{<C-w>}w: Cycle between open windows
+\paragraph{<C-w>s}: split window horizontally.
+\paragraph{<C-w>v}: split window vertically.
+\paragraph{<C-w>c}: close current window.
+\paragraph{<C-w>o}: close all windows except the active one.
+\paragraph{:sp {file}}: split window horizontally and open {file}.
+\paragraph{:vsp {file}}: split window vertically and open {file}.
+\paragraph{:tabe {filename}}: open {filename} in a new tab.
+\paragraph{<C-w>T}: move the current window into its own tab.
+\paragraph{:tabc}: close the current tab page and all of its windows.
+\paragraph{:tabo}: keep the active tab page, closing all others.
+\paragraph{:tabn N}: switch to tab number N.
+\paragraph{:tabn}: switch to next tab.
+\paragraph{:tabp}: switch to previous tab.
+\paragraph{:tabmove N}: move tab to position N (0 is the beginning).
+
+\section{Files}
+\paragraph{:edit or :e}: opens a file either by specifying
+an absolute or a relative filepath
+\paragraph{:find}: allows to open a file by its name without having to provide a fully qualified path
+\paragraph{Explore File System}: If we launch Vim with the path to a directory (for example \textit{vim .}) rather than a file, it will start up with a file explorer window
+\paragraph{:Explore or :E}: opens the file explorer
+\paragraph{:edit \{path\}}: opens the file explorer
+\paragraph{:Vexplore}: opens the file explorer in a vertical split window
+\paragraph{\textit{buffer number}:bdelete or :bd}: deletes the buffer(s) specified (it can be a range or a list too
+\end{document}
+

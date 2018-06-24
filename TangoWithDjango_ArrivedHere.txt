@@ -1,0 +1,8 @@
+Tango with Django, arrived here:
+
+Completed Chapter 5, but do the exercises at the end of the chapter before moving to next chapter!!
+
+Once the exercises are done proceed with
+
+http://www.tangowithdjango.com/book17/chapters/models.html
+

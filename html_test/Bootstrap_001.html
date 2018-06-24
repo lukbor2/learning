@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Testing Bootstrap CSS</title>
+</head>
+<body>
+<div class="container"> <!-- Bootstrap requires a containing element to wrap site contents and house the grid system. Use .container for a responsive fixed width container -->
+    <div class="row">
+        <div class="col-md-8" style="background-color:burlywood">First Row - Col-md-8</div>
+        <div class="col-md-4" style="background-color:aquamarine">First Row - Col-md-4</div>
+    </div>
+    <div class="row"> <!-- Remember with col-md-xx you need to use the class row --> 
+        <div class="col-md-12" style="background-color:burlywood"> <!--OK, this works. I use col-md-12 just to have everythin within bootstrap grid system. Then I use the bootstrap pull-righ. -->
+        <h2>
+            <span>
+                Case 1: Using bootstrap pull-right 
+            </span>
+            <button class="btn btn-primary pull-right">Button Case 1</button>
+        </h2>
+        </div>
+    </div>
+
+    <div class="row"> <!-- Remember with col-md-xx you need to use the class row --> 
+    <div class="col-md-8" style="padding-bottom: 5px; display: table; width: 100%"> <!-- OK, this works too. -->
+        <div style="display: table-cell; vertical-align: middle">
+            <h2>Case 2: Without using pull-right</h2>
+        </div>
+        <div class="" style="display: table-cell; vertical-align: middle; text-align: right">
+            <button class="btn btn-primary">Button Case 2</button>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>

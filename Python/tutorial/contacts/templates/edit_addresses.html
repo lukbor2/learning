@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<h1>Edit Addresses</h1>
+
+<p>Editing Addresses for {{ contact }} .</p>
+
+<form action="{% url "contacts-edit-addresses" pk=contact.id %}" method= "POST">
+{% csrf_token %}
+{{ form.management_form }}
+{% for address_form in form %}
+    <div class="form-group">
+    {% for field in address_form %}
+         {{field.label_tag}}
+           {{field|add_class:"form-control"}}
+    {% endfor %}
+   </div>
+   
+{% endfor %}
+<input type="submit" value="Save" class="btn btn-primary"/>
+</form>
+
+{% endblock %}

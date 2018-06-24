@@ -1,0 +1,298 @@
+Starting teams: [['Luca', 'Guido'], ['Luca', 'Raffa'], ['Luca', 'Claudio'], ['Luca', 'Gherra'], ['Luca', 'Mauro'], ['Luca', 'Marcello'], ['Luca', 'Sabba'], ['Guido', 'Raffa'], ['Guido', 'Claudio'], ['Guido', 'Gherra'], ['Guido', 'Mauro'], ['Guido', 'Marcello'], ['Guido', 'Sabba'], ['Raffa', 'Claudio'], ['Raffa', 'Gherra'], ['Raffa', 'Mauro'], ['Raffa', 'Marcello'], ['Raffa', 'Sabba'], ['Claudio', 'Gherra'], ['Claudio', 'Mauro'], ['Claudio', 'Marcello'], ['Claudio', 'Sabba'], ['Gherra', 'Mauro'], ['Gherra', 'Marcello'], ['Gherra', 'Sabba'], ['Mauro', 'Marcello'], ['Mauro', 'Sabba'], ['Marcello', 'Sabba']]
+team1: {'Guido', 'Luca'}
+Ranking: OrderedDict([('Sabba', 0), ('Marcello', 0), ('Gherra', 0), ('Claudio', 0), ('Guido', 0), ('Mauro', 0), ('Raffa', 0), ('Luca', 0)])
+Player: Sabba
+short table: [[['Luca', 'Guido'], ['Raffa', 'Sabba']]]
+teams: [['Luca', 'Raffa'], ['Luca', 'Claudio'], ['Luca', 'Gherra'], ['Luca', 'Mauro'], ['Luca', 'Marcello'], ['Luca', 'Sabba'], ['Guido', 'Raffa'], ['Guido', 'Claudio'], ['Guido', 'Gherra'], ['Guido', 'Mauro'], ['Guido', 'Marcello'], ['Guido', 'Sabba'], ['Raffa', 'Claudio'], ['Raffa', 'Gherra'], ['Raffa', 'Mauro'], ['Raffa', 'Marcello'], ['Claudio', 'Gherra'], ['Claudio', 'Mauro'], ['Claudio', 'Marcello'], ['Claudio', 'Sabba'], ['Gherra', 'Mauro'], ['Gherra', 'Marcello'], ['Gherra', 'Sabba'], ['Mauro', 'Marcello'], ['Mauro', 'Sabba'], ['Marcello', 'Sabba']]
+Ranking: OrderedDict([('Marcello', 0), ('Gherra', 0), ('Claudio', 0), ('Mauro', 0), ('Sabba', 1), ('Guido', 1), ('Raffa', 1), ('Luca', 1)])
+Player1: Marcello
+Player2: Gherra
+Find Team1: ['Gherra', 'Marcello']
+team1: {'Gherra', 'Marcello'}
+Ranking: OrderedDict([('Marcello', 0), ('Gherra', 0), ('Claudio', 0), ('Mauro', 0), ('Sabba', 1), ('Guido', 1), ('Raffa', 1), ('Luca', 1)])
+Player: Marcello
+short table: [[['Luca', 'Guido'], ['Raffa', 'Sabba']], [['Gherra', 'Marcello'], ['Luca', 'Claudio']]]
+teams: [['Luca', 'Raffa'], ['Luca', 'Gherra'], ['Luca', 'Mauro'], ['Luca', 'Marcello'], ['Luca', 'Sabba'], ['Guido', 'Raffa'], ['Guido', 'Claudio'], ['Guido', 'Gherra'], ['Guido', 'Mauro'], ['Guido', 'Marcello'], ['Guido', 'Sabba'], ['Raffa', 'Claudio'], ['Raffa', 'Gherra'], ['Raffa', 'Mauro'], ['Raffa', 'Marcello'], ['Claudio', 'Gherra'], ['Claudio', 'Mauro'], ['Claudio', 'Marcello'], ['Claudio', 'Sabba'], ['Gherra', 'Mauro'], ['Gherra', 'Sabba'], ['Mauro', 'Marcello'], ['Mauro', 'Sabba'], ['Marcello', 'Sabba']]
+Ranking: OrderedDict([('Mauro', 0), ('Sabba', 1), ('Gherra', 1), ('Claudio', 1), ('Guido', 1), ('Marcello', 1), ('Raffa', 1), ('Luca', 2)])
+Player1: Mauro
+Player2: Sabba
+Find Team1: ['Mauro', 'Sabba']
+team1: {'Sabba', 'Mauro'}
+Ranking: OrderedDict([('Mauro', 0), ('Sabba', 1), ('Gherra', 1), ('Claudio', 1), ('Guido', 1), ('Marcello', 1), ('Raffa', 1), ('Luca', 2)])
+Player: Mauro
+short table: [[['Luca', 'Guido'], ['Raffa', 'Sabba']], [['Gherra', 'Marcello'], ['Luca', 'Claudio']], [['Mauro', 'Sabba'], ['Luca', 'Gherra']]]
+teams: [['Luca', 'Raffa'], ['Luca', 'Mauro'], ['Luca', 'Marcello'], ['Luca', 'Sabba'], ['Guido', 'Raffa'], ['Guido', 'Claudio'], ['Guido', 'Gherra'], ['Guido', 'Mauro'], ['Guido', 'Marcello'], ['Guido', 'Sabba'], ['Raffa', 'Claudio'], ['Raffa', 'Gherra'], ['Raffa', 'Mauro'], ['Raffa', 'Marcello'], ['Claudio', 'Gherra'], ['Claudio', 'Mauro'], ['Claudio', 'Marcello'], ['Claudio', 'Sabba'], ['Gherra', 'Mauro'], ['Gherra', 'Sabba'], ['Mauro', 'Marcello'], ['Marcello', 'Sabba']]
+Ranking: OrderedDict([('Mauro', 1), ('Claudio', 1), ('Guido', 1), ('Marcello', 1), ('Raffa', 1), ('Sabba', 2), ('Gherra', 2), ('Luca', 3)])
+Player1: Mauro
+Player2: Claudio
+Find Team1: ['Claudio', 'Mauro']
+team1: {'Claudio', 'Mauro'}
+Ranking: OrderedDict([('Mauro', 1), ('Claudio', 1), ('Guido', 1), ('Marcello', 1), ('Raffa', 1), ('Sabba', 2), ('Gherra', 2), ('Luca', 3)])
+Player: Mauro
+short table: [[['Luca', 'Guido'], ['Raffa', 'Sabba']], [['Gherra', 'Marcello'], ['Luca', 'Claudio']], [['Mauro', 'Sabba'], ['Luca', 'Gherra']], [['Claudio', 'Mauro'], ['Guido', 'Raffa']]]
+teams: [['Luca', 'Raffa'], ['Luca', 'Mauro'], ['Luca', 'Marcello'], ['Luca', 'Sabba'], ['Guido', 'Claudio'], ['Guido', 'Gherra'], ['Guido', 'Mauro'], ['Guido', 'Marcello'], ['Guido', 'Sabba'], ['Raffa', 'Claudio'], ['Raffa', 'Gherra'], ['Raffa', 'Mauro'], ['Raffa', 'Marcello'], ['Claudio', 'Gherra'], ['Claudio', 'Marcello'], ['Claudio', 'Sabba'], ['Gherra', 'Mauro'], ['Gherra', 'Sabba'], ['Mauro', 'Marcello'], ['Marcello', 'Sabba']]
+Ranking: OrderedDict([('Marcello', 1), ('Sabba', 2), ('Mauro', 2), ('Gherra', 2), ('Claudio', 2), ('Guido', 2), ('Raffa', 2), ('Luca', 3)])
+Player1: Marcello
+Player2: Sabba
+Find Team1: ['Marcello', 'Sabba']
+team1: {'Sabba', 'Marcello'}
+Ranking: OrderedDict([('Marcello', 1), ('Sabba', 2), ('Mauro', 2), ('Gherra', 2), ('Claudio', 2), ('Guido', 2), ('Raffa', 2), ('Luca', 3)])
+Player: Marcello
+short table: [[['Luca', 'Guido'], ['Raffa', 'Sabba']], [['Gherra', 'Marcello'], ['Luca', 'Claudio']], [['Mauro', 'Sabba'], ['Luca', 'Gherra']], [['Claudio', 'Mauro'], ['Guido', 'Raffa']], [['Marcello', 'Sabba'], ['Luca', 'Mauro']]]
+teams: [['Luca', 'Raffa'], ['Luca', 'Marcello'], ['Luca', 'Sabba'], ['Guido', 'Claudio'], ['Guido', 'Gherra'], ['Guido', 'Mauro'], ['Guido', 'Marcello'], ['Guido', 'Sabba'], ['Raffa', 'Claudio'], ['Raffa', 'Gherra'], ['Raffa', 'Mauro'], ['Raffa', 'Marcello'], ['Claudio', 'Gherra'], ['Claudio', 'Marcello'], ['Claudio', 'Sabba'], ['Gherra', 'Mauro'], ['Gherra', 'Sabba'], ['Mauro', 'Marcello']]
+Ranking: OrderedDict([('Gherra', 2), ('Claudio', 2), ('Guido', 2), ('Marcello', 2), ('Raffa', 2), ('Sabba', 3), ('Mauro', 3), ('Luca', 4)])
+Player1: Gherra
+Player2: Claudio
+Find Team1: ['Claudio', 'Gherra']
+team1: {'Claudio', 'Gherra'}
+Ranking: OrderedDict([('Gherra', 2), ('Claudio', 2), ('Guido', 2), ('Marcello', 2), ('Raffa', 2), ('Sabba', 3), ('Mauro', 3), ('Luca', 4)])
+Player: Gherra
+short table: [[['Luca', 'Guido'], ['Raffa', 'Sabba']], [['Gherra', 'Marcello'], ['Luca', 'Claudio']], [['Mauro', 'Sabba'], ['Luca', 'Gherra']], [['Claudio', 'Mauro'], ['Guido', 'Raffa']], [['Marcello', 'Sabba'], ['Luca', 'Mauro']], [['Claudio', 'Gherra'], ['Guido', 'Mauro']]]
+teams: [['Luca', 'Raffa'], ['Luca', 'Marcello'], ['Luca', 'Sabba'], ['Guido', 'Claudio'], ['Guido', 'Gherra'], ['Guido', 'Marcello'], ['Guido', 'Sabba'], ['Raffa', 'Claudio'], ['Raffa', 'Gherra'], ['Raffa', 'Mauro'], ['Raffa', 'Marcello'], ['Claudio', 'Marcello'], ['Claudio', 'Sabba'], ['Gherra', 'Mauro'], ['Gherra', 'Sabba'], ['Mauro', 'Marcello']]
+Ranking: OrderedDict([('Marcello', 2), ('Raffa', 2), ('Sabba', 3), ('Gherra', 3), ('Claudio', 3), ('Guido', 3), ('Mauro', 4), ('Luca', 4)])
+Player1: Marcello
+Player2: Raffa
+Find Team1: ['Raffa', 'Marcello']
+team1: {'Marcello', 'Raffa'}
+Ranking: OrderedDict([('Marcello', 2), ('Raffa', 2), ('Sabba', 3), ('Gherra', 3), ('Claudio', 3), ('Guido', 3), ('Mauro', 4), ('Luca', 4)])
+Player: Marcello
+short table: [[['Luca', 'Guido'], ['Raffa', 'Sabba']], [['Gherra', 'Marcello'], ['Luca', 'Claudio']], [['Mauro', 'Sabba'], ['Luca', 'Gherra']], [['Claudio', 'Mauro'], ['Guido', 'Raffa']], [['Marcello', 'Sabba'], ['Luca', 'Mauro']], [['Claudio', 'Gherra'], ['Guido', 'Mauro']], [['Raffa', 'Marcello'], ['Luca', 'Sabba']]]
+teams: [['Luca', 'Raffa'], ['Luca', 'Marcello'], ['Guido', 'Claudio'], ['Guido', 'Gherra'], ['Guido', 'Marcello'], ['Guido', 'Sabba'], ['Raffa', 'Claudio'], ['Raffa', 'Gherra'], ['Raffa', 'Mauro'], ['Claudio', 'Marcello'], ['Claudio', 'Sabba'], ['Gherra', 'Mauro'], ['Gherra', 'Sabba'], ['Mauro', 'Marcello']]
+Ranking: OrderedDict([('Gherra', 3), ('Claudio', 3), ('Guido', 3), ('Marcello', 3), ('Raffa', 3), ('Sabba', 4), ('Mauro', 4), ('Luca', 5)])
+Player1: Gherra
+Player2: Claudio
+In find_team1, ['Luca', 'Raffa'] Gherra Gherra
+In find_team1, ['Luca', 'Marcello'] Gherra Gherra
+In find_team1, ['Guido', 'Claudio'] Gherra Gherra
+In find_team1, ['Guido', 'Gherra'] Gherra Gherra
+In find_team1, ['Guido', 'Marcello'] Gherra Gherra
+In find_team1, ['Guido', 'Sabba'] Gherra Gherra
+In find_team1, ['Raffa', 'Claudio'] Gherra Gherra
+In find_team1, ['Raffa', 'Gherra'] Gherra Gherra
+In find_team1, ['Raffa', 'Mauro'] Gherra Gherra
+In find_team1, ['Claudio', 'Marcello'] Gherra Gherra
+In find_team1, ['Claudio', 'Sabba'] Gherra Gherra
+In find_team1, ['Gherra', 'Mauro'] Gherra Gherra
+In find_team1, ['Gherra', 'Sabba'] Gherra Gherra
+In find_team1, ['Mauro', 'Marcello'] Gherra Gherra
+In find_team1, ['Luca', 'Raffa'] Gherra Claudio
+In find_team1, ['Luca', 'Marcello'] Gherra Claudio
+In find_team1, ['Guido', 'Claudio'] Gherra Claudio
+In find_team1, ['Guido', 'Gherra'] Gherra Claudio
+In find_team1, ['Guido', 'Marcello'] Gherra Claudio
+In find_team1, ['Guido', 'Sabba'] Gherra Claudio
+In find_team1, ['Raffa', 'Claudio'] Gherra Claudio
+In find_team1, ['Raffa', 'Gherra'] Gherra Claudio
+In find_team1, ['Raffa', 'Mauro'] Gherra Claudio
+In find_team1, ['Claudio', 'Marcello'] Gherra Claudio
+In find_team1, ['Claudio', 'Sabba'] Gherra Claudio
+In find_team1, ['Gherra', 'Mauro'] Gherra Claudio
+In find_team1, ['Gherra', 'Sabba'] Gherra Claudio
+In find_team1, ['Mauro', 'Marcello'] Gherra Claudio
+In find_team1, ['Luca', 'Raffa'] Gherra Guido
+In find_team1, ['Luca', 'Marcello'] Gherra Guido
+In find_team1, ['Guido', 'Claudio'] Gherra Guido
+In find_team1, ['Guido', 'Gherra'] Gherra Guido
+Find Team1: ['Guido', 'Gherra']
+team1: {'Gherra', 'Guido'}
+Ranking: OrderedDict([('Gherra', 3), ('Claudio', 3), ('Guido', 3), ('Marcello', 3), ('Raffa', 3), ('Sabba', 4), ('Mauro', 4), ('Luca', 5)])
+Player: Gherra
+short table: [[['Luca', 'Guido'], ['Raffa', 'Sabba']], [['Gherra', 'Marcello'], ['Luca', 'Claudio']], [['Mauro', 'Sabba'], ['Luca', 'Gherra']], [['Claudio', 'Mauro'], ['Guido', 'Raffa']], [['Marcello', 'Sabba'], ['Luca', 'Mauro']], [['Claudio', 'Gherra'], ['Guido', 'Mauro']], [['Raffa', 'Marcello'], ['Luca', 'Sabba']], [['Guido', 'Gherra'], ['Raffa', 'Claudio']]]
+teams: [['Luca', 'Raffa'], ['Luca', 'Marcello'], ['Guido', 'Claudio'], ['Guido', 'Marcello'], ['Guido', 'Sabba'], ['Raffa', 'Gherra'], ['Raffa', 'Mauro'], ['Claudio', 'Marcello'], ['Claudio', 'Sabba'], ['Gherra', 'Mauro'], ['Gherra', 'Sabba'], ['Mauro', 'Marcello']]
+Ranking: OrderedDict([('Marcello', 3), ('Sabba', 4), ('Mauro', 4), ('Gherra', 4), ('Claudio', 4), ('Guido', 4), ('Raffa', 4), ('Luca', 5)])
+Player1: Marcello
+Player2: Sabba
+In find_team1, ['Luca', 'Raffa'] Marcello Marcello
+In find_team1, ['Luca', 'Marcello'] Marcello Marcello
+In find_team1, ['Guido', 'Claudio'] Marcello Marcello
+In find_team1, ['Guido', 'Marcello'] Marcello Marcello
+In find_team1, ['Guido', 'Sabba'] Marcello Marcello
+In find_team1, ['Raffa', 'Gherra'] Marcello Marcello
+In find_team1, ['Raffa', 'Mauro'] Marcello Marcello
+In find_team1, ['Claudio', 'Marcello'] Marcello Marcello
+In find_team1, ['Claudio', 'Sabba'] Marcello Marcello
+In find_team1, ['Gherra', 'Mauro'] Marcello Marcello
+In find_team1, ['Gherra', 'Sabba'] Marcello Marcello
+In find_team1, ['Mauro', 'Marcello'] Marcello Marcello
+In find_team1, ['Luca', 'Raffa'] Marcello Sabba
+In find_team1, ['Luca', 'Marcello'] Marcello Sabba
+In find_team1, ['Guido', 'Claudio'] Marcello Sabba
+In find_team1, ['Guido', 'Marcello'] Marcello Sabba
+In find_team1, ['Guido', 'Sabba'] Marcello Sabba
+In find_team1, ['Raffa', 'Gherra'] Marcello Sabba
+In find_team1, ['Raffa', 'Mauro'] Marcello Sabba
+In find_team1, ['Claudio', 'Marcello'] Marcello Sabba
+In find_team1, ['Claudio', 'Sabba'] Marcello Sabba
+In find_team1, ['Gherra', 'Mauro'] Marcello Sabba
+In find_team1, ['Gherra', 'Sabba'] Marcello Sabba
+In find_team1, ['Mauro', 'Marcello'] Marcello Sabba
+In find_team1, ['Luca', 'Raffa'] Marcello Mauro
+In find_team1, ['Luca', 'Marcello'] Marcello Mauro
+In find_team1, ['Guido', 'Claudio'] Marcello Mauro
+In find_team1, ['Guido', 'Marcello'] Marcello Mauro
+In find_team1, ['Guido', 'Sabba'] Marcello Mauro
+In find_team1, ['Raffa', 'Gherra'] Marcello Mauro
+In find_team1, ['Raffa', 'Mauro'] Marcello Mauro
+In find_team1, ['Claudio', 'Marcello'] Marcello Mauro
+In find_team1, ['Claudio', 'Sabba'] Marcello Mauro
+In find_team1, ['Gherra', 'Mauro'] Marcello Mauro
+In find_team1, ['Gherra', 'Sabba'] Marcello Mauro
+In find_team1, ['Mauro', 'Marcello'] Marcello Mauro
+Find Team1: ['Mauro', 'Marcello']
+team1: {'Marcello', 'Mauro'}
+Ranking: OrderedDict([('Marcello', 3), ('Sabba', 4), ('Mauro', 4), ('Gherra', 4), ('Claudio', 4), ('Guido', 4), ('Raffa', 4), ('Luca', 5)])
+Player: Marcello
+short table: [[['Luca', 'Guido'], ['Raffa', 'Sabba']], [['Gherra', 'Marcello'], ['Luca', 'Claudio']], [['Mauro', 'Sabba'], ['Luca', 'Gherra']], [['Claudio', 'Mauro'], ['Guido', 'Raffa']], [['Marcello', 'Sabba'], ['Luca', 'Mauro']], [['Claudio', 'Gherra'], ['Guido', 'Mauro']], [['Raffa', 'Marcello'], ['Luca', 'Sabba']], [['Guido', 'Gherra'], ['Raffa', 'Claudio']], [['Mauro', 'Marcello'], ['Guido', 'Sabba']]]
+teams: [['Luca', 'Raffa'], ['Luca', 'Marcello'], ['Guido', 'Claudio'], ['Guido', 'Marcello'], ['Raffa', 'Gherra'], ['Raffa', 'Mauro'], ['Claudio', 'Marcello'], ['Claudio', 'Sabba'], ['Gherra', 'Mauro'], ['Gherra', 'Sabba']]
+Ranking: OrderedDict([('Gherra', 4), ('Claudio', 4), ('Marcello', 4), ('Raffa', 4), ('Sabba', 5), ('Mauro', 5), ('Guido', 5), ('Luca', 5)])
+Player1: Gherra
+Player2: Claudio
+In find_team1, ['Luca', 'Raffa'] Gherra Gherra
+In find_team1, ['Luca', 'Marcello'] Gherra Gherra
+In find_team1, ['Guido', 'Claudio'] Gherra Gherra
+In find_team1, ['Guido', 'Marcello'] Gherra Gherra
+In find_team1, ['Raffa', 'Gherra'] Gherra Gherra
+In find_team1, ['Raffa', 'Mauro'] Gherra Gherra
+In find_team1, ['Claudio', 'Marcello'] Gherra Gherra
+In find_team1, ['Claudio', 'Sabba'] Gherra Gherra
+In find_team1, ['Gherra', 'Mauro'] Gherra Gherra
+In find_team1, ['Gherra', 'Sabba'] Gherra Gherra
+In find_team1, ['Luca', 'Raffa'] Gherra Claudio
+In find_team1, ['Luca', 'Marcello'] Gherra Claudio
+In find_team1, ['Guido', 'Claudio'] Gherra Claudio
+In find_team1, ['Guido', 'Marcello'] Gherra Claudio
+In find_team1, ['Raffa', 'Gherra'] Gherra Claudio
+In find_team1, ['Raffa', 'Mauro'] Gherra Claudio
+In find_team1, ['Claudio', 'Marcello'] Gherra Claudio
+In find_team1, ['Claudio', 'Sabba'] Gherra Claudio
+In find_team1, ['Gherra', 'Mauro'] Gherra Claudio
+In find_team1, ['Gherra', 'Sabba'] Gherra Claudio
+In find_team1, ['Luca', 'Raffa'] Gherra Marcello
+In find_team1, ['Luca', 'Marcello'] Gherra Marcello
+In find_team1, ['Guido', 'Claudio'] Gherra Marcello
+In find_team1, ['Guido', 'Marcello'] Gherra Marcello
+In find_team1, ['Raffa', 'Gherra'] Gherra Marcello
+In find_team1, ['Raffa', 'Mauro'] Gherra Marcello
+In find_team1, ['Claudio', 'Marcello'] Gherra Marcello
+In find_team1, ['Claudio', 'Sabba'] Gherra Marcello
+In find_team1, ['Gherra', 'Mauro'] Gherra Marcello
+In find_team1, ['Gherra', 'Sabba'] Gherra Marcello
+In find_team1, ['Luca', 'Raffa'] Gherra Raffa
+In find_team1, ['Luca', 'Marcello'] Gherra Raffa
+In find_team1, ['Guido', 'Claudio'] Gherra Raffa
+In find_team1, ['Guido', 'Marcello'] Gherra Raffa
+In find_team1, ['Raffa', 'Gherra'] Gherra Raffa
+Find Team1: ['Raffa', 'Gherra']
+team1: {'Gherra', 'Raffa'}
+Ranking: OrderedDict([('Gherra', 4), ('Claudio', 4), ('Marcello', 4), ('Raffa', 4), ('Sabba', 5), ('Mauro', 5), ('Guido', 5), ('Luca', 5)])
+Player: Gherra
+short table: [[['Luca', 'Guido'], ['Raffa', 'Sabba']], [['Gherra', 'Marcello'], ['Luca', 'Claudio']], [['Mauro', 'Sabba'], ['Luca', 'Gherra']], [['Claudio', 'Mauro'], ['Guido', 'Raffa']], [['Marcello', 'Sabba'], ['Luca', 'Mauro']], [['Claudio', 'Gherra'], ['Guido', 'Mauro']], [['Raffa', 'Marcello'], ['Luca', 'Sabba']], [['Guido', 'Gherra'], ['Raffa', 'Claudio']], [['Mauro', 'Marcello'], ['Guido', 'Sabba']], [['Raffa', 'Gherra'], ['Guido', 'Claudio']]]
+teams: [['Luca', 'Raffa'], ['Luca', 'Marcello'], ['Guido', 'Marcello'], ['Raffa', 'Mauro'], ['Claudio', 'Marcello'], ['Claudio', 'Sabba'], ['Gherra', 'Mauro'], ['Gherra', 'Sabba']]
+Ranking: OrderedDict([('Marcello', 4), ('Sabba', 5), ('Mauro', 5), ('Gherra', 5), ('Claudio', 5), ('Raffa', 5), ('Luca', 5), ('Guido', 6)])
+Player1: Marcello
+Player2: Sabba
+In find_team1, ['Luca', 'Raffa'] Marcello Marcello
+In find_team1, ['Luca', 'Marcello'] Marcello Marcello
+In find_team1, ['Guido', 'Marcello'] Marcello Marcello
+In find_team1, ['Raffa', 'Mauro'] Marcello Marcello
+In find_team1, ['Claudio', 'Marcello'] Marcello Marcello
+In find_team1, ['Claudio', 'Sabba'] Marcello Marcello
+In find_team1, ['Gherra', 'Mauro'] Marcello Marcello
+In find_team1, ['Gherra', 'Sabba'] Marcello Marcello
+In find_team1, ['Luca', 'Raffa'] Marcello Sabba
+In find_team1, ['Luca', 'Marcello'] Marcello Sabba
+In find_team1, ['Guido', 'Marcello'] Marcello Sabba
+In find_team1, ['Raffa', 'Mauro'] Marcello Sabba
+In find_team1, ['Claudio', 'Marcello'] Marcello Sabba
+In find_team1, ['Claudio', 'Sabba'] Marcello Sabba
+In find_team1, ['Gherra', 'Mauro'] Marcello Sabba
+In find_team1, ['Gherra', 'Sabba'] Marcello Sabba
+In find_team1, ['Luca', 'Raffa'] Marcello Mauro
+In find_team1, ['Luca', 'Marcello'] Marcello Mauro
+In find_team1, ['Guido', 'Marcello'] Marcello Mauro
+In find_team1, ['Raffa', 'Mauro'] Marcello Mauro
+In find_team1, ['Claudio', 'Marcello'] Marcello Mauro
+In find_team1, ['Claudio', 'Sabba'] Marcello Mauro
+In find_team1, ['Gherra', 'Mauro'] Marcello Mauro
+In find_team1, ['Gherra', 'Sabba'] Marcello Mauro
+In find_team1, ['Luca', 'Raffa'] Marcello Gherra
+In find_team1, ['Luca', 'Marcello'] Marcello Gherra
+In find_team1, ['Guido', 'Marcello'] Marcello Gherra
+In find_team1, ['Raffa', 'Mauro'] Marcello Gherra
+In find_team1, ['Claudio', 'Marcello'] Marcello Gherra
+In find_team1, ['Claudio', 'Sabba'] Marcello Gherra
+In find_team1, ['Gherra', 'Mauro'] Marcello Gherra
+In find_team1, ['Gherra', 'Sabba'] Marcello Gherra
+In find_team1, ['Luca', 'Raffa'] Marcello Claudio
+In find_team1, ['Luca', 'Marcello'] Marcello Claudio
+In find_team1, ['Guido', 'Marcello'] Marcello Claudio
+In find_team1, ['Raffa', 'Mauro'] Marcello Claudio
+In find_team1, ['Claudio', 'Marcello'] Marcello Claudio
+Find Team1: ['Claudio', 'Marcello']
+team1: {'Claudio', 'Marcello'}
+Ranking: OrderedDict([('Marcello', 4), ('Sabba', 5), ('Mauro', 5), ('Gherra', 5), ('Claudio', 5), ('Raffa', 5), ('Luca', 5), ('Guido', 6)])
+Player: Marcello
+short table: [[['Luca', 'Guido'], ['Raffa', 'Sabba']], [['Gherra', 'Marcello'], ['Luca', 'Claudio']], [['Mauro', 'Sabba'], ['Luca', 'Gherra']], [['Claudio', 'Mauro'], ['Guido', 'Raffa']], [['Marcello', 'Sabba'], ['Luca', 'Mauro']], [['Claudio', 'Gherra'], ['Guido', 'Mauro']], [['Raffa', 'Marcello'], ['Luca', 'Sabba']], [['Guido', 'Gherra'], ['Raffa', 'Claudio']], [['Mauro', 'Marcello'], ['Guido', 'Sabba']], [['Raffa', 'Gherra'], ['Guido', 'Claudio']], [['Claudio', 'Marcello'], ['Gherra', 'Sabba']]]
+teams: [['Luca', 'Raffa'], ['Luca', 'Marcello'], ['Guido', 'Marcello'], ['Raffa', 'Mauro'], ['Claudio', 'Sabba'], ['Gherra', 'Mauro']]
+Ranking: OrderedDict([('Mauro', 5), ('Marcello', 5), ('Raffa', 5), ('Luca', 5), ('Sabba', 6), ('Gherra', 6), ('Claudio', 6), ('Guido', 6)])
+Player1: Mauro
+Player2: Marcello
+In find_team1, ['Luca', 'Raffa'] Mauro Mauro
+In find_team1, ['Luca', 'Marcello'] Mauro Mauro
+In find_team1, ['Guido', 'Marcello'] Mauro Mauro
+In find_team1, ['Raffa', 'Mauro'] Mauro Mauro
+In find_team1, ['Claudio', 'Sabba'] Mauro Mauro
+In find_team1, ['Gherra', 'Mauro'] Mauro Mauro
+In find_team1, ['Luca', 'Raffa'] Mauro Marcello
+In find_team1, ['Luca', 'Marcello'] Mauro Marcello
+In find_team1, ['Guido', 'Marcello'] Mauro Marcello
+In find_team1, ['Raffa', 'Mauro'] Mauro Marcello
+In find_team1, ['Claudio', 'Sabba'] Mauro Marcello
+In find_team1, ['Gherra', 'Mauro'] Mauro Marcello
+In find_team1, ['Luca', 'Raffa'] Mauro Raffa
+In find_team1, ['Luca', 'Marcello'] Mauro Raffa
+In find_team1, ['Guido', 'Marcello'] Mauro Raffa
+In find_team1, ['Raffa', 'Mauro'] Mauro Raffa
+Find Team1: ['Raffa', 'Mauro']
+team1: {'Mauro', 'Raffa'}
+Ranking: OrderedDict([('Mauro', 5), ('Marcello', 5), ('Raffa', 5), ('Luca', 5), ('Sabba', 6), ('Gherra', 6), ('Claudio', 6), ('Guido', 6)])
+Player: Mauro
+short table: [[['Luca', 'Guido'], ['Raffa', 'Sabba']], [['Gherra', 'Marcello'], ['Luca', 'Claudio']], [['Mauro', 'Sabba'], ['Luca', 'Gherra']], [['Claudio', 'Mauro'], ['Guido', 'Raffa']], [['Marcello', 'Sabba'], ['Luca', 'Mauro']], [['Claudio', 'Gherra'], ['Guido', 'Mauro']], [['Raffa', 'Marcello'], ['Luca', 'Sabba']], [['Guido', 'Gherra'], ['Raffa', 'Claudio']], [['Mauro', 'Marcello'], ['Guido', 'Sabba']], [['Raffa', 'Gherra'], ['Guido', 'Claudio']], [['Claudio', 'Marcello'], ['Gherra', 'Sabba']], [['Raffa', 'Mauro'], ['Luca', 'Marcello']]]
+teams: [['Luca', 'Raffa'], ['Guido', 'Marcello'], ['Claudio', 'Sabba'], ['Gherra', 'Mauro']]
+Ranking: OrderedDict([('Sabba', 6), ('Mauro', 6), ('Gherra', 6), ('Claudio', 6), ('Guido', 6), ('Marcello', 6), ('Raffa', 6), ('Luca', 6)])
+Player1: Sabba
+Player2: Mauro
+In find_team1, ['Luca', 'Raffa'] Sabba Sabba
+In find_team1, ['Guido', 'Marcello'] Sabba Sabba
+In find_team1, ['Claudio', 'Sabba'] Sabba Sabba
+In find_team1, ['Gherra', 'Mauro'] Sabba Sabba
+In find_team1, ['Luca', 'Raffa'] Sabba Mauro
+In find_team1, ['Guido', 'Marcello'] Sabba Mauro
+In find_team1, ['Claudio', 'Sabba'] Sabba Mauro
+In find_team1, ['Gherra', 'Mauro'] Sabba Mauro
+In find_team1, ['Luca', 'Raffa'] Sabba Gherra
+In find_team1, ['Guido', 'Marcello'] Sabba Gherra
+In find_team1, ['Claudio', 'Sabba'] Sabba Gherra
+In find_team1, ['Gherra', 'Mauro'] Sabba Gherra
+In find_team1, ['Luca', 'Raffa'] Sabba Claudio
+In find_team1, ['Guido', 'Marcello'] Sabba Claudio
+In find_team1, ['Claudio', 'Sabba'] Sabba Claudio
+Find Team1: ['Claudio', 'Sabba']
+team1: {'Sabba', 'Claudio'}
+Ranking: OrderedDict([('Sabba', 6), ('Mauro', 6), ('Gherra', 6), ('Claudio', 6), ('Guido', 6), ('Marcello', 6), ('Raffa', 6), ('Luca', 6)])
+Player: Sabba
+short table: [[['Luca', 'Guido'], ['Raffa', 'Sabba']], [['Gherra', 'Marcello'], ['Luca', 'Claudio']], [['Mauro', 'Sabba'], ['Luca', 'Gherra']], [['Claudio', 'Mauro'], ['Guido', 'Raffa']], [['Marcello', 'Sabba'], ['Luca', 'Mauro']], [['Claudio', 'Gherra'], ['Guido', 'Mauro']], [['Raffa', 'Marcello'], ['Luca', 'Sabba']], [['Guido', 'Gherra'], ['Raffa', 'Claudio']], [['Mauro', 'Marcello'], ['Guido', 'Sabba']], [['Raffa', 'Gherra'], ['Guido', 'Claudio']], [['Claudio', 'Marcello'], ['Gherra', 'Sabba']], [['Raffa', 'Mauro'], ['Luca', 'Marcello']], [['Claudio', 'Sabba'], ['Gherra', 'Mauro']]]
+teams: [['Luca', 'Raffa'], ['Guido', 'Marcello']]
+Ranking: OrderedDict([('Guido', 6), ('Marcello', 6), ('Raffa', 6), ('Luca', 6), ('Sabba', 7), ('Mauro', 7), ('Gherra', 7), ('Claudio', 7)])
+Player1: Guido
+Player2: Marcello
+Find Team1: ['Guido', 'Marcello']
+team1: {'Guido', 'Marcello'}
+Ranking: OrderedDict([('Guido', 6), ('Marcello', 6), ('Raffa', 6), ('Luca', 6), ('Sabba', 7), ('Mauro', 7), ('Gherra', 7), ('Claudio', 7)])
+Player: Guido
+short table: [[['Luca', 'Guido'], ['Raffa', 'Sabba']], [['Gherra', 'Marcello'], ['Luca', 'Claudio']], [['Mauro', 'Sabba'], ['Luca', 'Gherra']], [['Claudio', 'Mauro'], ['Guido', 'Raffa']], [['Marcello', 'Sabba'], ['Luca', 'Mauro']], [['Claudio', 'Gherra'], ['Guido', 'Mauro']], [['Raffa', 'Marcello'], ['Luca', 'Sabba']], [['Guido', 'Gherra'], ['Raffa', 'Claudio']], [['Mauro', 'Marcello'], ['Guido', 'Sabba']], [['Raffa', 'Gherra'], ['Guido', 'Claudio']], [['Claudio', 'Marcello'], ['Gherra', 'Sabba']], [['Raffa', 'Mauro'], ['Luca', 'Marcello']], [['Claudio', 'Sabba'], ['Gherra', 'Mauro']], [['Guido', 'Marcello'], ['Luca', 'Raffa']]]
+teams: []
+Ranking: OrderedDict([('Sabba', 7), ('Mauro', 7), ('Gherra', 7), ('Claudio', 7), ('Guido', 7), ('Marcello', 7), ('Raffa', 7), ('Luca', 7)])
+Player1: Sabba
+Player2: Mauro
+Find Team1: []

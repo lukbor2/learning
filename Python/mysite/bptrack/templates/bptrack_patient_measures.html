@@ -1,0 +1,91 @@
+{% extends "bptrack_base.html" %}
+
+{% block title %} BP Track Patient Measures  {% endblock %}
+
+{% block breadcrumb %}
+<li><a href="{% url 'bptrack:patient-list' %}">Home</a></li>
+<li class="active">Patient BP Measures</li>
+{% endblock %}
+
+{% block title_1 %}
+	<h2>BP Measures for {{ patient.first_name }} {{ patient.last_name }} </h2>
+{% endblock %}
+
+{% block right_title_1 %}
+  {% url 'bptrack:bpmeasure-add' patient.id as url_to_add %}
+<a href="{{ url_to_add }}" role="button" class="btn btn-success">Add New BP Measure</a>
+{% endblock %}
+
+{% block content %}
+	<!-- Note how I use patient which was added in the view to the context.
+	patient is not just the foreign key, it is the entire object, so I can access its attributes  -->
+	 
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>{% load model_field %} {% model_field_verbose_name from patient.last_name %}</th>
+            <th>{% load model_field %} {% model_field_verbose_name from patient.first_name %}</th>
+            <th>{% load model_field %} {% model_field_verbose_name from patient.date_of_birth %}</th>
+            <th>{% load model_field %} {% model_field_verbose_name from patient.age %}</th>
+            <th>{% load model_field %} {% model_field_verbose_name from patient.email %}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ patient.id }}</td>
+            <td>{{ patient.last_name }}</td>
+            <td>{{ patient.first_name }}</td>
+            <td>{{ patient.date_of_birth}}</td>
+            <td>{{ patient.calculate_age}}</td>
+            <td>{{ patient.email}}</td>
+        </tr>
+    </tbody>
+</table>
+<table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th></th>
+                <th>ID</th>
+                <th>{% load model_field %} {% model_field_verbose_name from patient_measure.bp_measure_date %}</th>
+                <th>{% load model_field %} {% model_field_verbose_name from patient_measure.bp_measure_min %}</th>
+                <th>{% load model_field %} {% model_field_verbose_name from patient_measure.bp_measure_max %}</th>
+                <th>{% load model_field %} {% model_field_verbose_name from patient_measure.bp_measure_pulse %}</th>
+                <th>{% load model_field %} {% model_field_verbose_name from patient_measure.bp_measure_time_of_day %}</th>
+                <th>{% load model_field %} {% model_field_verbose_name from patient_measure.bp_measure_note %}</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for measure in patient_measure %}
+            <tr>
+                <td>
+                    <div class="checkbox"> <label><input type="checkbox" value="{{ measure.id}}" name="selected_for_action"></label> </div>
+                    <!-- The value is what is submit via the POST method. This is why I put there the measure id. So the actions can use that id.-->
+                </td>
+                <td style="vertical-align:middle">{{ measure.id }}</td>
+                <td style="vertical-align:middle">{{ measure.bp_measure_date }}</td>
+                <td style="vertical-align:middle">{{ measure.bp_measure_min }}</td>
+                <td style="vertical-align:middle">{{ measure.bp_measure_max }}</td>
+                <td style="vertical-align:middle">{{ measure.bp_measure_pulse }}</td>
+                <td style="vertical-align:middle">{{ measure.bp_measure_time_of_day }}</td>
+                <td style="vertical-align:middle">{{ measure.bp_measure_note }}</td>
+                <!-- TODO: see if I need this space for any action. -->
+                <td style="vertical-align:middle"><a href="#" title="Details"><span class="glyphicon glyphicon-zoom-in"></span></a></td>
+                <!-- TODO: Build a link to a view where I can edit the bp_measure in this row -->
+                <td style="vertical-align:middle"><a href="#" title="Edit"><span class="glyphicon glyphicon-edit"></span></a></td>
+                <!-- TODO: Build a link to a view which handles the deletion of the bp_measure in this row. -->
+                <td style="vertical-align:middle"><a href="#" title="Delete"><span class="glyphicon glyphicon-trash"></span> </a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+	
+{% url 'bptrack:patient-list' as home_page %}
+<a href="{{ home_page }}" role="button" class="btn btn-info">Back to Home Page</a> {% url 'bptrack:patient-update' patient_detail.id as url_to_update %}
+
+{% endblock %}

@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "activating venv"
+source /home/luca/Documents/python3.5_venv/bin/activate
+cd /home/luca/Documents/python3.5_venv
+echo "starting server"
+/home/luca/Documents/python3.5_venv/bin/python  /home/luca/git/learning/Python/mysite/manage.py runserver

@@ -1,0 +1,24 @@
+Starting teams: [['Raffa', 'Gherra'], ['Guido', 'Raffa'], ['Claudio', 'Gherra'], ['Guido', 'Claudio'], ['Guido', 'Gherra'], ['Raffa', 'Claudio'], ['Luca', 'Guido'], ['Luca', 'Claudio'], ['Luca', 'Gherra'], ['Luca', 'Raffa']]
+team1: {'Raffa', 'Gherra'}
+Ranking: OrderedDict([('Luca', 0), ('Raffa', 0), ('Guido', 0), ('Gherra', 0), ('Claudio', 0)])
+Player: Luca
+short table: [[['Raffa', 'Gherra'], ['Luca', 'Guido']]]
+teams: [['Guido', 'Raffa'], ['Claudio', 'Gherra'], ['Guido', 'Claudio'], ['Guido', 'Gherra'], ['Raffa', 'Claudio'], ['Luca', 'Claudio'], ['Luca', 'Gherra'], ['Luca', 'Raffa']]
+team1: {'Raffa', 'Guido'}
+Ranking: OrderedDict([('Claudio', 0), ('Luca', 1), ('Raffa', 1), ('Guido', 1), ('Gherra', 1)])
+Player: Claudio
+short table: [[['Raffa', 'Gherra'], ['Luca', 'Guido']], [['Guido', 'Raffa'], ['Claudio', 'Gherra']]]
+teams: [['Guido', 'Claudio'], ['Guido', 'Gherra'], ['Raffa', 'Claudio'], ['Luca', 'Claudio'], ['Luca', 'Gherra'], ['Luca', 'Raffa']]
+team1: {'Guido', 'Claudio'}
+Ranking: OrderedDict([('Luca', 1), ('Claudio', 1), ('Raffa', 2), ('Guido', 2), ('Gherra', 2)])
+Player: Luca
+short table: [[['Raffa', 'Gherra'], ['Luca', 'Guido']], [['Guido', 'Raffa'], ['Claudio', 'Gherra']], [['Guido', 'Claudio'], ['Luca', 'Gherra']]]
+teams: [['Guido', 'Gherra'], ['Raffa', 'Claudio'], ['Luca', 'Claudio'], ['Luca', 'Raffa']]
+team1: {'Gherra', 'Guido'}
+Ranking: OrderedDict([('Luca', 2), ('Raffa', 2), ('Claudio', 2), ('Guido', 3), ('Gherra', 3)])
+Player: Luca
+short table: [[['Raffa', 'Gherra'], ['Luca', 'Guido']], [['Guido', 'Raffa'], ['Claudio', 'Gherra']], [['Guido', 'Claudio'], ['Luca', 'Gherra']], [['Guido', 'Gherra'], ['Luca', 'Claudio']]]
+teams: [['Raffa', 'Claudio'], ['Luca', 'Raffa']]
+team1: {'Raffa', 'Claudio'}
+Ranking: OrderedDict([('Raffa', 2), ('Luca', 3), ('Claudio', 3), ('Guido', 4), ('Gherra', 4)])
+Player: Raffa

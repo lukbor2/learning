@@ -34,3 +34,22 @@ From Eclipse
 	In one of the windows which follow select the master branch and
 	use the option "force commit"
 	Then click on the button "Commit and Push"
+
+	
+Error Message
+=============
+
+	When one repository has non-committed changes and I commit and push changes from other repositories,
+	(for example I don't commit from Eclipse, but I commit and push from Cloud9) then an error might happen
+	
+	git  error: The following untracked working tree files would be overwritten by merge
+	
+	In this case look at the file(s) in the error message and use the command
+	
+	git clean -f <directory or file> 
+	
+	to remove those files. After that git pull should work.
+	
+	Sometimes instead of git clean I used
+
+	git rm -r <directory or file>

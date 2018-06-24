@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %} List of Publishers {% endblock %} 
+
+{% block content %}
+<h2>Publishers Changed in Visual Studio</h2>
+<ul>
+	{% for publisher in list_of_publishers %}
+	<li>{{ publisher.name}}</li>
+	{% endfor %}
+</ul>
+
+{% endblock %} 

@@ -1,0 +1,11 @@
+*** SIZE OF A WEB PAGE ***
+
+I would like to test the time needed to load a page and look at the size of the page too.
+I have a script to calculate the load time and in general there are many ways to do it, but I don't know how to calculate the size of a web page.
+Some links to pages talking about calculating the size of a webpage:
+
+http://stackoverflow.com/questions/30597829/is-there-a-better-way-to-retrieve-webpage-sizes-with-python
+http://stackoverflow.com/questions/1611376/calculate-web-page-size-in-python
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length
+
+It looks like in the head of an html page there is an attribute carrying the size of the page.
