@@ -1,0 +1,24 @@
+\contentsline {chapter}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {1.1}Common Directories Structure}{3}
+\contentsline {section}{\numberline {1.2}Symbolic Links}{5}
+\contentsline {section}{\numberline {1.3}Ways to find installed software}{5}
+\contentsline {section}{\numberline {1.4}Scripting and the shell}{6}
+\contentsline {subsection}{\numberline {1.4.1}Files and Directories}{6}
+\contentsline {subsection}{\numberline {1.4.2}Manipulating Files}{7}
+\contentsline {subsection}{\numberline {1.4.3}Pipes and Redirection}{7}
+\contentsline {subsection}{\numberline {1.4.4}Variables and Quoting}{8}
+\contentsline {subsection}{\numberline {1.4.5}Common Filter Commands}{9}
+\contentsline {subsection}{\numberline {1.4.6}Regular Expressions}{11}
+\contentsline {subsection}{\numberline {1.4.7}Other Commands}{12}
+\contentsline {section}{\numberline {1.5}Controlling Processes}{13}
+\contentsline {subsection}{\numberline {1.5.1}PID - Process ID Number}{13}
+\contentsline {subsection}{\numberline {1.5.2}PPID: Process Parent ID}{13}
+\contentsline {subsection}{\numberline {1.5.3}UID and EUID: Real and Effective user ID}{13}
+\contentsline {subsection}{\numberline {1.5.4}GID and EGID: Real and Effective Group ID}{13}
+\contentsline {subsection}{\numberline {1.5.5}Signals}{13}
+\contentsline {subsection}{\numberline {1.5.6}KILL: Send Signals}{14}
+\contentsline {subsection}{\numberline {1.5.7}Process States}{14}
+\contentsline {subsection}{\numberline {1.5.8}PS: Monitor Processes}{14}
+\contentsline {subsection}{\numberline {1.5.9}Dynamic Monitoring}{15}
+\contentsline {subsection}{\numberline {1.5.10}The /Proc Filesystem}{15}
+\contentsline {subsection}{\numberline {1.5.11}Trace Signals and System Calls}{15}
