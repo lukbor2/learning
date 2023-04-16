@@ -1,3 +1,11 @@
+0)
+
+Token generated:
+
+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
+
+Use this token instead of the password.
+
 1) Go to the folder where you want to create a repository.
 
         git init
@@ -33,7 +41,7 @@
 
 6) To push the local repository to the github server we need to add a remote repository
 
-        git remote add origin <url of the remote repository> 
+        git remote add origin <url of the remote repository>
 
    origin is the name usually used for the remote repository, but another name can be used too.
    So now my remote repository is called origin and the main branch of my local repository is master.
@@ -109,5 +117,3 @@
 
     note that -d works only on branches which have been merged.
     To delete a branch which has not been merged use -d and -f options together or just the -D option.
-
-
