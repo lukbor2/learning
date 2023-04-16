@@ -1,0 +1,837 @@
+*** Starting Log for: 2020-05-13 21:52:56.576933 ***
+add_data function: 8.482567071914673
+*** Starting Log for: 2020-05-13 22:16:06.931101 ***
+remove_data function: 0.6222109794616699
+add_data function: 8.350215911865234
+update_final_01 function: 75.22864294052124
+add_us_states function: 139.69277596473694
+add_italy_data function: 6.558566093444824
+add_italy_regions function: 0.19980406761169434
+add_us_details function: 206.14747190475464
+update_time function: 2.8949763774871826
+update_time_region function: 2.415099620819092
+update_exceptions function: 0.1666879653930664
+*** Starting Log for: 2020-05-15 22:49:26.548511 ***
+remove_data function: 0.585625171661377
+*** Starting Log for: 2020-05-15 22:50:56.469071 ***
+remove_data function: 0.11833834648132324
+add_data function: 8.627649307250977
+update_final_01 function: 72.76527953147888
+add_us_states function: 142.96178579330444
+add_italy_data function: 7.0808024406433105
+add_italy_regions function: 0.1950063705444336
+add_us_details function: 206.8322036266327
+update_time function: 2.6592705249786377
+update_time_region function: 2.308945655822754
+update_exceptions function: 0.1425187587738037
+*** Starting Log for: 2020-05-16 19:45:03.101511 ***
+remove_data function: 0.5993502140045166
+add_data function: 8.392882108688354
+update_final_01 function: 72.43273568153381
+add_us_states function: 137.7741551399231
+add_italy_data function: 6.293365478515625
+add_italy_regions function: 0.18692231178283691
+add_us_details function: 203.9165666103363
+update_time function: 2.739628553390503
+update_time_region function: 2.2341508865356445
+update_exceptions function: 0.13369393348693848
+*** Starting Log for: 2020-05-17 22:07:13.516718 ***
+remove_data function: 0.5660274028778076
+add_data function: 8.985095262527466
+update_final_01 function: 73.45121622085571
+add_us_states function: 148.619811296463
+add_italy_data function: 6.787620782852173
+add_italy_regions function: 0.30730462074279785
+add_us_details function: 217.91521525382996
+update_time function: 2.854735851287842
+update_time_region function: 2.5475151538848877
+update_exceptions function: 0.14535212516784668
+*** Starting Log for: 2020-05-19 22:16:55.302428 ***
+remove_data function: 0.6212797164916992
+add_data function: 15.341274499893188
+update_final_01 function: 77.51327204704285
+add_us_states function: 160.88181138038635
+add_italy_data function: 7.455647230148315
+add_italy_regions function: 0.20653200149536133
+add_us_details function: 227.9383933544159
+update_time function: 2.9035089015960693
+update_time_region function: 2.508683681488037
+update_exceptions function: 0.12885069847106934
+*** Starting Log for: 2020-05-20 22:10:04.163513 ***
+remove_data function: 0.629920482635498
+add_data function: 9.897608518600464
+update_final_01 function: 75.6019651889801
+add_us_states function: 160.64357495307922
+add_italy_data function: 7.390560150146484
+add_italy_regions function: 0.2021493911743164
+add_us_details function: 231.40805578231812
+update_time function: 2.9930572509765625
+update_time_region function: 2.5488393306732178
+update_exceptions function: 0.13396310806274414
+*** Starting Log for: 2020-05-22 22:31:00.905298 ***
+remove_data function: 0.626986026763916
+add_data function: 11.116940021514893
+update_final_01 function: 79.7082507610321
+add_us_states function: 161.27639746665955
+add_italy_data function: 7.657825469970703
+add_italy_regions function: 0.24154376983642578
+add_us_details function: 250.13258457183838
+update_time function: 3.100684404373169
+update_time_region function: 2.628551721572876
+update_exceptions function: 0.14154696464538574
+*** Starting Log for: 2020-05-24 10:13:21.442527 ***
+remove_data function: 0.6274607181549072
+add_data function: 12.121923208236694
+update_final_01 function: 80.99476027488708
+add_us_states function: 179.52111792564392
+add_italy_data function: 7.923112154006958
+add_italy_regions function: 0.2210068702697754
+add_us_details function: 251.61285209655762
+update_time function: 3.2172441482543945
+update_time_region function: 2.5865321159362793
+update_exceptions function: 0.13480257987976074
+*** Starting Log for: 2020-05-24 11:51:13.572129 ***
+remove_data function: 0.6013474464416504
+add_data function: 9.061036825180054
+update_final_01 function: 76.82836127281189
+add_canada function: 0.06429553031921387
+add_us_states function: 176.1716980934143
+add_italy_data function: 7.636821031570435
+add_italy_regions function: 0.22788190841674805
+add_us_details function: 262.7767119407654
+update_time function: 3.2053158283233643
+update_time_region function: 2.617018222808838
+update_exceptions function: 0.14307546615600586
+*** Starting Log for: 2020-05-24 22:05:27.121320 ***
+remove_data function: 0.6657590866088867
+add_data function: 10.009021043777466
+update_final_01 function: 79.87311816215515
+add_canada function: 0.07202005386352539
+add_us_states function: 179.71498465538025
+add_italy_data function: 7.834495544433594
+add_italy_regions function: 0.22870111465454102
+add_us_details function: 263.1732335090637
+update_time function: 3.048666477203369
+update_time_region function: 2.5673513412475586
+update_exceptions function: 0.13593673706054688
+*** Starting Log for: 2020-05-27 19:40:00.617148 ***
+remove_data function: 0.6225025653839111
+add_data function: 9.622771263122559
+update_final_01 function: 78.25680136680603
+add_canada function: 0.0724787712097168
+add_us_states function: 175.17801451683044
+add_italy_data function: 7.877073287963867
+add_italy_regions function: 0.506361722946167
+add_us_details function: 271.29926466941833
+update_time function: 3.0749921798706055
+update_time_region function: 2.5981392860412598
+update_exceptions function: 0.13640189170837402
+*** Starting Log for: 2020-05-28 20:51:19.930330 ***
+remove_data function: 0.6446056365966797
+add_data function: 12.122415781021118
+update_final_01 function: 78.53271579742432
+add_canada function: 0.10027551651000977
+add_us_states function: 179.71171307563782
+add_italy_data function: 8.033265590667725
+add_italy_regions function: 0.21836161613464355
+add_us_details function: 277.1988492012024
+update_time function: 3.2450437545776367
+update_time_region function: 2.6701369285583496
+update_exceptions function: 0.14959716796875
+*** Starting Log for: 2020-06-01 22:01:59.536237 ***
+remove_data function: 0.6235942840576172
+add_data function: 10.812136888504028
+update_final_01 function: 83.87172865867615
+add_canada function: 0.07377767562866211
+add_us_states function: 207.0183162689209
+add_italy_data function: 9.261460542678833
+add_italy_regions function: 0.4647552967071533
+add_us_details function: 297.56860876083374
+update_time function: 3.361078977584839
+update_time_region function: 2.732234001159668
+update_exceptions function: 0.15511703491210938
+*** Starting Log for: 2020-06-05 23:12:23.151920 ***
+remove_data function: 0.635366678237915
+add_data function: 13.248200178146362
+update_final_01 function: 85.30318927764893
+add_canada function: 0.07437252998352051
+add_us_states function: 213.2336025238037
+add_italy_data function: 9.323565483093262
+add_italy_regions function: 0.32246828079223633
+*** Starting Log for: 2020-06-06 21:06:03.702770 ***
+remove_data function: 0.6951034069061279
+add_data function: 10.313176155090332
+update_final_01 function: 81.96383333206177
+add_canada function: 0.07835912704467773
+add_us_states function: 214.4922206401825
+add_italy_data function: 9.479756355285645
+add_italy_regions function: 0.27413296699523926
+*** Starting Log for: 2020-06-06 21:18:20.607570 ***
+remove_data function: 0.6572122573852539
+add_data function: 10.522340297698975
+update_final_01 function: 90.38696002960205
+add_canada function: 0.07348847389221191
+add_us_states function: 235.1425211429596
+add_italy_data function: 11.01571798324585
+add_italy_regions function: 0.30554938316345215
+add_us_details function: 339.02250599861145
+update_time function: 3.5156359672546387
+update_time_region function: 2.8640050888061523
+update_exceptions function: 0.14719581604003906
+*** Starting Log for: 2020-06-08 21:39:19.549806 ***
+remove_data function: 0.6874935626983643
+add_data function: 10.338341236114502
+update_final_01 function: 83.97501540184021
+add_canada function: 0.07493805885314941
+add_us_states function: 216.61565709114075
+add_italy_data function: 9.846318244934082
+add_italy_regions function: 0.29520082473754883
+add_us_details function: 321.5712616443634
+update_time function: 3.409050941467285
+update_time_region function: 2.8559134006500244
+update_exceptions function: 0.14835834503173828
+*** Starting Log for: 2020-06-12 22:43:49.297946 ***
+remove_data function: 0.7041738033294678
+add_data function: 12.310598611831665
+update_final_01 function: 86.99829149246216
+add_canada function: 0.0829925537109375
+add_us_states function: 253.63345766067505
+add_italy_data function: 11.340900897979736
+add_italy_regions function: 0.26661252975463867
+*** Starting Log for: 2020-06-12 22:54:35.161285 ***
+remove_data function: 0.6937541961669922
+add_data function: 10.737664937973022
+update_final_01 function: 85.86638689041138
+add_canada function: 0.08726739883422852
+add_us_states function: 253.8985152244568
+add_italy_data function: 11.148190021514893
+add_italy_regions function: 0.2702956199645996
+*** Starting Log for: 2020-06-13 21:34:33.075611 ***
+remove_data function: 0.7197785377502441
+add_data function: 11.342151165008545
+update_final_01 function: 87.58192014694214
+add_canada function: 0.07892537117004395
+add_us_states function: 252.15441036224365
+add_italy_data function: 11.93025279045105
+add_italy_regions function: 0.29885268211364746
+add_us_details function: 397.95612382888794
+update_time function: 3.95536208152771
+update_time_region function: 3.4094204902648926
+update_exceptions function: 0.17224335670471191
+*** Starting Log for: 2020-06-13 22:03:48.156413 ***
+remove_data function: 0.7152276039123535
+add_data function: 11.500085830688477
+update_final_01 function: 93.58742260932922
+add_canada function: 0.08279943466186523
+add_us_states function: 271.85824370384216
+add_italy_data function: 11.451657772064209
+add_italy_regions function: 0.719332218170166
+add_us_details function: 403.685106754303
+update_time function: 3.7430419921875
+update_time_region function: 3.1543173789978027
+update_exceptions function: 0.16008782386779785
+*** Starting Log for: 2020-06-14 14:59:13.720621 ***
+remove_data function: 0.7580137252807617
+add_data function: 14.91262674331665
+update_final_01 function: 93.13034868240356
+add_canada function: 0.0814967155456543
+add_us_states function: 265.1058351993561
+add_italy_data function: 11.946884155273438
+add_italy_regions function: 0.28872132301330566
+*** Starting Log for: 2020-06-14 15:19:13.124030 ***
+remove_data function: 0.7338001728057861
+add_data function: 14.592471837997437
+update_final_01 function: 95.27523231506348
+add_canada function: 0.08306765556335449
+add_us_states function: 277.2895474433899
+add_italy_data function: 11.916860818862915
+add_italy_regions function: 0.2522397041320801
+*** Starting Log for: 2020-06-14 15:28:39.235480 ***
+*** Starting Log for: 2020-06-14 15:29:25.372834 ***
+add_us_details function: 399.53140211105347
+update_time function: 3.8029539585113525
+update_time_region function: 3.1331872940063477
+update_exceptions function: 0.166337251663208
+*** Starting Log for: 2020-06-14 15:36:45.869532 ***
+*** Starting Log for: 2020-06-14 15:37:20.509108 ***
+*** Starting Log for: 2020-06-14 15:37:56.219660 ***
+*** Starting Log for: 2020-06-14 15:38:23.507284 ***
+*** Starting Log for: 2020-06-14 15:39:06.234146 ***
+*** Starting Log for: 2020-06-14 15:39:18.889673 ***
+*** Starting Log for: 2020-06-14 15:39:28.138071 ***
+*** Starting Log for: 2020-06-14 15:39:39.137102 ***
+*** Starting Log for: 2020-06-14 15:39:47.186019 ***
+*** Starting Log for: 2020-06-14 15:39:54.346135 ***
+*** Starting Log for: 2020-06-14 15:40:01.236694 ***
+*** Starting Log for: 2020-06-14 15:40:08.824309 ***
+*** Starting Log for: 2020-06-14 15:40:15.029188 ***
+*** Starting Log for: 2020-06-14 15:40:26.236024 ***
+*** Starting Log for: 2020-06-14 15:40:32.472634 ***
+*** Starting Log for: 2020-06-14 15:40:38.459173 ***
+*** Starting Log for: 2020-06-14 15:40:44.361748 ***
+*** Starting Log for: 2020-06-14 15:40:50.324835 ***
+*** Starting Log for: 2020-06-14 15:44:58.953298 ***
+*** Starting Log for: 2020-06-14 15:45:52.401429 ***
+*** Starting Log for: 2020-06-14 15:46:31.741440 ***
+*** Starting Log for: 2020-06-14 15:47:04.069666 ***
+*** Starting Log for: 2020-06-14 15:47:38.780126 ***
+*** Starting Log for: 2020-06-14 15:50:17.609640 ***
+*** Starting Log for: 2020-06-14 15:50:56.937214 ***
+*** Starting Log for: 2020-06-14 15:52:16.632797 ***
+*** Starting Log for: 2020-06-14 15:54:02.950239 ***
+*** Starting Log for: 2020-06-14 15:56:04.005666 ***
+remove_data function: 0.7751100063323975
+add_data function: 13.631071329116821
+update_final_01 function: 93.61265778541565
+add_canada function: 0.07795929908752441
+add_us_states function: 269.2712140083313
+add_italy_data function: 11.252280235290527
+add_italy_regions function: 0.27256083488464355
+add_us_details function: 522.721396446228
+update_time function: 3.7516980171203613
+update_time_region function: 3.070950508117676
+update_exceptions function: 0.16394543647766113
+*** Starting Log for: 2020-06-15 21:36:22.517130 ***
+remove_data function: 0.7759382724761963
+add_data function: 11.938741445541382
+update_final_01 function: 89.74965262413025
+add_canada function: 0.08325982093811035
+add_us_states function: 271.6833393573761
+add_italy_data function: 11.670861959457397
+add_italy_regions function: 0.3745758533477783
+add_us_details function: 556.87531208992
+update_time function: 4.04460334777832
+update_time_region function: 3.2566840648651123
+update_exceptions function: 0.20122861862182617
+*** Starting Log for: 2020-06-17 22:06:16.178617 ***
+remove_data function: 0.7819573879241943
+add_data function: 17.575023889541626
+update_final_01 function: 90.84860634803772
+add_canada function: 0.09762859344482422
+add_us_states function: 279.3769326210022
+add_italy_data function: 12.17556118965149
+add_italy_regions function: 0.26325106620788574
+add_us_details function: 583.3739488124847
+update_time function: 3.9754934310913086
+update_time_region function: 3.295079231262207
+update_exceptions function: 0.16979694366455078
+*** Starting Log for: 2020-06-20 16:08:32.037520 ***
+remove_data function: 0.7542586326599121
+add_data function: 11.554373741149902
+update_final_01 function: 92.32345199584961
+add_canada function: 0.08073544502258301
+add_us_states function: 284.0483260154724
+add_italy_data function: 11.625729322433472
+add_italy_regions function: 0.2778129577636719
+add_us_details function: 547.6963794231415
+update_time function: 3.984921455383301
+update_time_region function: 3.1322576999664307
+update_exceptions function: 0.17026376724243164
+*** Starting Log for: 2020-06-28 20:47:56.094858 ***
+remove_data function: 0.7898859977722168
+add_data function: 11.831352472305298
+update_final_01 function: 102.00963759422302
+add_canada function: 0.0877375602722168
+add_us_states function: 334.59138536453247
+add_italy_data function: 13.229456186294556
+add_italy_regions function: 0.28606581687927246
+add_us_details function: 649.5704336166382
+update_time function: 4.342501163482666
+update_time_region function: 3.4067864418029785
+update_exceptions function: 0.1760416030883789
+*** Starting Log for: 2020-06-30 21:00:04.081350 ***
+remove_data function: 0.7918343544006348
+add_data function: 12.299095392227173
+update_final_01 function: 104.3762276172638
+add_canada function: 0.08708477020263672
+add_us_states function: 350.38480591773987
+*** Starting Log for: 2020-06-30 21:45:52.524132 ***
+remove_data function: 0.7806398868560791
+add_data function: 14.77274203300476
+update_final_01 function: 105.38038563728333
+add_canada function: 0.1050405502319336
+add_us_states function: 374.5263640880585
+add_italy_data function: 14.953325271606445
+*** Starting Log for: 2020-06-30 22:06:55.991355 ***
+remove_data function: 0.7913801670074463
+add_data function: 12.141556024551392
+update_final_01 function: 107.14706039428711
+add_canada function: 0.11316990852355957
+add_us_states function: 361.7304961681366
+add_italy_data function: 15.457229137420654
+add_italy_regions function: 0.33330488204956055
+add_us_details function: 686.4394416809082
+update_time function: 4.133693695068359
+update_time_region function: 3.3647289276123047
+update_exceptions function: 0.1782991886138916
+*** Starting Log for: 2020-07-01 21:24:30.563689 ***
+remove_data function: 0.8757238388061523
+add_data function: 14.520615577697754
+update_final_01 function: 107.64702105522156
+add_canada function: 0.09125351905822754
+add_us_states function: 363.94071078300476
+add_italy_data function: 15.034815073013306
+add_italy_regions function: 0.30010461807250977
+add_us_details function: 705.3113248348236
+update_time function: 4.348918437957764
+update_time_region function: 3.6166067123413086
+update_exceptions function: 0.1854248046875
+*** Starting Log for: 2020-07-02 22:29:33.332929 ***
+remove_data function: 0.8156623840332031
+add_data function: 13.159805536270142
+update_final_01 function: 103.96081066131592
+add_canada function: 0.11513733863830566
+add_us_states function: 357.95995807647705
+add_italy_data function: 16.0064218044281
+add_italy_regions function: 0.3496694564819336
+add_us_details function: 738.7515547275543
+update_time function: 4.666811943054199
+update_time_region function: 3.83009672164917
+update_exceptions function: 0.20664262771606445
+*** Starting Log for: 2020-07-03 22:08:23.430146 ***
+remove_data function: 0.8459689617156982
+add_data function: 13.379037857055664
+update_final_01 function: 106.64960145950317
+add_canada function: 0.09104228019714355
+add_us_states function: 381.73506808280945
+add_italy_data function: 16.406023263931274
+add_italy_regions function: 0.3442995548248291
+add_us_details function: 759.0678744316101
+update_time function: 4.785822868347168
+update_time_region function: 3.919234275817871
+update_exceptions function: 0.20192599296569824
+*** Starting Log for: 2020-07-04 21:35:07.824168 ***
+remove_data function: 0.839775800704956
+add_data function: 12.088133096694946
+update_final_01 function: 106.73932075500488
+add_canada function: 0.09030961990356445
+add_us_states function: 370.5641357898712
+add_italy_data function: 15.550843477249146
+add_italy_regions function: 0.3037533760070801
+add_us_details function: 838.7761089801788
+update_time function: 5.10649561882019
+update_time_region function: 3.7940030097961426
+update_exceptions function: 0.22237300872802734
+*** Starting Log for: 2020-07-11 13:47:51.813901 ***
+remove_data function: 0.9166638851165771
+add_data function: 13.383528232574463
+update_final_01 function: 118.82638168334961
+add_canada function: 0.10088777542114258
+add_us_states function: 429.36318349838257
+add_italy_data function: 17.453272819519043
+add_italy_regions function: 0.4522843360900879
+add_us_details function: 794.3378348350525
+update_time function: 4.711859703063965
+update_time_region function: 3.6594481468200684
+update_exceptions function: 0.18423986434936523
+*** Starting Log for: 2020-07-16 21:37:55.859029 ***
+remove_data function: 1.143089771270752
+add_data function: 14.304537534713745
+update_final_01 function: 110.74313545227051
+add_canada function: 0.09726119041442871
+add_us_states function: 441.9600455760956
+add_italy_data function: 19.01719641685486
+add_italy_regions function: 0.3415720462799072
+add_us_details function: 935.518358707428
+update_time function: 5.3122100830078125
+update_time_region function: 4.0925612449646
+update_exceptions function: 0.2122957706451416
+*** Starting Log for: 2020-07-19 10:40:50.457475 ***
+remove_data function: 0.9029905796051025
+add_data function: 14.620151996612549
+update_final_01 function: 125.69513416290283
+add_canada function: 0.10388398170471191
+add_us_states function: 493.50592279434204
+add_italy_data function: 19.819563627243042
+add_italy_regions function: 0.5242445468902588
+add_us_details function: 918.0800473690033
+update_time function: 5.068484306335449
+update_time_region function: 3.90887188911438
+update_exceptions function: 0.20403242111206055
+*** Starting Log for: 2020-07-24 20:09:32.465506 ***
+remove_data function: 0.8750288486480713
+add_data function: 16.237855195999146
+update_final_01 function: 125.96497821807861
+add_canada function: 0.10591626167297363
+add_us_states function: 514.4324154853821
+add_italy_data function: 22.0943124294281
+add_italy_regions function: 0.4133284091949463
+add_us_details function: 971.6584630012512
+update_time function: 4.980673313140869
+update_time_region function: 3.9616894721984863
+update_exceptions function: 0.20743751525878906
+*** Starting Log for: 2020-07-26 13:02:27.396951 ***
+remove_data function: 0.9301338195800781
+add_data function: 15.289351224899292
+update_final_01 function: 125.4922354221344
+add_canada function: 0.12761354446411133
+add_us_states function: 509.348349571228
+add_italy_data function: 19.1671359539032
+add_italy_regions function: 0.35779833793640137
+add_us_details function: 934.9333999156952
+update_time function: 5.195553302764893
+update_time_region function: 4.073674917221069
+update_exceptions function: 0.20412349700927734
+*** Starting Log for: 2020-07-29 21:46:44.001153 ***
+remove_data function: 0.9589552879333496
+add_data function: 14.116634607315063
+update_final_01 function: 118.48090887069702
+add_canada function: 0.10181832313537598
+add_us_states function: 486.8606939315796
+add_italy_data function: 19.43637228012085
+add_italy_regions function: 1.1666669845581055
+add_us_details function: 980.0710191726685
+update_time function: 5.246288776397705
+update_time_region function: 4.101616859436035
+update_exceptions function: 0.20553350448608398
+*** Starting Log for: 2020-08-17 21:39:34.275150 ***
+remove_data function: 0.9707894325256348
+*** Starting Log for: 2020-08-17 21:39:52.632043 ***
+remove_data function: 0.4493834972381592
+add_data function: 15.63662314414978
+update_final_01 function: 126.94014072418213
+add_canada function: 0.12022113800048828
+add_us_states function: 598.8211543560028
+add_italy_data function: 25.26727819442749
+add_italy_regions function: 0.4041464328765869
+add_us_details function: 699.1782360076904
+update_time function: 7.000324726104736
+update_time_region function: 5.008655071258545
+update_exceptions function: 0.25792479515075684
+*** Starting Log for: 2020-08-20 21:25:35.883295 ***
+remove_data function: 1.0591564178466797
+add_data function: 15.764618158340454
+update_final_01 function: 135.41636395454407
+add_canada function: 0.12129020690917969
+add_us_states function: 648.0237278938293
+add_italy_data function: 24.856457233428955
+add_italy_regions function: 0.3990285396575928
+add_us_details function: 695.3479509353638
+update_time function: 6.2344255447387695
+update_time_region function: 4.83226752281189
+update_exceptions function: 0.24049997329711914
+*** Starting Log for: 2020-08-23 14:13:23.340188 ***
+remove_data function: 1.130263328552246
+add_data function: 18.630800247192383
+update_final_01 function: 151.33329248428345
+add_canada function: 0.13044428825378418
+add_us_states function: 690.7896432876587
+add_italy_data function: 27.66487693786621
+add_italy_regions function: 0.41175365447998047
+add_us_details function: 710.4598739147186
+update_time function: 6.149051904678345
+update_time_region function: 4.888627052307129
+update_exceptions function: 0.23537874221801758
+*** Starting Log for: 2020-08-26 20:01:54.603584 ***
+remove_data function: 1.1145999431610107
+add_data function: 22.41335964202881
+update_final_01 function: 130.54968690872192
+add_canada function: 0.11326313018798828
+add_us_states function: 661.8764555454254
+add_italy_data function: 25.655415058135986
+add_italy_regions function: 0.41594648361206055
+*** Starting Log for: 2020-08-28 20:01:10.218647 ***
+remove_data function: 1.087843656539917
+add_data function: 16.480961322784424
+update_final_01 function: 135.86502051353455
+add_canada function: 0.11354708671569824
+add_us_states function: 702.6420016288757
+add_italy_data function: 29.805286169052124
+add_italy_regions function: 0.5190441608428955
+*** Starting Log for: 2020-08-28 21:35:12.644133 ***
+remove_data function: 1.079932451248169
+add_data function: 16.90456986427307
+update_final_01 function: 138.05953860282898
+add_canada function: 0.11783695220947266
+add_us_states function: 675.9451673030853
+add_italy_data function: 26.999820470809937
+add_italy_regions function: 0.4323575496673584
+*** Starting Log for: 2020-08-28 22:05:07.175387 ***
+remove_data function: 1.0809831619262695
+add_data function: 16.562374591827393
+update_final_01 function: 136.39496660232544
+add_canada function: 0.11611223220825195
+add_us_states function: 683.9424381256104
+add_italy_data function: 26.810227870941162
+add_italy_regions function: 0.6159529685974121
+add_us_details function: 1438.6964609622955
+update_time function: 6.2905333042144775
+update_time_region function: 5.031797409057617
+update_exceptions function: 0.23433470726013184
+*** Starting Log for: 2020-08-30 14:57:31.676668 ***
+remove_data function: 1.1892871856689453
+add_data function: 18.018256902694702
+update_final_01 function: 138.12448048591614
+add_canada function: 0.1450967788696289
+add_us_states function: 737.4789934158325
+add_italy_data function: 29.965869903564453
+add_italy_regions function: 0.6602294445037842
+add_us_details function: 1542.3509566783905
+update_time function: 6.740891695022583
+update_time_region function: 5.318322420120239
+update_exceptions function: 0.28763604164123535
+*** Starting Log for: 2020-09-09 21:00:56.536816 ***
+remove_data function: 1.220285177230835
+add_data function: 17.007048845291138
+update_final_01 function: 138.19809246063232
+add_canada function: 0.13997864723205566
+add_us_states function: 779.3736400604248
+add_italy_data function: 31.254733562469482
+add_italy_regions function: 0.4608750343322754
+add_us_details function: 1563.9609513282776
+update_time function: 6.599038600921631
+update_time_region function: 5.168603181838989
+update_exceptions function: 0.26122212409973145
+*** Starting Log for: 2020-09-15 21:13:27.127336 ***
+remove_data function: 1.2503151893615723
+add_data function: 17.98396944999695
+update_final_01 function: 144.40093660354614
+add_canada function: 0.14147114753723145
+add_us_states function: 849.4194996356964
+add_italy_data function: 35.61822700500488
+add_italy_regions function: 0.45296263694763184
+add_us_details function: 1764.7568771839142
+update_time function: 7.1354193687438965
+update_time_region function: 5.514509439468384
+update_exceptions function: 0.2624642848968506
+*** Starting Log for: 2020-09-18 20:33:04.082105 ***
+remove_data function: 1.295771598815918
+add_data function: 20.863487243652344
+update_final_01 function: 159.15796184539795
+add_canada function: 0.14857006072998047
+add_us_states function: 894.9167969226837
+add_italy_data function: 33.46125769615173
+add_italy_regions function: 0.4641387462615967
+add_us_details function: 1740.8578491210938
+update_time function: 7.071756362915039
+update_time_region function: 5.530043363571167
+update_exceptions function: 0.27597570419311523
+*** Starting Log for: 2020-09-25 21:32:44.671574 ***
+remove_data function: 1.317859172821045
+add_data function: 23.988970279693604
+update_final_01 function: 145.55103540420532
+add_canada function: 0.13807344436645508
+add_us_states function: 937.6052494049072
+add_italy_data function: 36.48856997489929
+add_italy_regions function: 0.5087332725524902
+*** Starting Log for: 2020-09-27 11:39:34.531191 ***
+remove_data function: 1.318213701248169
+add_data function: 19.24668526649475
+update_final_01 function: 164.41334629058838
+add_canada function: 0.15253376960754395
+add_us_states function: 983.7681131362915
+add_italy_data function: 36.40428376197815
+add_italy_regions function: 1.7370483875274658
+add_us_details function: 1879.881690979004
+update_time function: 7.932704210281372
+update_time_region function: 6.175872564315796
+update_exceptions function: 0.305727481842041
+*** Starting Log for: 2020-10-04 12:13:24.465603 ***
+remove_data function: 1.3460640907287598
+add_data function: 21.51320791244507
+update_final_01 function: 159.3155071735382
+add_canada function: 0.18147826194763184
+add_us_states function: 1052.2182774543762
+add_italy_data function: 44.11773228645325
+add_italy_regions function: 0.5014402866363525
+add_us_details function: 2117.6996195316315
+update_time function: 8.882440090179443
+update_time_region function: 7.276140451431274
+update_exceptions function: 0.3259882926940918
+*** Starting Log for: 2020-10-07 20:17:52.378931 ***
+remove_data function: 1.3605742454528809
+add_data function: 21.011295795440674
+update_final_01 function: 161.98439741134644
+add_canada function: 0.15340328216552734
+add_us_states function: 1016.2670557498932
+add_italy_data function: 38.21345376968384
+add_italy_regions function: 0.4896531105041504
+add_us_details function: 1988.4452514648438
+update_time function: 7.569610595703125
+update_time_region function: 5.966801166534424
+update_exceptions function: 0.29547977447509766
+*** Starting Log for: 2020-10-09 20:07:00.520447 ***
+remove_data function: 1.3800582885742188
+add_data function: 20.59211039543152
+update_final_01 function: 164.19364070892334
+add_canada function: 0.15037083625793457
+add_us_states function: 1118.4400053024292
+add_italy_data function: 44.033273220062256
+add_italy_regions function: 0.5133960247039795
+add_us_details function: 2528.4366714954376
+update_time function: 9.369504451751709
+update_time_region function: 7.4912497997283936
+update_exceptions function: 0.3536262512207031
+*** Starting Log for: 2020-10-11 12:42:24.717127 ***
+remove_data function: 1.4188838005065918
+add_data function: 19.859861850738525
+update_final_01 function: 158.21329379081726
+add_canada function: 0.1543262004852295
+add_us_states function: 1133.0691475868225
+add_italy_data function: 44.680586099624634
+add_italy_regions function: 0.5388278961181641
+add_us_details function: 2443.888119459152
+update_time function: 9.062116622924805
+update_time_region function: 7.051313400268555
+update_exceptions function: 0.3536210060119629
+*** Starting Log for: 2020-10-15 20:25:20.269872 ***
+remove_data function: 1.4310834407806396
+add_data function: 22.833137035369873
+update_final_01 function: 167.10168981552124
+add_canada function: 0.15767455101013184
+add_us_states function: 1154.2380776405334
+add_italy_data function: 42.11583185195923
+add_italy_regions function: 0.5252549648284912
+add_us_details function: 2608.652813911438
+update_time function: 8.447248935699463
+update_time_region function: 6.503661394119263
+update_exceptions function: 0.3081858158111572
+*** Starting Log for: 2020-10-16 19:37:13.717367 ***
+remove_data function: 1.4751732349395752
+add_data function: 22.86260962486267
+update_final_01 function: 171.19811582565308
+add_canada function: 0.14994192123413086
+add_us_states function: 1168.4929168224335
+add_italy_data function: 45.239370346069336
+add_italy_regions function: 0.6173746585845947
+*** Starting Log for: 2020-10-16 21:15:41.231311 ***
+remove_data function: 1.425490140914917
+add_data function: 21.74568271636963
+update_final_01 function: 171.29551362991333
+add_canada function: 0.15188241004943848
+add_us_states function: 1139.2466793060303
+add_italy_data function: 48.03828167915344
+add_italy_regions function: 0.6344411373138428
+add_us_details function: 2286.691319704056
+update_time function: 8.257873773574829
+update_time_region function: 6.209803819656372
+update_exceptions function: 0.31603479385375977
+*** Starting Log for: 2020-10-18 18:21:08.423693 ***
+remove_data function: 1.4328835010528564
+add_data function: 21.467377424240112
+update_final_01 function: 166.29933500289917
+add_canada function: 0.1585369110107422
+add_us_states function: 1152.9980854988098
+add_italy_data function: 45.93407440185547
+add_italy_regions function: 1.4590301513671875
+add_us_details function: 2424.463411092758
+update_time function: 9.901428699493408
+update_time_region function: 7.78041410446167
+update_exceptions function: 0.3721902370452881
+*** Starting Log for: 2020-10-22 19:56:41.907642 ***
+remove_data function: 1.5127272605895996
+add_data function: 20.84007692337036
+update_final_01 function: 174.76033854484558
+add_canada function: 0.16350579261779785
+add_us_states function: 1208.6032705307007
+add_italy_data function: 47.96075892448425
+add_italy_regions function: 0.5424361228942871
+add_us_details function: 2347.7786436080933
+update_time function: 9.059763431549072
+update_time_region function: 7.304330110549927
+update_exceptions function: 0.3854513168334961
+*** Starting Log for: 2020-11-01 12:29:25.138143 ***
+remove_data function: 1.443220853805542
+add_data function: 24.414355516433716
+update_final_01 function: 186.15658569335938
+add_canada function: 0.18485164642333984
+add_us_states function: 1496.4373714923859
+add_italy_data function: 57.69978904724121
+add_italy_regions function: 0.6375668048858643
+add_us_details function: 2977.0817234516144
+update_time function: 9.914446592330933
+update_time_region function: 7.5416717529296875
+update_exceptions function: 0.38853025436401367
+*** Starting Log for: 2020-11-13 19:39:18.298808 ***
+remove_data function: 1.433952808380127
+add_data function: 23.79672384262085
+update_final_01 function: 181.1796305179596
+add_canada function: 0.1934354305267334
+add_us_states function: 1491.3671870231628
+add_italy_data function: 65.78579640388489
+add_italy_regions function: 0.7636141777038574
+*** Starting Log for: 2020-11-14 12:22:01.907373 ***
+remove_data function: 1.475839614868164
+add_data function: 24.374836444854736
+update_final_01 function: 180.27541589736938
+add_canada function: 0.19767332077026367
+add_us_states function: 1567.150128364563
+add_italy_data function: 65.53688836097717
+add_italy_regions function: 0.7429971694946289
+add_us_details function: 3122.7240340709686
+update_time function: 9.234470844268799
+update_time_region function: 7.131862163543701
+update_exceptions function: 0.34804868698120117
+*** Starting Log for: 2020-11-22 10:26:44.689843 ***
+remove_data function: 1.5064902305603027
+add_data function: 24.261147260665894
+update_final_01 function: 190.30732202529907
+add_canada function: 0.190521240234375
+add_us_states function: 1794.6218748092651
+add_italy_data function: 72.9726128578186
+add_italy_regions function: 0.8230607509613037
+add_us_details function: 3334.6089255809784
+update_time function: 9.367623329162598
+update_time_region function: 7.177209138870239
+update_exceptions function: 0.37233901023864746
+*** Starting Log for: 2020-12-12 16:48:25.256255 ***
+remove_data function: 1.5791444778442383
+*** Starting Log for: 2020-12-12 16:52:01.604358 ***
+remove_data function: 0.0053751468658447266
+*** Starting Log for: 2020-12-12 16:53:11.477103 ***
+remove_data function: 0.35848212242126465
+add_data function: 25.9479820728302
+update_final_01 function: 204.22500824928284
+add_canada function: 0.2046513557434082
+add_us_states function: 1804.5009591579437
+add_italy_data function: 74.53200697898865
+add_italy_regions function: 0.7053506374359131
+add_us_details function: 3639.3235127925873
+update_time function: 9.918387174606323
+update_time_region function: 7.665191888809204
+update_exceptions function: 0.3855130672454834
+*** Starting Log for: 2020-12-27 14:54:07.503739 ***
+remove_data function: 1.6864304542541504
+add_data function: 28.560113668441772
+update_final_01 function: 200.88019108772278
+add_canada function: 0.21148085594177246
+add_us_states function: 1837.7311675548553
+add_italy_data function: 67.31920719146729
+add_italy_regions function: 0.6779584884643555
+*** Starting Log for: 2021-01-05 19:31:14.318761 ***
+remove_data function: 1.6204018592834473
+add_data function: 26.888127326965332
+update_final_01 function: 209.73678159713745
+add_canada function: 0.2043919563293457
+add_us_states function: 2216.087869167328
+add_italy_data function: 86.6005311012268
+add_italy_regions function: 0.8523657321929932
+add_us_details function: 4120.632447242737
+update_time function: 10.022791385650635
+update_time_region function: 7.93465256690979
+update_exceptions function: 0.3873600959777832
+*** Starting Log for: 2021-01-07 19:25:50.595581 ***
+remove_data function: 1.6566903591156006
+*** Starting Log for: 2021-01-08 19:54:44.952420 ***
+remove_data function: 0.020769596099853516
+*** Starting Log for: 2021-01-08 20:09:28.799189 ***
+remove_data function: 0.0053861141204833984
+*** Starting Log for: 2021-01-08 20:09:56.501813 ***
+remove_data function: 0.005269765853881836
+*** Starting Log for: 2021-01-08 20:11:20.238232 ***
+remove_data function: 0.005113363265991211
+add_data function: 32.89521598815918
+update_final_01 function: 218.84128284454346
+add_canada function: 0.22724485397338867
+*** Starting Log for: 2021-01-09 12:45:42.452297 ***
+remove_data function: 1.7328271865844727
+add_data function: 28.718300580978394
+update_final_01 function: 227.2059350013733
+add_canada function: 0.23013544082641602
+add_us_states function: 2297.191992521286
+add_italy_data function: 94.10972690582275
+add_italy_regions function: 0.8973147869110107
+add_us_details function: 4487.159947872162
+update_time function: 11.06869101524353
+update_time_region function: 8.432868242263794
+update_exceptions function: 0.40654635429382324

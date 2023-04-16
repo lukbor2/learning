@@ -1,81 +1,115 @@
-\contentsline {chapter}{\numberline {1}Commands}{3}
-\contentsline {section}{\numberline {1.1}Movements}{3}
-\contentsline {paragraph}{w}{3}
-\contentsline {paragraph}{b}{3}
-\contentsline {paragraph}{\textdollar }{3}
-\contentsline {paragraph}{0}{3}
-\contentsline {section}{\numberline {1.2}Misc}{3}
-\contentsline {paragraph}{i}{3}
-\contentsline {paragraph}{I}{3}
-\contentsline {paragraph}{<esc>}{3}
-\contentsline {paragraph}{a}{3}
-\contentsline {paragraph}{A}{3}
-\contentsline {paragraph}{R}{3}
-\contentsline {paragraph}{.}{3}
-\contentsline {paragraph}{u}{3}
-\contentsline {paragraph}{<C-a>, <C-x>}{4}
-\contentsline {paragraph}{gU}{4}
-\contentsline {paragraph}{gu}{4}
-\contentsline {section}{\numberline {1.3}Delete Stuff}{4}
-\contentsline {paragraph}{x}{4}
-\contentsline {paragraph}{s}{4}
-\contentsline {paragraph}{dw}{4}
-\contentsline {paragraph}{db}{4}
-\contentsline {paragraph}{dd}{4}
-\contentsline {paragraph}{dap}{4}
-\contentsline {paragraph}{cw}{4}
-\contentsline {paragraph}{cb}{4}
-\contentsline {paragraph}{cc}{4}
-\contentsline {paragraph}{cap}{4}
-\contentsline {paragraph}{<C-h>}{4}
-\contentsline {paragraph}{<C-w>}{4}
-\contentsline {paragraph}{<C-u>}{4}
-\contentsline {section}{\numberline {1.4}Indentation}{5}
-\contentsline {paragraph}{>G}{5}
-\contentsline {paragraph}{>>}{5}
-\contentsline {paragraph}{=}{5}
-\contentsline {section}{\numberline {1.5}Search}{5}
-\contentsline {paragraph}{f\{char\}}{5}
-\contentsline {paragraph}{F\{char\}}{5}
-\contentsline {paragraph}{t\{char\}}{5}
-\contentsline {paragraph}{T\{char\}}{5}
-\contentsline {paragraph}{;}{5}
-\contentsline {paragraph}{,}{5}
-\contentsline {paragraph}{/pattern}{5}
-\contentsline {paragraph}{?pattern}{5}
-\contentsline {paragraph}{n}{5}
-\contentsline {paragraph}{N}{5}
-\contentsline {paragraph}{*}{5}
-\contentsline {section}{\numberline {1.6}Copy and Paste}{5}
-\contentsline {paragraph}{yy}{5}
-\contentsline {paragraph}{yw}{5}
-\contentsline {paragraph}{yb}{6}
-\contentsline {paragraph}{p}{6}
-\contentsline {paragraph}{<C-r>0}{6}
-\contentsline {section}{\numberline {1.7}Multiple Files}{6}
-\contentsline {paragraph}{:ls}{6}
-\contentsline {paragraph}{<C-\^{}>}{6}
-\contentsline {paragraph}{:bN}{6}
-\contentsline {paragraph}{<C-w>}{6}
-\contentsline {paragraph}{<C-w>s}{6}
-\contentsline {paragraph}{<C-w>v}{6}
-\contentsline {paragraph}{<C-w>c}{6}
-\contentsline {paragraph}{<C-w>o}{6}
-\contentsline {paragraph}{:sp {file}}{6}
-\contentsline {paragraph}{:vsp {file}}{6}
-\contentsline {paragraph}{:tabe {filename}}{6}
-\contentsline {paragraph}{<C-w>T}{6}
-\contentsline {paragraph}{:tabc}{6}
-\contentsline {paragraph}{:tabo}{6}
-\contentsline {paragraph}{:tabn N}{6}
-\contentsline {paragraph}{:tabn}{7}
-\contentsline {paragraph}{:tabp}{7}
-\contentsline {paragraph}{:tabmove N}{7}
-\contentsline {section}{\numberline {1.8}Files}{7}
-\contentsline {paragraph}{:edit or :e}{7}
-\contentsline {paragraph}{:find}{7}
-\contentsline {paragraph}{Explore File System}{7}
-\contentsline {paragraph}{:Explore or :E}{7}
-\contentsline {paragraph}{:edit \{path\}}{7}
-\contentsline {paragraph}{:Vexplore}{7}
-\contentsline {paragraph}{\textit {buffer number}:bdelete or :bd}{7}
+\contentsline {chapter}{\numberline {1}Commands}{3}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Movements}{3}{section.1.1}% 
+\contentsline {paragraph}{w}{3}{section*.2}% 
+\contentsline {paragraph}{b}{3}{section*.3}% 
+\contentsline {paragraph}{e}{3}{section*.4}% 
+\contentsline {paragraph}{\textdollar }{3}{section*.5}% 
+\contentsline {paragraph}{0 or \^{}}{3}{section*.6}% 
+\contentsline {paragraph}{G}{3}{section*.7}% 
+\contentsline {paragraph}{gg}{3}{section*.8}% 
+\contentsline {paragraph}{f-char}{3}{section*.9}% 
+\contentsline {paragraph}{t-char}{3}{section*.10}% 
+\contentsline {paragraph}{F-char}{3}{section*.11}% 
+\contentsline {paragraph}{T-char}{3}{section*.12}% 
+\contentsline {paragraph}{;}{3}{section*.13}% 
+\contentsline {section}{\numberline {1.2}Misc}{4}{section.1.2}% 
+\contentsline {paragraph}{:[range]g/pattern/cmd}{4}{section*.14}% 
+\contentsline {paragraph}{i}{4}{section*.15}% 
+\contentsline {paragraph}{I}{4}{section*.16}% 
+\contentsline {paragraph}{<esc>}{4}{section*.17}% 
+\contentsline {paragraph}{a}{4}{section*.18}% 
+\contentsline {paragraph}{A}{4}{section*.19}% 
+\contentsline {paragraph}{R}{4}{section*.20}% 
+\contentsline {paragraph}{r}{4}{section*.21}% 
+\contentsline {paragraph}{.}{4}{section*.22}% 
+\contentsline {paragraph}{u}{4}{section*.23}% 
+\contentsline {paragraph}{<C-a>, <C-x>}{4}{section*.24}% 
+\contentsline {paragraph}{gU}{4}{section*.25}% 
+\contentsline {paragraph}{gu}{4}{section*.26}% 
+\contentsline {paragraph}{v}{4}{section*.27}% 
+\contentsline {paragraph}{V}{4}{section*.28}% 
+\contentsline {paragraph}{C-v}{4}{section*.29}% 
+\contentsline {paragraph}{v j}{4}{section*.30}% 
+\contentsline {paragraph}{v \$ }{5}{section*.31}% 
+\contentsline {paragraph}{v \^{} or v 0}{5}{section*.32}% 
+\contentsline {paragraph}{v ip}{5}{section*.33}% 
+\contentsline {paragraph}{Select multiple lines and insert at the beginning of each line with multiple cursors}{5}{section*.34}% 
+\contentsline {paragraph}{operator-modifier}{5}{section*.35}% 
+\contentsline {paragraph}{preset occurrence}{5}{section*.36}% 
+\contentsline {paragraph}{Select and change the same word in several places}{5}{section*.37}% 
+\contentsline {paragraph}{Table of contents with links:}{5}{section*.38}% 
+\contentsline {paragraph}{Changing the size of the vim window:}{6}{section*.39}% 
+\contentsline {paragraph}{Showing pieces of codes in a document:}{6}{section*.40}% 
+\contentsline {section}{\numberline {1.3}Delete Stuff}{6}{section.1.3}% 
+\contentsline {paragraph}{x}{6}{section*.41}% 
+\contentsline {paragraph}{s}{6}{section*.42}% 
+\contentsline {paragraph}{dw}{6}{section*.43}% 
+\contentsline {paragraph}{db}{6}{section*.44}% 
+\contentsline {paragraph}{dd}{6}{section*.45}% 
+\contentsline {paragraph}{d\$}{6}{section*.46}% 
+\contentsline {paragraph}{dap}{6}{section*.47}% 
+\contentsline {paragraph}{c}{6}{section*.48}% 
+\contentsline {paragraph}{C}{6}{section*.49}% 
+\contentsline {paragraph}{cw}{6}{section*.50}% 
+\contentsline {paragraph}{cb}{6}{section*.51}% 
+\contentsline {paragraph}{cc}{6}{section*.52}% 
+\contentsline {paragraph}{cap}{6}{section*.53}% 
+\contentsline {paragraph}{<C-h>}{6}{section*.54}% 
+\contentsline {paragraph}{<C-w>}{7}{section*.55}% 
+\contentsline {paragraph}{<C-u>}{7}{section*.56}% 
+\contentsline {section}{\numberline {1.4}Indentation}{7}{section.1.4}% 
+\contentsline {paragraph}{>G}{7}{section*.57}% 
+\contentsline {paragraph}{>>}{7}{section*.58}% 
+\contentsline {paragraph}{=}{7}{section*.59}% 
+\contentsline {section}{\numberline {1.5}Search}{7}{section.1.5}% 
+\contentsline {paragraph}{In normal mode type \textbackslash }{7}{section*.60}% 
+\contentsline {paragraph}{f\{char\}}{7}{section*.61}% 
+\contentsline {paragraph}{F\{char\}}{7}{section*.62}% 
+\contentsline {paragraph}{t\{char\}}{7}{section*.63}% 
+\contentsline {paragraph}{T\{char\}}{7}{section*.64}% 
+\contentsline {paragraph}{;}{7}{section*.65}% 
+\contentsline {paragraph}{,}{7}{section*.66}% 
+\contentsline {paragraph}{/pattern}{7}{section*.67}% 
+\contentsline {paragraph}{?pattern}{7}{section*.68}% 
+\contentsline {paragraph}{n}{7}{section*.69}% 
+\contentsline {paragraph}{N}{7}{section*.70}% 
+\contentsline {paragraph}{*}{8}{section*.71}% 
+\contentsline {section}{\numberline {1.6}Copy and Paste}{8}{section.1.6}% 
+\contentsline {paragraph}{yy}{8}{section*.72}% 
+\contentsline {paragraph}{yw}{8}{section*.73}% 
+\contentsline {paragraph}{yb}{8}{section*.74}% 
+\contentsline {paragraph}{p}{8}{section*.75}% 
+\contentsline {paragraph}{<C-r>0}{8}{section*.76}% 
+\contentsline {section}{\numberline {1.7}Multiple Files}{8}{section.1.7}% 
+\contentsline {paragraph}{:ls}{8}{section*.77}% 
+\contentsline {paragraph}{<C-\^{}>}{8}{section*.78}% 
+\contentsline {paragraph}{:bN}{8}{section*.79}% 
+\contentsline {paragraph}{<C-w>}{8}{section*.80}% 
+\contentsline {paragraph}{<C-w>s}{8}{section*.81}% 
+\contentsline {paragraph}{<C-w>v}{8}{section*.82}% 
+\contentsline {paragraph}{<C-w>c}{8}{section*.83}% 
+\contentsline {paragraph}{<C-w>o}{8}{section*.84}% 
+\contentsline {paragraph}{:sp {file}}{8}{section*.85}% 
+\contentsline {paragraph}{:vsp {file}}{8}{section*.86}% 
+\contentsline {paragraph}{:tabe {filename}}{8}{section*.87}% 
+\contentsline {paragraph}{<C-w>T}{9}{section*.88}% 
+\contentsline {paragraph}{:tabc}{9}{section*.89}% 
+\contentsline {paragraph}{:tabo}{9}{section*.90}% 
+\contentsline {paragraph}{:tabn N}{9}{section*.91}% 
+\contentsline {paragraph}{:tabn}{9}{section*.92}% 
+\contentsline {paragraph}{:tabp}{9}{section*.93}% 
+\contentsline {paragraph}{:tabmove N}{9}{section*.94}% 
+\contentsline {section}{\numberline {1.8}Files}{9}{section.1.8}% 
+\contentsline {paragraph}{:edit or :e}{9}{section*.95}% 
+\contentsline {paragraph}{:find}{9}{section*.96}% 
+\contentsline {paragraph}{Explore File System}{9}{section*.97}% 
+\contentsline {paragraph}{:Explore or :E}{9}{section*.98}% 
+\contentsline {paragraph}{:edit \{path\}}{9}{section*.99}% 
+\contentsline {paragraph}{:Vexplore}{9}{section*.100}% 
+\contentsline {paragraph}{\textit {buffer number}:bdelete or :bd}{9}{section*.101}% 
+\contentsline {section}{\numberline {1.9}Links}{9}{section.1.9}% 
+\contentsline {chapter}{\numberline {2}Vim Latex}{11}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Folding}{11}{section.2.1}% 
+\contentsline {paragraph}{\textbackslash rf}{11}{section*.102}% 
+\contentsline {paragraph}{\textbackslash za}{11}{section*.103}% 
+\contentsline {paragraph}{C-k C-number}{11}{section*.104}% 

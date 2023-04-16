@@ -7,6 +7,13 @@
 \usepackage{makeidx}
 \usepackage{graphicx}
 \usepackage{listings}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
 
 
 \begin{document}
@@ -16,27 +23,79 @@
 \section{Movements}
 \paragraph{w}: Move one word forward
 \paragraph{b}: Move one word backward
+\paragraph{e}: Move to the end of the current or next word
 \paragraph{\textdollar}: Move to end of line
-\paragraph{0}: Move to beginning of line
+\paragraph{0 or \^{}}: Move to beginning of line
+\paragraph{G}: Move to end of file.
+\paragraph{gg}: Move to beginning of file.
+\paragraph{f-char}: Move right to the next occurence of \textit{char}.
+\paragraph{t-char}: Move right before the next occurence of \textit{char}.
+\paragraph{F-char}: Move left to the next occurence of \textit{char}.
+\paragraph{T-char}: Move left before the next occurence of \textit{char}.
+\paragraph{;}: typing \textit{;} will repeat the last command; it is very useful with commands used for moving around. For example: \textit{fo} will position the cursor to the next \textit{o} character; then hitting \textit{;} will move to the next occurence of \textit{o}.
+
 \section{Misc}
+\paragraph{:[range]g/pattern/cmd}: This acts on the specified \textit{[range]} (default whole file), by executing the Ex command \textit{cmd} for each line matching \textit{pattern} (an Ex command is one starting with a colon such as :d for delete). Example:\\
+\textit{:g/pattern/d}: delete all lines matching \textit{pattern}\\
 \paragraph{i}: Enter insert mode at the position of the cursor
 \paragraph{I}: Enter insert mode at beginning of the line
 \paragraph{<esc>}: Enter normal mode.
 \paragraph{a}: Enter insert mode and append at one character after cursor's current position.
 \paragraph{A}: Enter insert mode and append at end of the line.
-\paragraph{R}: Enter replace mode (basically to overwrite stuff)
-\paragraph{.}: The dot command lets us repeat the last change.
+\paragraph{R}: Enter replace mode (basically to overwrite stuff).
+\paragraph{r}: Replace single character at cursor.
+
+\paragraph{.}: The dot command lets us repeat the last command.
 \paragraph{u}: Undo last change.
 \paragraph{<C-a>, <C-x>}: perform addition and subtraction on numbers.
 \paragraph{gU}: converts into upper case. Must be used with something else. For example \textit{gUap} converts an entire paragraph, \textit{gUaw} converts a word, etc.
 \paragraph{gu}: converts into lower case. Must be used with something else. For example \textit{guap} converts an entire paragraph, \textit{guaw} converts a word, etc.
+\paragraph{v}: Enter character-wise visual mode.
+\paragraph{V}: Enter line-wise visual mode.
+\paragraph{C-v}: Enter block-wise visual mode.
+
+\paragraph{v j}: Enter visual mode and select current line.
+\paragraph{v \$ }: Enter visual mode and select until end of current line.
+\paragraph{v  \^{} or v 0}: Enter visual mode and select until beginning of current line.
+\paragraph{v ip}: Enter visual mode and select everything between two empty lines in relation to current position of the cursor.
+
+\paragraph{Select multiple lines and insert at the beginning of each line with multiple cursors}: go at the beginning of the first line, enter block-wise visual mode, select the other lines, then Shift-i and you get one cursor ready for entry at the beginning of each line.
+
+\paragraph{operator-modifier}: \textit{o} is the operator modifier.\\
+The effect of \textit{o} is that it re-selects the keyword under-cursor within the whole target area.\\
+For example, \textit{cop} means use command c in this paragraph applied to all words equal to the word where the cursor is on. It can be incredibly useful to change the same word everywhere in a line/paragraph/document.
+\paragraph{preset occurrence}: move onto the first word to change in several places and use \textit{go} to set the first keyword; then move to the second word to change and repeat the \textit{go} command. Now 2 presets have been established and with \textit{cp} I can change both words everywhere in the paragraph.
+
+\paragraph{Select and change the same word in several places}: search for the word to change using the normal search (i.e. using /). Then use the command \textit{cgn} to cancel the word, type the new word and then use the key \textit{n} to move to the next occurence and then use the the \textit{'.'} to repeat the change.\\
+The text-object \textit{gn} works like other text-objects with all commands. You can for example use it with \textit{d} to delete the matches.
+
+\paragraph{Table of contents with links:} in order to have a table of content in the pdf file with links to the sections, use the package and the command as below:\\
+\begin{lstlisting}
+\usepackage{hyperref}
+\hypersetup
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+\end{lstlisting}
+\paragraph{Changing the size of the vim window:} To change programatically the size of the window use the commands below in the command line and/or in the .vimrc file.
+\begin{lstlisting}
+set lines=50 columns=100
+\end{lstlisting}
+\paragraph{Showing pieces of codes in a document:} To show pieces of code in a document use the \emph{lstlisting} environment. The package \emph{listings} must be added at the beginning of the document.
 \section{Delete Stuff}
 \paragraph{x}: The x command deletes the character under the cursor.
 \paragraph{s}: Deletes character under the cursor and enters insert mode.
 \paragraph{dw}: Delete the word the cursor is on
 \paragraph{db}: Delete the word before the one the cursor is on
 \paragraph{dd}: Delete entire line
+\paragraph{d\$}: Delete from cursor to the end of current line.
+
 \paragraph{dap}: Delete entire paragraph
+\paragraph{c}: Delete the current selection and drop into insert mode.
+\paragraph{C}: delete from cursor's position to the end of the line.
+
 \paragraph{cw}: Delete to the end of the word and then drop into Insert mode
 \paragraph{cb}: Delete from the beginning of the word and then drop into Insert mode
 \paragraph{cc}: Delete entire line and then drop into insert mode
@@ -46,12 +105,13 @@
 \paragraph{<C-h>}: from Insert Mode, delete back 1 character
 \paragraph{<C-w>}: from Insert Mode, delete back 1 word
 \paragraph{<C-u>}: from Insert Mode, delete back to start of line
-
 \section{Indentation}
 \paragraph{>G}:The >G command increases the indentation from the current line until the end of the file.
 \paragraph{>>}: Intent current line
 \paragraph{=}: Autoindent
 \section{Search}
+\paragraph{In normal mode type \textbackslash}: this will open the command line. Then enter the word to search. At the end of the word add the \textbackslash c option to run a case-insensitive search.
+
 \paragraph{f\{char\}}: Look ahead for the next occurrence of the specified character and then move the cursor directly to it if a match is found.
 \paragraph{F\{char\}}: Look backwards for the next occurrence of the specified character and then move the cursor directly to it if a match is found.
 \paragraph{t\{char\}}: Forward to the character before the next occurrence of \{char\}
@@ -69,7 +129,7 @@
 \paragraph{yb}: copy the word before the one the cursor is on into register\\ \\
 \textbf{NOTE}: all the y commands can be used with a number n before, which means the command is repeated n times. For example: \textit{3yy} will copy 3 lines, \textit{3yw} will copy 3 words, etc.
 \paragraph{p}: paste register
-\paragraph{<C-r>0}: paster register 0 from Insert Mode
+\paragraph{<C-r>0}: paste register 0 from Insert Mode
 \section{Multiple Files}
 \paragraph{:ls}: Buffers list. The one with the \% symbol is the active one
 \paragraph{<C-\^{}>}: toggle between files.
@@ -89,7 +149,6 @@
 \paragraph{:tabn}: switch to next tab.
 \paragraph{:tabp}: switch to previous tab.
 \paragraph{:tabmove N}: move tab to position N (0 is the beginning).
-
 \section{Files}
 \paragraph{:edit or :e}: opens a file either by specifying
 an absolute or a relative filepath
@@ -98,6 +157,18 @@ an absolute or a relative filepath
 \paragraph{:Explore or :E}: opens the file explorer
 \paragraph{:edit \{path\}}: opens the file explorer
 \paragraph{:Vexplore}: opens the file explorer in a vertical split window
-\paragraph{\textit{buffer number}:bdelete or :bd}: deletes the buffer(s) specified (it can be a range or a list too
-\end{document}
+\paragraph{\textit{buffer number}:bdelete or :bd}: deletes the buffer(s) specified (it can be a range or a list too.
+\section{Links}
+\href{https://github.com/t9md/atom-vim-mode-plus/wiki/AdvancedTopicTutorial#0-text-to-use-in-this-tour}{Some advanced topics}\\
 
+\chapter{Vim Latex}
+Vim-Latex is a vim add-on/plug-in which is used to make Latex files in Vim.\\
+\href{http://vim-latex.sourceforge.net/documentation/latex-suite/}{The manual is here}.\\
+Check the chapter 3 which is about the macros available to quickly insert the different elements of a Latex document.
+\section{Folding}
+\paragraph{\textbackslash rf}: This will fold up the entire file. Does not seem to work in Atom.
+\paragraph{\textbackslash za}: Open and close folds.
+\paragraph{C-k C-number}: where \textit{number} is a number from 1 to 9. Folds/unfolds the level specified by \textit{number}.
+
+
+\end{document}

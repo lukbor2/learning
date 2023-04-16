@@ -1,0 +1,20 @@
+DATA VISUALIZATION with React
+
+https://www.flexmonster.com/?r=m7
+https://www.webdatarocks.com/?r=m7
+https://formidable.com/open-source/victory/?r=m7
+https://dev.to/giteden/top-5-react-chart-libraries-for-2020-1amb
+
+
+OTHER FOR DATA VISUALIZATION ON WEB
+
+https://d3js.org/
+https://www.webfx.com/blog/web-design/free-data-visualization-tools/
+http://nvd3.org/
+https://plotly.com/
+
+DJANGO RELATED
+
+https://medium.com/better-programming/prettify-python-django-with-beautiful-visual-charts-836fe6646305
+https://www.geeksforgeeks.org/data-visualization-using-chartjs-and-django/
+https://www.freecodecamp.org/news/how-to-create-an-analytics-dashboard-in-django-app/

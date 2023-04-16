@@ -1,0 +1,395 @@
+#INFO: look here for information on sub-plots https://plotly.com/python/subplots/
+
+import dash
+import dash_bootstrap_components as dbc
+import dash_core_components as dcc
+import dash_html_components as html
+import dash_daq as daq
+import pandas as pd
+import plotly.graph_objs as go
+from plotly.subplots import make_subplots
+from dash.dependencies import Input, Output
+import mysql.connector as sql
+from datetime import date, timedelta, datetime
+
+app = dash.Dash(external_stylesheets=[dbc.themes.SPACELAB])
+
+db_connection = sql.connect(host='localhost', database='covid19', user='root', password='cacca1971')
+ds = pd.read_sql('SELECT * FROM final_01', con=db_connection)
+ds['confirmed_number_add'] = ds['confirmed_number'] #Duplicate the column confirmed_number. I use it later.
+
+ds_countries = pd.read_sql('SELECT DISTINCT final_01_country FROM final_01 ORDER BY final_01_country', con=db_connection) #I will use the list of countries in one dropdown
+
+ds_population = pd.read_sql('SELECT population_country, population_region, population_size, population_surface_km, population_surface_mi FROM population ORDER BY population_country, population_region', con=db_connection)
+
+views = [
+        {'label': "Total Cases", 'value': "confirmed_number"},
+        {'label': "Current Positive", 'value': "current_positive"},
+        {'label': "Deaths", 'value': "deaths_number"},
+        {'label': "Hospitalized", 'value': "hospitalized"},
+        {'label': "In ICU", 'value': "in_icu"},
+        {'label': "Tested", 'value': "tested"},
+] #These are the options for the drop down used to select which data to see on the charts.
+
+connected_measure = {
+                        "confirmed_number": "confirmed_delta",
+                        "current_positive": "current_positive_delta",
+                        "deaths_number": "deaths_delta",
+                        "hospitalized": "hospitalized_delta",
+                        "in_icu": "in_icu_delta",
+                        "tested": "tested_pos_delta"
+}
+
+table_header = [html.Thead(html.Tr([html.Th("Country/Region"), html.Th("Population")]))]
+row1 = html.Tr([html.Td(""), html.Td("")])
+table_body = [html.Tbody([row1])]
+#table = dbc.Table(table_header + table_body, bordered=True)
+
+controls = dbc.Card(
+    [
+        dbc.FormGroup(
+            [
+                daq.BooleanSwitch(
+                                label='Absolute or Percent Delta',
+                                #className='custom-control-input',
+                                id='toggle-switch_01',
+                                on=False,
+                                labelPosition="top"
+                                ),
+            ]
+        ),
+        dbc.FormGroup(
+            [
+                dbc.Label("Time Horizon"),
+                dbc.RadioItems(
+                    id='time_horizon',
+                    options=[
+                        {"label": "From the Beginning", "value": 0 },
+                        {"label": "Since 100 Cases", "value": 100},
+                        {"label": "Since 1000 Cases", "value": 1000},
+                        {"label": "Last 15 Days", "value": 15},
+                        {"label": "Last 30 Days", "value": 30},
+                        {"label": "Last 60 Days", "value": 60},
+                    ]
+                )
+            ]
+        ),
+        dbc.FormGroup(
+            [
+                dbc.Label("View Selector"),
+                dcc.Dropdown(
+                    id="view_selector",
+                    options=views,
+                    value="current_positive",
+                ),
+            ]
+        ),
+        dbc.FormGroup(
+            [
+                dbc.Label("Country 1"),
+                dcc.Dropdown(
+                    id="country_1",
+                    options=[
+                        {"label": col, "value": col} for col in ds_countries["final_01_country"]
+                    ],
+                    value="US",
+                ),
+            ]
+        ),
+        dbc.FormGroup(
+            [
+                dbc.Label("Region 1"),
+                dcc.Dropdown(
+                    id="region_1",
+                    value="",
+                    placeholder="None",
+                ),
+            ]
+        ),
+        dbc.FormGroup(
+            [
+                dbc.Label("Country 2"),
+                dcc.Dropdown(
+                    id="country_2",
+                    options=[
+                        {"label": col, "value": col} for col in ds_countries["final_01_country"]
+                    ],
+                    value="Italy",
+                ),
+            ]
+        ),
+        dbc.FormGroup(
+            [
+                dbc.Label("Region 2"),
+                dcc.Dropdown(
+                    id="region_2",
+                    value="",
+                ),
+            ]
+        ),
+    ],
+    body=True,
+)
+
+app.layout = dbc.Container(
+    [
+        html.H1("Compare Countries and Regions"),
+        html.Hr(),
+        dbc.Row(
+            [
+                dbc.Col(controls, md=2),
+                dbc.Col(
+                    [
+                        dcc.Graph(id="graph_country_1"),
+                    ],
+                md=10)
+            ],
+            align="center"
+        ),
+        dbc.Row(
+            [
+                dbc.Col(md=2),
+                dbc.Col(dcc.Graph(id="table_1"), md=5),
+                dbc.Col(dcc.Graph(id="table_2"), md=5),
+            ]
+        )
+    ],
+    fluid=True,
+)
+
+@app.callback(
+    [
+        Output("graph_country_1", "figure"),
+        Output("table_1", "figure"),
+        Output("table_2", "figure"),
+    ],
+    [
+        Input("country_1", "value"),
+        Input("country_2", "value"),
+        Input("region_1", "value"),
+        Input("region_2", "value"),
+        Input("view_selector", "value"),
+        Input("toggle-switch_01", "on"),
+        Input("time_horizon", "value"),
+    ],
+)
+def make_graph(country_1, country_2, region_1, region_2, view, delta_p, t_horizon):
+    measure_1 = view
+    measure_2 = connected_measure[measure_1]
+    if t_horizon is None: #I do this test to set a default value until one of the radio button is checked.
+        t_horizon = 60
+
+    ds_country = ds.groupby(['final_01_country', 'final_01_date'])[[measure_1, measure_2, 'confirmed_number_add']].sum().reset_index()
+    ds_region = ds.groupby(['final_01_country', 'final_01_region' , 'final_01_date'])[[measure_1, measure_2, 'confirmed_number_add']].sum().reset_index()
+
+    ds_country_pop = ds_population.groupby(['population_country'])[['population_size']].sum().reset_index()
+
+    #now = date.today()
+    now = pd.to_datetime("today")
+
+    if t_horizon not in [15, 30, 60]:
+        limit = t_horizon
+        date_since = pd.Timestamp('2020-01-01')
+    else:
+        limit = 0
+        date_since = now - pd.Timedelta(t_horizon, unit='d')
+
+    if region_1 == "":
+        ds_country_1 = ds_country[(ds_country['final_01_country'] == country_1) & (ds_country['confirmed_number_add'] > limit) & (ds_country['final_01_date'] >= date_since)]
+        population_1 = ds_country_pop['population_size'][(ds_country_pop['population_country'] == country_1)]
+    else:
+        ds_country_1 = ds_region[(ds_region['final_01_region'] == region_1) & (ds_region['confirmed_number_add'] > limit) & (ds_region['final_01_date'] >= date_since)]
+        population_1 = ds_population['population_size'][(ds_population['population_region'] == region_1)]
+
+    if region_2 == "":
+        ds_country_2 = ds_country[(ds_country['final_01_country'] == country_2) & (ds_country['confirmed_number_add'] > limit) & (ds_country['final_01_date'] >= date_since)]
+        population_2 = ds_country_pop['population_size'][(ds_country_pop['population_country'] == country_2)]
+    else:
+        ds_country_2 = ds_region[(ds_region['final_01_region'] == region_2) & (ds_region['confirmed_number_add'] > limit) & (ds_region['final_01_date'] >= date_since)]
+        population_2 = ds_population['population_size'][(ds_population['population_region'] == region_2)]
+
+    def get_color(v):
+        if v > 0:
+            return 'red'
+        else:
+            return 'green'
+
+    fig = make_subplots(
+        rows=2, cols=2,
+        subplot_titles=(country_1 + " - " + region_1 + " - " + measure_1, country_2 + " - " + region_2 + " - " + measure_1, country_1  + " - " + region_1 + " - " +  measure_1 + "_delta", country_2  + " - "  + region_2 + " - " +  measure_1 + "_delta"),
+        row_heights = [0.6, 0.4],
+        vertical_spacing = 0.12
+        )
+
+    fig.add_trace(
+        go.Bar(
+            x = ds_country_1["final_01_date"],
+            y = ds_country_1[measure_1],
+            #marker_color = '#1F77B4',
+            marker_color='rgb(55, 83, 109)'
+        ),
+        row=1, col=1,
+    )
+
+    colors = [get_color(v) for v in ds_country_1[measure_1].diff()] #Picking color red if the increase is positive, otherwise green.
+    if delta_p:
+        y_axixs=''
+        fig.add_trace(
+            go.Bar(
+                x = ds_country_1["final_01_date"],
+                y = ds_country_1[measure_1].diff(),
+                marker_color = colors,
+                #marker=dict(color=ds_country_1[measure_1].diff(), reversescale=True, coloraxis="coloraxis",cmid=0)
+            ),
+            row=2, col=1,
+        )
+        fig.add_trace(
+            go.Scatter(
+                x = ds_country_1["final_01_date"],
+                y = ds_country_1[measure_1].diff().rolling(7).mean(),
+                marker_color = '#19D3F3',
+                name="Last 7 Days Avg",
+            ),
+            row=2, col=1,
+        )
+    else:
+        y_axixs='%'
+        fig.add_trace(
+            go.Scatter(
+                x = ds_country_1["final_01_date"],
+                y = ds_country_1[measure_1].pct_change(), #As I am aggregating values, I don't use the percent change in the db I have to calculate it here.
+                mode='markers',
+                marker_color = colors,
+                #marker=dict(color=ds_country_1[measure_1].diff(), reversescale=True, coloraxis="coloraxis",cmid=0)
+            ),
+            row=2, col=1,
+        )
+
+    fig.add_trace(
+        go.Bar(
+            x = ds_country_2["final_01_date"],
+            y = ds_country_2[measure_1],
+            marker_color='rgb(26, 118, 255)'
+            #marker_color = '#bcbd22',
+        ),
+        row=1, col=2,
+    )
+
+    colors = [get_color(v) for v in ds_country_2[measure_1].diff()] #Picking color red if the increase is positive, otherwise green.
+    if delta_p:
+        y_axixs=''
+        fig.add_trace(
+            go.Bar(
+                x = ds_country_2["final_01_date"],
+                y = ds_country_2[measure_1].diff(),
+                marker_color = colors,
+            ),
+            row=2, col=2,
+        )
+        fig.add_trace(
+            go.Scatter(
+                x = ds_country_2["final_01_date"],
+                y = ds_country_2[measure_1].diff().rolling(7).mean(),
+                marker_color = '#19D3F3',
+                name="Last 7 Days Avg",
+            ),
+            row=2, col=2,
+        )
+    else:
+        y_axixs='%'
+        fig.add_trace(
+            go.Scatter(
+                x = ds_country_2["final_01_date"],
+                y = ds_country_2[measure_1].pct_change(),
+                mode = 'markers',
+                marker_color = colors,
+            ),
+            row=2, col=2,
+        )
+
+    #fig.update_layout(xaxis_tickangle=-45, showlegend=False, height=1200, yaxis2=dict(range=[-1,1])) Use this to limit the y axis. is it better?
+    #fig.update_layout(xaxis_tickangle=-45, showlegend=False, height=800, yaxis3_tickformat=y_axixs, yaxis4_tickformat=y_axixs,coloraxis=dict(colorscale='RdYlGn'))
+    #fig.update_layout(xaxis_tickangle=-45, showlegend=False, height=800, yaxis3_tickformat=y_axixs, yaxis4_tickformat=y_axixs,coloraxis=dict(colorscale=["green","red"]))
+    fig.update_layout(xaxis_tickangle=-45, showlegend=False, height=800, yaxis3_tickformat=y_axixs, yaxis4_tickformat=y_axixs)
+
+    def table_calculation(pop, number):
+        pop_index = pop/1000
+        data = number/pop_index
+        return data
+
+    table_headers_1 = ['Country/Region', country_1 + ' - ' + region_1]
+    #pop_index = population_1.array[0]/1000
+    #num = ds_country_1[measure_1][ds_country_1['final_01_date']=='2020-05-26'].array[0]
+    #data = num / pop_index
+
+    #date_ref = (datetime.today()-timedelta(days=1)).strftime('%Y-%m-%d') #I take yesterday as the date of reference.
+    date_ref_1 = ds_country_1['final_01_date'].max()
+    date_ref_2 = ds_country_2['final_01_date'].max()
+
+    table_1_content = {
+        'Population': population_1,
+        measure_1 + '/1000 people': table_calculation(population_1.array[0], ds_country_1[measure_1][ds_country_1['final_01_date']==date_ref_1].array[0])
+        }
+
+    table_headers_2 = ['Country/Region', country_2 + ' - ' + region_2]
+    table_2_content = {
+        'Population': population_2,
+        measure_1 + '/1000 people': table_calculation(population_2.array[0], ds_country_2[measure_1][ds_country_2['final_01_date']==date_ref_2].array[0])
+        }
+
+
+    def build_table_data(content):
+        table_data = []
+        table_data_1 = []
+        table_data_2 = []
+        for x in content:
+            table_data_1.append(x)
+            table_data_2.append(content[x])
+        table_data.append(table_data_1)
+        table_data.append(table_data_2)
+        #print(table_data)
+        return table_data
+
+    table_1 = go.Figure(
+            data=[go.Table(
+                    header=dict(values=table_headers_1, align='center'),
+                    cells=dict(values=build_table_data(table_1_content), align='left', format=[None, ',.2f']))
+            ]
+    )
+
+    table_2 = go.Figure(
+            data=[go.Table(
+                    header=dict(values=table_headers_2, align='center'),
+                    cells=dict(values=build_table_data(table_2_content), align='left', format=[None, ',.2f']))
+            ]
+    )
+
+    return go.Figure(fig), table_1, table_2
+
+
+@app.callback(
+    [
+        Output("region_1", "options"),
+        Output("region_2", "options")
+    ],
+    [
+        Input("country_1", "value"),
+        Input("country_2", "value")
+    ]
+)
+def set_region_list(country_1, country_2):
+    qry_1 = 'SELECT DISTINCT final_01_region FROM final_01 WHERE final_01_country = \'' + country_1 + '\' ORDER BY final_01_region'
+    qry_2 = 'SELECT DISTINCT final_01_region FROM final_01 WHERE final_01_country = \'' + country_2 + '\' ORDER BY final_01_region'
+    ds_regions_1 = pd.read_sql(qry_1, con=db_connection)
+    ds_regions_2 = pd.read_sql(qry_2, con=db_connection)
+
+    options_1 = [{"label": col, "value": col} for col in ds_regions_1["final_01_region"]]
+    options_2 = [{"label": col, "value": col} for col in ds_regions_2["final_01_region"]]
+
+    return options_1, options_2
+
+PORT = 8887
+ADDRESS = '127.0.0.1'
+
+if __name__ == "__main__":
+    app.run_server(debug=True, host=ADDRESS, port=PORT)
