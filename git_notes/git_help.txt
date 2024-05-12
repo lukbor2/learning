@@ -1,8 +1,11 @@
 0)
 
 Token generated:
-
+OLD one:
 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
+
+NEW one:
+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
 
 Use this token instead of the password.
 
