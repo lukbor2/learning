@@ -1,1 +1,117 @@
+<<<<<<< HEAD
 I removed the file from here and put it in the Installation_Notes folder.
+=======
+
+
+1) Go to the folder where you want to create a repository.
+
+        git init
+
+   Repository is initialized and the hidden folder .git is created.
+
+2) Check the status
+
+        git status
+
+   It reveals whether there are non-tracked files. i.e. files which need to be added to the repository.
+
+3) Add files to the repository
+
+        git add <filename>
+        git add -A .
+
+   The last commmand adds all files and folders below the current one.
+   It is possible to use wildcards, but in those cases remember to use the single quotes. For example:
+
+        git add '*.txt'
+
+4) Once added a file goes into the staging area. It means it is added but has not been committed yet.
+
+        git commit -m "message goes here"
+
+   Run this command to commit all the changes to all files.
+
+5) To see a log of all changes there is a dedicated command
+
+        git log
+        git log --summary
+
+6) To push the local repository to the github server we need to add a remote repository
+
+        git remote add origin <url of the remote repository>
+
+   origin is the name usually used for the remote repository, but another name can be used too.
+   So now my remote repository is called origin and the main branch of my local repository is master.
+
+7) Once the remote repository is ready, we shall push the local changes to the remote repository.
+   Using the -u option allows to remember the configuration push has to use.
+
+        git push -u origin master
+
+8) Other people have done some work and they have pushed their changes to the remote repository.
+   I can pull those changes to my local repository.
+
+        git pull origin master
+
+9) To check the differences between the current status (after a pull) and my last commit I can use the diff command.
+
+        git diff HEAD
+
+   The HEAD is a pointer that holds your position within all your different commits.
+   By default HEAD points to your most recent commit, so it can be used as a quick way to reference that commit
+
+        git diff --staged
+
+   This shows the differences in staged files (i.e. files not committed yet).
+
+10) To remove a staged file use the reset command
+
+        git reset <filename>
+
+11) To "rewind" everything back to the point where a certain commit was made use the checkout command
+
+        git checkout -- <filename>
+
+12) A branch is a copy of an existing repository. I can work on a branch, make commits and then merge the branch back into the master repository.
+    To create a branch use the branch command.
+
+        git branch <branchname>
+        git checkout <branchname> --> switches to new branch
+        git checkout -b <branchname> --> creates a new branch and switches to it
+
+    Once a branch is ready and commit, it can be pushed to the remote repository too.
+
+13) To remove files from a repository use the rm command
+
+        git rm <filename>
+
+     The rm command, not only removes the files from the disk, it also stages the removal of the files from the repository.
+
+        git rm -r <foldername>
+
+     This will recursively remove all folders and files from the given directory.
+     If a file is removed with the standard rm command (the OS command), then either git rm is used or use
+
+        git commit -a
+
+     The -a option auto-removes deleted files.
+
+14) To merge a branch with the master. First switch to the master.
+
+        git checkout master
+
+    then merge
+
+        git merge <branchname>
+
+     If you're hosting your repo on GitHub, you can do something called a pull request.
+     A pull request allows the boss of the project to look through your changes and make comments before deciding to merge in the change.
+     It's a really great feature that is used all the time for remote workers and open-source projects.
+
+15) After a branch has been merged, the branch can be removed.
+
+        git branch -d <branchname>
+
+    note that -d works only on branches which have been merged.
+    To delete a branch which has not been merged use -d and -f options together or just the -D option.
+>>>>>>> 9345e4dc1081beb693f4b03e33dff4467e5b7a3a
