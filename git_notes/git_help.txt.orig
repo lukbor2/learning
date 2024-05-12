@@ -1,7 +1,6 @@
-0) About logging in
+<<<<<<< HEAD
 I removed the file from here and put it in the Installation_Notes folder.
-Look at the file there to learn about login.
-I could not keep it here because git does not allow to sync secrets.
+=======
 
 
 1) Go to the folder where you want to create a repository.
