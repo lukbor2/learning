@@ -1,10 +1,4 @@
-0)
 
-Token generated:
-
-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
-
-Use this token instead of the password.
 
 1) Go to the folder where you want to create a repository.
 
