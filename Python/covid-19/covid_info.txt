@@ -1,0 +1,7 @@
+https://towardsdatascience.com/see-the-coronavirus-for-yourself-88ce06b88f5e
+
+https://www.kaggle.com/sudalairajkumar/novel-corona-virus-2019-dataset#COVID19_line_list_data.csv
+
+https://www.nytimes.com/article/coronavirus-county-data-us.html
+
+Ideas for charting data: plotly and Jupyter Notebook. Instead of plotly, Bokeh is another alternative.

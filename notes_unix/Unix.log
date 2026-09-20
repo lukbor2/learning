@@ -1,10 +1,19 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.12.1)  10 MAR 2019 11:57
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.15)  15 SEP 2018 14:24
+>>>>>>> acc605e7dd2c5b9ee0aa4423b8787ff0413593d3
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Unix.tex
 (./Unix.tex
+<<<<<<< HEAD
 LaTeX2e <2018-04-01> patch level 5
+=======
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 5 language(s) loaded.
+>>>>>>> acc605e7dd2c5b9ee0aa4423b8787ff0413593d3
 (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
@@ -24,12 +33,20 @@ File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen102
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+<<<<<<< HEAD
 Package: inputenc 2018/04/06 v1.3b Input encoding file
+=======
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+>>>>>>> acc605e7dd2c5b9ee0aa4423b8787ff0413593d3
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
+<<<<<<< HEAD
 File: latin1.def 2018/04/06 v1.3b Input encoding file
+=======
+File: latin1.def 2015/03/17 v1.2c Input encoding file
+>>>>>>> acc605e7dd2c5b9ee0aa4423b8787ff0413593d3
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
@@ -58,6 +75,7 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
+<<<<<<< HEAD
 \inf@bad=\count89
 LaTeX Info: Redefining \frac on input line 213.
 \uproot@=\count90
@@ -65,6 +83,15 @@ LaTeX Info: Redefining \frac on input line 213.
 LaTeX Info: Redefining \overline on input line 375.
 \classnum@=\count92
 \DOTSCASE@=\count93
+=======
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count91
+\DOTSCASE@=\count92
+>>>>>>> acc605e7dd2c5b9ee0aa4423b8787ff0413593d3
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
@@ -73,8 +100,13 @@ LaTeX Info: Redefining \cdots on input line 596.
 \big@size=\dimen105
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+<<<<<<< HEAD
 \macc@depth=\count94
 \c@MaxMatrixCols=\count95
+=======
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+>>>>>>> acc605e7dd2c5b9ee0aa4423b8787ff0413593d3
 \dotsspace@=\muskip10
 \c@parentequation=\count96
 \dspbrk@lvl=\count97
@@ -134,23 +166,28 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@width=\dimen113
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count101
+\lst@mode=\count100
 \lst@gtempboxa=\box28
 \lst@token=\toks22
-\lst@length=\count102
+\lst@length=\count101
 \lst@currlwidth=\dimen114
-\lst@column=\count103
-\lst@pos=\count104
+\lst@column=\count102
+\lst@pos=\count103
 \lst@lostspace=\dimen115
 \lst@width=\dimen116
-\lst@newlines=\count105
-\lst@lineno=\count106
+\lst@newlines=\count104
+\lst@lineno=\count105
 \lst@maxwidth=\dimen117
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+<<<<<<< HEAD
 \c@lstnumber=\count107
 \lst@skipnumbers=\count108
+=======
+\c@lstnumber=\count106
+\lst@skipnumbers=\count107
+>>>>>>> acc605e7dd2c5b9ee0aa4423b8787ff0413593d3
 \lst@framebox=\box29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -175,16 +212,16 @@ LaTeX Font Info:    ... okay on input line 12.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count109
+\scratchcounter=\count108
 \scratchdimen=\dimen118
 \scratchbox=\box30
-\nofMPsegments=\count110
-\nofMParguments=\count111
+\nofMPsegments=\count109
+\nofMParguments=\count110
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count112
+\MPscratchCnt=\count111
 \MPscratchDim=\dimen119
-\MPnumerator=\count113
-\makeMPintoPDFobject=\count114
+\MPnumerator=\count112
+\makeMPintoPDFobject=\count113
 \everyMPtoPDFconversion=\toks24
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -217,6 +254,17 @@ Package ifluatex Info: LuaTeX not detected.
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
 )
+<<<<<<< HEAD
+=======
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+)
+>>>>>>> acc605e7dd2c5b9ee0aa4423b8787ff0413593d3
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
@@ -237,7 +285,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count115
+\c@lstlisting=\count114
 
 (./Unix.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 2.
@@ -391,6 +439,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 311--330
 
 [10] [11] [12] (./Unix.aux) ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  4218 strings out of 493362
  54449 string characters out of 6150309
  132121 words of memory out of 5000000
@@ -413,6 +462,30 @@ Output written on Unix.pdf (12 pages, 128503 bytes).
 PDF statistics:
  375 PDF objects out of 1000 (max. 8388607)
  66 compressed objects within 1 object stream
+=======
+ 4231 strings out of 494880
+ 54578 string characters out of 6179601
+ 124213 words of memory out of 5000000
+ 7495 multiletter control sequences out of 15000+600000
+ 14562 words of font info for 34 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 41i,7n,32p,398b,1555s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/luca/.texlive2017/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecti1000.600pk> </home/luca/.texlive2017/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecbx1200.600pk> </home/luca/.texlive2017/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecbx1440.600pk> </home/luca/.texlive2017/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecbx2074.600pk> </home/luca/.texlive2017/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecsl1000.600pk> </home/luca/.texlive2017/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecrm1000.600pk> </home/luca/.texlive2017/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecbx1000.600pk> </home/luca/.texlive2017/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecbx2488.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy7.pfb>
+Output written on Unix.pdf (11 pages, 122674 bytes).
+PDF statistics:
+ 358 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
+>>>>>>> acc605e7dd2c5b9ee0aa4423b8787ff0413593d3
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

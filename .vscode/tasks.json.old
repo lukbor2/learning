@@ -1,0 +1,15 @@
+{
+    "version": "0.1.0",
+    "command": "sh",
+    "args": ["-c"],
+    "isShellCommand": true,
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "tasks": [
+        {
+            "taskName": "~/Documents/python3.5_venv/bin/python  ~/git/learning/Python/mysite/manage.py runserver",
+            "args": ["~/Documents/python3.5_venv/bin/python  ~/git/learning/Python/mysite/manage.py runserver"]
+        }
+        
+    ]
+}
