@@ -1,0 +1,28 @@
+    Start server:
+
+sudo systemctl start ollama 
+
+    Stop server:
+
+sudo systemctl stop ollama 
+
+    Status of the server:
+
+systemctl status ollama
+
+    or:
+
+ollama serve
+
+    list of models:
+
+ollama list
+
+    GPU
+
+ollama ps
+
+
+    to run a model
+
+ollama run devstral-small-2
