@@ -340,4 +340,25 @@ The Linux versions of \textbf{ps} and \textbf{top} read their process status inf
 \subsection{Trace Signals and System Calls}
 Linux lets you directly observe a process with the \textbf{strace} command, which shows every system call the process makes and every signal it receives.
 
+\section{Getting Information About the Network}
+\subsection{General Info}
+Use the command \textbf{lspci}. It has several options, for example to get general info about network devices:
+\begin{lstlisting}
+lspci | grep Network
+\end{lstlisting}
+\subsection{More Detailed Info}
+\textbf{lshw} command will attempt to provide you with all possible network device hardware information. For example to get detailed info about network devices:
+\begin{lstlisting}
+lshw -class network
+\end{lstlisting}
+NOTE: using this command it is easy to see the id of the different network adapter, which is useful to read the output of the \textbf{ip} command.
+\subsection{Hardware and Configuration}
+\textbf{inxi} is an extremely useful tool which apart of many other features can also print out a network hardware information and its configuration in a nicely formatted output.
+\subsection{Network Configuration}
+The most obvious command to obtain a network configuration is by using \textbf{ip} command. For example:
+\begin{lstlisting}
+ip ad show
+\end{lstlisting}
+
+
 \end{document}

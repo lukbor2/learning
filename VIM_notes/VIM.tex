@@ -7,6 +7,13 @@
 \usepackage{makeidx}
 \usepackage{graphicx}
 \usepackage{listings}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
 
 
 \begin{document}
@@ -30,6 +37,21 @@
 \paragraph{<C-a>, <C-x>}: perform addition and subtraction on numbers.
 \paragraph{gU}: converts into upper case. Must be used with something else. For example \textit{gUap} converts an entire paragraph, \textit{gUaw} converts a word, etc.
 \paragraph{gu}: converts into lower case. Must be used with something else. For example \textit{guap} converts an entire paragraph, \textit{guaw} converts a word, etc.
+\paragraph{Table of contents with links:} in order to have a table of content in the pdf file with links to the sections, use the package and the command as below:\\
+\begin{lstlisting}
+\usepackage{hyperref}
+\hypersetup
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\end{lstlisting}
+\paragraph{Changing the size of the vim window:} To change programatically the size of the window use the commands below in the command line and/or in the .vimrc file.
+\begin{lstlisting}
+set lines=50 columns=100
+\end{lstlisting}
+\paragraph{Showing pieces of codes in a document:} To show pieces of code in a document use the \emph{lstlisting} environment. The package \emph{listings} must be added at the beginning of the document.
 \section{Delete Stuff}
 \paragraph{x}: The x command deletes the character under the cursor.
 \paragraph{s}: Deletes character under the cursor and enters insert mode.
@@ -98,6 +120,15 @@ an absolute or a relative filepath
 \paragraph{:Explore or :E}: opens the file explorer
 \paragraph{:edit \{path\}}: opens the file explorer
 \paragraph{:Vexplore}: opens the file explorer in a vertical split window
-\paragraph{\textit{buffer number}:bdelete or :bd}: deletes the buffer(s) specified (it can be a range or a list too
+\paragraph{\textit{buffer number}:bdelete or :bd}: deletes the buffer(s) specified (it can be a range or a list too.
+
+\chapter{Vim Latex}
+Vim-Latex is a vim add-on/plug-in which is used to make Latex files in Vim.\\
+\href{http://vim-latex.sourceforge.net/documentation/latex-suite/}{The manual is here}.\\
+Check the chapter 3 which is about the macros available to quickly insert the different elements of a Latex document.
+\section{Folding}
+\paragraph{\textbackslash rf}: This will fold up the entire file.
+\paragraph{\textbackslash za}: Open and close folds. 
+
 \end{document}
 
